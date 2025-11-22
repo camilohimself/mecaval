@@ -109,19 +109,17 @@ export default function ServicesPage() {
       <Header />
       <main>
 
-        {/* Hero Section - Vercel Style */}
+        {/* Hero Section - Ultra Minimal */}
         <section className="section border-b">
-          <div className="container text-center">
-            <h1 className="text-display mb-4 max-w-4xl mx-auto">
-              Réparations en 48h. <br className="hidden sm:block" />
-              Pas en 3 semaines.
-            </h1>
-            <p className="text-body text-xl max-w-2xl mx-auto mb-8">
-              Machines électriques • Thermiques • Vélos | Savièse, Valais
-            </p>
+          <div className="container text-center max-w-4xl mx-auto space-y-8">
 
-            {/* Social Proof Badges - Next.js Style */}
-            <div className="flex flex-wrap justify-center gap-4 mb-8">
+            {/* Titre seul */}
+            <h1 className="text-display">
+              Réparation en 48 heures.
+            </h1>
+
+            {/* Badges */}
+            <div className="flex flex-wrap justify-center gap-3">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 border border-gray-300 rounded-full">
                 <Zap className="w-4 h-4 text-rouge" />
                 <span className="text-sm font-medium text-gray-900">48h garanti</span>
@@ -136,6 +134,7 @@ export default function ServicesPage() {
               </div>
             </div>
 
+            {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="primary" size="lg" icon={Phone} iconPosition="left" href="tel:0767080308">
                 076 708 03 08
@@ -144,6 +143,7 @@ export default function ServicesPage() {
                 Voir les tarifs
               </Button>
             </div>
+
           </div>
         </section>
 
