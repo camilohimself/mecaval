@@ -192,7 +192,7 @@ export default function AtelierPage() {
               <h2 className="text-5xl md:text-6xl font-extrabold text-white mb-6 leading-tight">
                 {tAtelier('methodology.title')}
               </h2>
-              <p className="text-xl text-gray-200 max-w-2xl mx-auto leading-loose">
+              <p className="text-lg md:text-xl text-gray-200 max-w-2xl mx-auto leading-loose">
                 {tAtelier('methodology.subtitle')}
               </p>
             </div>
@@ -203,7 +203,7 @@ export default function AtelierPage() {
               <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-white/20 -translate-x-1/2" />
 
               {/* Steps */}
-              <div className="space-y-16 lg:space-y-24">
+              <div className="space-y-12 lg:space-y-24">
                 {methodology.map((step, index) => {
                   const Icon = step.icon;
                   const isLeft = index % 2 === 0;
