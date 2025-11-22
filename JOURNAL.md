@@ -24,7 +24,7 @@ Site web professionnel pour atelier de réparation de machines (électriques, th
 ### Stack Technique
 - **Framework:** Next.js 16.0.3 (App Router)
 - **UI:** React 19.2.0 + Tailwind CSS 4
-- **i18n:** next-intl 4.5.5 (FR/DE)
+- **i18n:** next-intl 4.5.5 (FR/DE) ✅ **100% BILINGUE FONCTIONNEL**
 - **Icons:** Lucide React
 - **Deploy:** Vercel (auto-deploy)
 - **Repo:** `git@github.com:camilohimself/mecaval.git`
@@ -114,16 +114,226 @@ git push origin main → Auto-deploy Vercel → Live
 
 ---
 
+## 🌍 SYSTÈME DE TRADUCTION BILINGUE - GAME CHANGER OSOM
+
+### Architecture next-intl 4.5.5
+
+**Stratégie:** Structure de clés PLATE et COHÉRENTE entre fr.json et de.json
+
+#### Principe de Base
+```
+❌ ÉVITER (nested objects):
+"metrics": {
+  "metric1": {
+    "value": "48h",
+    "label": "Délai garanti"
+  }
+}
+
+✅ ADOPTER (flat structure):
+"metrics": {
+  "metric1Value": "48h",
+  "metric1Label": "Délai garanti",
+  "metric1Sub": "vs. 2-3 semaines"
+}
+```
+
+#### Convention de Nommage Stricte
+
+**1. Features/Items Lists:**
+```json
+// Toujours: feature1, feature2, feature3 (jamais item1, benefit1, etc.)
+"callout": {
+  "feature1": "Certification conforme",
+  "feature2": "Sécurité garantie",
+  "feature3": "Tests complets"
+}
+```
+
+**2. Metrics/Stats:**
+```json
+// Pattern: metricXValue, metricXLabel, metricXSub
+"metrics": {
+  "metric1Value": "48h",
+  "metric1Label": "Délai maximum garanti",
+  "metric1Sub": "vs. 2-3 semaines concurrence"
+}
+```
+
+**3. Sections avec Titres:**
+```json
+// Pattern: sectionTitle, sectionFeature1-4
+"thermal": {
+  "serviceTitle": "Entretien complet",
+  "serviceFeature1": "Diagnostic complet",
+  "serviceFeature2": "Service filtres",
+  "repairTitle": "Réparations courantes",
+  "repairFeature1": "Problèmes démarrage"
+}
+```
+
+**4. Pricing/Cards:**
+```json
+// Pattern: note (au lieu de refund/subtitle), feature1-3
+"pricing": {
+  "diagnostic": {
+    "title": "Diagnostic professionnel",
+    "price": "X CHF",
+    "note": "(déduit si réparation)",
+    "feature1": "Analyse panne précise",
+    "feature2": "Devis détaillé écrit",
+    "feature3": "Explication problème claire",
+    "duration": "30-60 min"
+  }
+}
+```
+
+### Méthodologie de Vérification
+
+**1. Read fr.json Structure FIRST**
+```bash
+# Toujours lire la structure FR de référence
+Read messages/fr.json (lignes concernées)
+```
+
+**2. Match de.json EXACTEMENT**
+```bash
+# Aligner TOUTES les clés sur fr.json
+Edit messages/de.json
+# Même structure, même noms de clés, traduction DE uniquement
+```
+
+**3. Clean Turbopack Cache**
+```bash
+rm -rf .next && npm run dev
+# OBLIGATOIRE pour recharger les traductions
+```
+
+**4. Test Systématique Bilingue**
+```bash
+# Tester TOUTES les pages FR ET DE
+curl -s http://localhost:3001/fr | grep -i "MISSING_MESSAGE\|Error"
+curl -s http://localhost:3001/de | grep -i "MISSING_MESSAGE\|Error"
+curl -s http://localhost:3001/fr/services | grep -i "MISSING_MESSAGE\|Error"
+curl -s http://localhost:3001/de/services | grep -i "MISSING_MESSAGE\|Error"
+# Répéter pour /atelier, /contact
+```
+
+**Résultat attendu:** ZERO output (aucune erreur)
+
+### Erreurs Typiques à Éviter
+
+**Erreur 1: Structure Nested vs Flat**
+```json
+// ❌ Code attend flat, JSON a nested
+Code: tServices('metrics.metric1Value')
+JSON: "metric1": { "value": "48h" } // FAIL
+
+// ✅ Alignement correct
+Code: tServices('metrics.metric1Value')
+JSON: "metric1Value": "48h" // SUCCESS
+```
+
+**Erreur 2: Noms de Clés Incohérents**
+```json
+// ❌ Mélange de noms
+"callout": {
+  "benefit1": "...",  // différent de
+  "feature2": "..."   // FAIL
+}
+
+// ✅ Cohérence stricte
+"callout": {
+  "feature1": "...",
+  "feature2": "...",
+  "feature3": "..."   // SUCCESS
+}
+```
+
+**Erreur 3: Clés Manquantes entre Locales**
+```json
+// fr.json a:
+"thermal": {
+  "serviceTitle": "...",
+  "serviceFeature1": "..."
+}
+
+// ❌ de.json n'a pas ces clés → MISSING_MESSAGE
+
+// ✅ de.json doit avoir EXACTEMENT les mêmes clés
+"thermal": {
+  "serviceTitle": "...",
+  "serviceFeature1": "..."
+}
+```
+
+### Debug Workflow
+
+**Symptôme:** Page /de/services affiche français ou `MISSING_MESSAGE`
+
+**1. Vérifier Console Dev**
+```
+Error: MISSING_MESSAGE: Could not resolve `services.metrics.metric1Value`
+```
+
+**2. Comparer fr.json vs de.json**
+```bash
+# Lire section exacte dans fr.json
+Read messages/fr.json (lignes services)
+
+# Vérifier si de.json a TOUTES les clés
+Read messages/de.json (lignes services)
+```
+
+**3. Fixer Structure de.json**
+```bash
+# Ajouter/renommer clés pour matcher fr.json
+Edit messages/de.json
+```
+
+**4. Clean + Test**
+```bash
+rm -rf .next && npm run dev
+curl -s http://localhost:3001/de/services | grep "MISSING_MESSAGE"
+# Doit retourner vide
+```
+
+### Bénéfices Approche OSOM
+
+✅ **Scalabilité:** Ajout facile de nouvelles langues (IT, EN, etc.)
+✅ **Maintenance:** Structure cohérente = modifications rapides
+✅ **Debug:** Erreurs MISSING_MESSAGE pointent clé exacte manquante
+✅ **Performance:** Flat structure = accès direct sans traversée
+✅ **DX:** Convention stricte = moins d'erreurs humaines
+
+### Application Mecaval
+
+**Pages Bilingues Complètes:**
+- ✅ Homepage (/) - FR/DE
+- ✅ Services (/services) - FR/DE
+- ✅ Atelier (/atelier) - FR/DE
+- ✅ Contact (/contact) - FR/DE
+
+**Clés Totales Traduites:**
+- `messages/fr.json`: ~450 clés
+- `messages/de.json`: ~450 clés (100% match)
+
+**Tests Finaux:**
+- 8 pages testées (4 FR + 4 DE)
+- ZERO erreurs MISSING_MESSAGE
+- 100% fonctionnel bilingue
+
+---
+
 ## 📝 COMMITS RÉCENTS
 
 ```
-d381c58 - Titres sections centrés + "Nos services de réparation"
-951ba0f - Hero centré mobile, aligné gauche desktop
-2e5ffcf - Montants € → CHF
-565b910 - Hero Services ultra minimal
-7433e48 - Page Services refonte Next.js/Vercel
-d7049d1 - Refonte OSOM level pages Atelier/Contact
-aab0fa0 - Design system corporate initial
+6efbe22 - fix: Complete German translation - Zero errors achieved
+d1b107f - feat: Complete FR/DE bilingual implementation for all pages
+e971333 - fix: Complete FR/DE translations for Atelier page
+d26866f - feat: Gallery + Testimonials components - Page Atelier
+cc3a838 - feat: Animations corporate-safe - Phase 1
+7779b9b - docs: Journal de projet - État complet et compact
 ```
 
 ---
@@ -204,4 +414,4 @@ aab0fa0 - Design system corporate initial
 
 ---
 
-**Dernière session:** 22 novembre 2025 - Refonte complète design Next.js/Vercel style + optimisations UX
+**Dernière session:** 22 novembre 2025 - Système traduction bilingue FR/DE 100% fonctionnel + documentation méthodologie OSOM
