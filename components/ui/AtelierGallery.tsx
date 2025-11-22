@@ -79,7 +79,7 @@ export default function AtelierGallery({ images }: AtelierGalleryProps) {
         {/* Note pour développeur */}
         <div className="mt-8 card bg-teal-light border-teal text-center">
           <p className="text-sm text-teal-dark font-medium">
-            {tAtelier('note')}
+            {tAtelier('photoNote')}
           </p>
         </div>
       </div>

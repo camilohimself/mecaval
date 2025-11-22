@@ -6,79 +6,93 @@ import Button from '@/components/ui/Button';
 
 export default function ServicesPage() {
   const tCta = useTranslations('cta');
+  const tCommon = useTranslations('common');
+  const tServices = useTranslations('services');
 
   const essentialServices = [
     {
       icon: Zap,
-      title: 'Machines Électriques',
-      badge: 'URGENT',
+      title: tServices('electric.title'),
+      badge: tServices('electric.badge'),
       badgeColor: 'rouge',
-      description: 'Réparation complète + certification normes électriques',
-      startingPrice: '50 CHF',
+      description: tServices('electric.description'),
+      startingPrice: tServices('electric.startingPrice'),
       features: [
-        'Diagnostic professionnel',
-        'Réparation toutes marques',
-        'Certificat de conformité',
-        'Garantie incluse'
+        tServices('electric.feature1'),
+        tServices('electric.feature2'),
+        tServices('electric.feature3'),
+        tServices('electric.feature4')
       ],
       link: '#electric'
     },
     {
       icon: Settings,
-      title: 'Machines Thermiques',
-      badge: 'SAISON',
+      title: tServices('thermal.title'),
+      badge: tServices('thermal.badge'),
       badgeColor: 'teal',
-      description: 'Entretien et réparation moteurs essence',
-      startingPrice: '80 CHF',
+      description: tServices('thermal.description'),
+      startingPrice: tServices('thermal.startingPrice'),
       features: [
-        'Révision complète',
-        'Nettoyage carburateur',
-        'Affûtage lames',
-        'Hivernage'
+        tServices('thermal.feature1'),
+        tServices('thermal.feature2'),
+        tServices('thermal.feature3'),
+        tServices('thermal.feature4')
       ],
       link: '#thermal'
     },
     {
       icon: Bike,
-      title: 'Vélos & E-bikes',
-      badge: 'EXPRESS',
+      title: tServices('bikes.title'),
+      badge: tServices('bikes.badge'),
       badgeColor: 'teal',
-      description: 'Tous types de vélos et vélos électriques',
-      startingPrice: '60 CHF',
+      description: tServices('bikes.description'),
+      startingPrice: tServices('bikes.startingPrice'),
       features: [
-        'Révision complète',
-        'Réglage précis',
-        'Diagnostic VAE',
-        'Service rapide'
+        tServices('bikes.feature1'),
+        tServices('bikes.feature2'),
+        tServices('bikes.feature3'),
+        tServices('bikes.feature4')
       ],
       link: '#bikes'
     }
   ];
 
   const metrics = [
-    { value: '48h', label: 'Délai maximum', subtext: 'vs 2-3 semaines ailleurs' },
-    { value: '100%', label: 'Machines testées', subtext: 'Avant livraison' },
-    { value: '0 CHF', label: 'Frais cachés', subtext: 'Devis transparent' }
+    { value: tServices('metrics.metric1.value'), label: tServices('metrics.metric1.label'), subtext: tServices('metrics.metric1.detail') },
+    { value: tServices('metrics.metric2.value'), label: tServices('metrics.metric2.label'), subtext: tServices('metrics.metric2.detail') },
+    { value: tServices('metrics.metric3.value'), label: tServices('metrics.metric3.label'), subtext: tServices('metrics.metric3.detail') }
   ];
 
   const pricingCategories = [
     {
-      title: 'Diagnostic',
-      price: '50 CHF',
-      note: 'Déduit si réparation',
-      features: ['Analyse complète', 'Devis détaillé', 'Explications']
+      title: tServices('pricing.diagnostic.title'),
+      price: tServices('pricing.diagnostic.price'),
+      note: tServices('pricing.diagnostic.refund'),
+      features: [
+        tServices('pricing.diagnostic.item1'),
+        tServices('pricing.diagnostic.item2'),
+        tServices('pricing.diagnostic.item3')
+      ]
     },
     {
-      title: 'Réparation',
-      price: 'Variable',
-      note: 'Selon panne',
-      features: ['Pièces qualité', 'Délai 48h', 'Garantie']
+      title: tServices('pricing.repair.title'),
+      price: tServices('pricing.repair.price'),
+      note: tServices('pricing.repair.duration'),
+      features: [
+        tServices('pricing.repair.item1'),
+        tServices('pricing.repair.item2'),
+        tServices('pricing.repair.item4')
+      ]
     },
     {
-      title: 'Certification',
-      price: 'Inclus',
-      note: 'Gratuit',
-      features: ['Test normes', 'Certificat', 'Conformité'],
+      title: tServices('pricing.certification.title'),
+      price: tServices('pricing.certification.price'),
+      note: tServices('pricing.certification.duration'),
+      features: [
+        tServices('pricing.certification.item1'),
+        tServices('pricing.certification.item3'),
+        tServices('pricing.certification.item4')
+      ],
       highlight: true
     }
   ];
@@ -86,21 +100,33 @@ export default function ServicesPage() {
   const b2bServices = [
     {
       icon: Building2,
-      title: 'Contrats Annuels',
-      description: 'Maintenance préventive avec tarifs négociés',
-      benefits: ['Planning fixe', 'Tarifs -15%', 'Priorité']
+      title: tServices('b2b.contracts.title'),
+      description: tServices('b2b.contracts.description'),
+      benefits: [
+        tServices('b2b.contracts.benefit1'),
+        tServices('b2b.contracts.benefit2'),
+        tServices('b2b.contracts.benefit3')
+      ]
     },
     {
       icon: Wrench,
-      title: 'BTP & Construction',
-      description: 'Service dédié métiers du bâtiment',
-      benefits: ['Dépannage rapide', 'Devis 24h', 'Factures détaillées']
+      title: tServices('b2b.construction.title'),
+      description: tServices('b2b.construction.description'),
+      benefits: [
+        tServices('b2b.construction.benefit1'),
+        tServices('b2b.construction.benefit2'),
+        tServices('b2b.construction.benefit3')
+      ]
     },
     {
       icon: TrendingUp,
-      title: 'Paysagistes',
-      description: 'Entretien saisonnier parc machines',
-      benefits: ['Remise en service', 'Suivi saison', 'Hivernage']
+      title: tServices('b2b.landscaping.title'),
+      description: tServices('b2b.landscaping.description'),
+      benefits: [
+        tServices('b2b.landscaping.benefit1'),
+        tServices('b2b.landscaping.benefit2'),
+        tServices('b2b.landscaping.benefit3')
+      ]
     }
   ];
 
@@ -115,32 +141,32 @@ export default function ServicesPage() {
 
             {/* Titre seul */}
             <h1 className="text-display animate-slideUp">
-              Réparation en 48 heures.
+              {tServices('hero.title')}
             </h1>
 
             {/* Badges */}
             <div className="flex flex-wrap justify-center gap-3 animate-slideUp animation-delay-100">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 border border-gray-300 rounded-full">
                 <Zap className="w-4 h-4 text-rouge" />
-                <span className="text-sm font-medium text-gray-900">48h garanti</span>
+                <span className="text-sm font-medium text-gray-900">{tServices('hero.badge1')}</span>
               </div>
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 border border-gray-300 rounded-full">
                 <Shield className="w-4 h-4 text-teal" />
-                <span className="text-sm font-medium text-gray-900">Normes certifiées</span>
+                <span className="text-sm font-medium text-gray-900">{tServices('hero.badge2')}</span>
               </div>
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 border border-gray-300 rounded-full">
                 <Target className="w-4 h-4 text-teal" />
-                <span className="text-sm font-medium text-gray-900">Contact direct</span>
+                <span className="text-sm font-medium text-gray-900">{tServices('hero.badge3')}</span>
               </div>
             </div>
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slideUp animation-delay-200">
               <Button variant="primary" size="lg" icon={Phone} iconPosition="left" href="tel:0767080308">
-                076 708 03 08
+                {tServices('hero.ctaPrimary')}
               </Button>
               <Button variant="outline" size="lg" icon={ArrowRight} iconPosition="right" href="#pricing">
-                Voir les tarifs
+                {tCta('seeRates')}
               </Button>
             </div>
 
@@ -151,8 +177,8 @@ export default function ServicesPage() {
         <section className="section bg-gray-50">
           <div className="container">
             <div className="text-center mb-12">
-              <h2 className="text-h2 mb-4">Services Essentiels</h2>
-              <p className="text-body text-lg">Réparation rapide et professionnelle</p>
+              <h2 className="text-h2 mb-4">{tServices('essential.title')}</h2>
+              <p className="text-body text-lg">{tServices('essential.subtitle')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -178,7 +204,7 @@ export default function ServicesPage() {
 
                     {/* Price */}
                     <div className="mb-4">
-                      <span className="text-sm text-gray-600">À partir de </span>
+                      <span className="text-sm text-gray-600">{tCommon('from')} </span>
                       <span className="text-2xl font-bold text-gray-900">{service.startingPrice}</span>
                     </div>
 
@@ -207,23 +233,23 @@ export default function ServicesPage() {
               <div>
                 <div className="inline-flex items-center gap-2 px-3 py-1 bg-teal text-white text-xs font-bold rounded-full mb-4">
                   <Award className="w-3 h-3" />
-                  DIFFÉRENCIATEUR MAJEUR
+                  {tServices('callout.badge')}
                 </div>
 
                 <h2 className="text-display mb-4">
-                  Contrôle Normes Électriques
+                  {tServices('callout.title')}
                 </h2>
 
                 <p className="text-body text-xl mb-6">
-                  Seul atelier du Valais avec machine de certification complète
+                  {tServices('callout.subtitle')}
                 </p>
 
                 <div className="space-y-4 mb-8">
                   {[
-                    'Machine de diagnostic professionnelle',
-                    'Certificat de conformité officiel',
-                    'Remise aux normes garantie',
-                    'Sécurité totale pour vos assurances'
+                    tServices('callout.benefit1'),
+                    tServices('callout.benefit2'),
+                    tServices('callout.benefit3'),
+                    tServices('callout.benefit4')
                   ].map((item, i) => (
                     <div key={i} className="flex items-start gap-3">
                       <div className="w-6 h-6 bg-teal rounded-lg flex items-center justify-center flex-shrink-0">
@@ -235,7 +261,7 @@ export default function ServicesPage() {
                 </div>
 
                 <Button variant="primary" size="lg" href="tel:0767080308">
-                  Demander un diagnostic
+                  {tCta('requestDiagnostic')}
                 </Button>
               </div>
 
@@ -270,15 +296,15 @@ export default function ServicesPage() {
               <div className="inline-flex items-center justify-center w-14 h-14 bg-rouge-light border border-rouge rounded-lg mb-4">
                 <Settings className="w-7 h-7 text-rouge" />
               </div>
-              <h2 className="text-h2 mb-4">Machines Thermiques</h2>
-              <p className="text-body text-lg">Tondeuses, débroussailleuses, tronçonneuses - Entretien saisonnier complet</p>
+              <h2 className="text-h2 mb-4">{tServices('thermal.title')}</h2>
+              <p className="text-body text-lg">{tServices('thermal.description')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="card">
-                <h3 className="text-h4 mb-4">Révision Complète</h3>
+                <h3 className="text-h4 mb-4">{tServices('thermal.feature2')}</h3>
                 <ul className="space-y-2">
-                  {['Vidange + filtres', 'Nettoyage carburateur', 'Réglage moteur', 'Test performance'].map((item, i) => (
+                  {[tServices('thermal.detail1'), tServices('thermal.detail2'), tServices('thermal.detail3'), tServices('thermal.detail4')].map((item, i) => (
                     <li key={i} className="flex items-center gap-2 text-sm">
                       <CheckCircle className="w-4 h-4 text-rouge flex-shrink-0" />
                       {item}
@@ -288,9 +314,9 @@ export default function ServicesPage() {
               </div>
 
               <div className="card">
-                <h3 className="text-h4 mb-4">Réparations Courantes</h3>
+                <h3 className="text-h4 mb-4">{tServices('thermal.feature1')}</h3>
                 <ul className="space-y-2">
-                  {['Problème démarrage', 'Remplacement lanceur', 'Affûtage lames', 'Diagnostic panne'].map((item, i) => (
+                  {[tServices('thermal.issue1'), tServices('thermal.issue2'), tServices('thermal.issue3'), tServices('thermal.issue4')].map((item, i) => (
                     <li key={i} className="flex items-center gap-2 text-sm">
                       <CheckCircle className="w-4 h-4 text-rouge flex-shrink-0" />
                       {item}
@@ -309,15 +335,15 @@ export default function ServicesPage() {
               <div className="inline-flex items-center justify-center w-14 h-14 bg-teal-light border border-teal rounded-lg mb-4">
                 <Bike className="w-7 h-7 text-teal" />
               </div>
-              <h2 className="text-h2 mb-4">Vélos & E-bikes</h2>
-              <p className="text-body text-lg">VTT, route, ville, électriques - Entretien et réparation tous types</p>
+              <h2 className="text-h2 mb-4">{tServices('bikes.title')}</h2>
+              <p className="text-body text-lg">{tServices('bikes.description')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="card">
-                <h3 className="text-h4 mb-4">Services Vélos</h3>
+                <h3 className="text-h4 mb-4">{tServices('bikes.service1')}</h3>
                 <ul className="space-y-2">
-                  {['Révision complète', 'Réglage freins/vitesses', 'Changement pneus', 'Entretien transmission'].map((item, i) => (
+                  {[tServices('bikes.detail1'), tServices('bikes.detail2'), tServices('bikes.service2'), tServices('bikes.service3')].map((item, i) => (
                     <li key={i} className="flex items-center gap-2 text-sm">
                       <CheckCircle className="w-4 h-4 text-teal flex-shrink-0" />
                       {item}
@@ -327,9 +353,9 @@ export default function ServicesPage() {
               </div>
 
               <div className="card">
-                <h3 className="text-h4 mb-4">Vélos Électriques</h3>
+                <h3 className="text-h4 mb-4">{tServices('bikes.service4')}</h3>
                 <ul className="space-y-2">
-                  {['Diagnostic VAE', 'Batterie & moteur', 'Électronique embarquée', 'Mise à jour système'].map((item, i) => (
+                  {[tServices('bikes.feature3'), tServices('bikes.detail3'), tServices('bikes.detail4'), tServices('bikes.feature4')].map((item, i) => (
                     <li key={i} className="flex items-center gap-2 text-sm">
                       <CheckCircle className="w-4 h-4 text-teal flex-shrink-0" />
                       {item}
@@ -341,7 +367,7 @@ export default function ServicesPage() {
 
             <div className="mt-8 card bg-teal-light border-teal text-center">
               <p className="text-sm text-teal-dark font-semibold">
-                Partenariat Speedped - Commande de vélos sur demande
+                {tServices('bikes.feature3')} - {tServices('bikes.feature4')}
               </p>
             </div>
           </div>
@@ -351,8 +377,8 @@ export default function ServicesPage() {
         <section id="pricing" className="section bg-gray-50">
           <div className="container">
             <div className="text-center mb-12">
-              <h2 className="text-h2 mb-4">Tarification Transparente</h2>
-              <p className="text-body text-lg">Pas de surprises - Devis détaillé avant intervention</p>
+              <h2 className="text-h2 mb-4">{tServices('pricing.title')}</h2>
+              <p className="text-body text-lg">{tServices('pricing.subtitle')}</p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
@@ -394,9 +420,9 @@ export default function ServicesPage() {
                 <Building2 className="w-3 h-3" />
                 PROFESSIONNELS
               </div>
-              <h2 className="text-h2 text-white mb-4">Solutions B2B</h2>
+              <h2 className="text-h2 text-white mb-4">{tServices('b2b.title')}</h2>
               <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                Services sur mesure pour entreprises du bâtiment et de la construction
+                {tServices('b2b.subtitle')}
               </p>
             </div>
 
@@ -423,7 +449,7 @@ export default function ServicesPage() {
 
             <div className="mt-12 text-center">
               <Button variant="primary" size="lg" icon={Phone} iconPosition="left" href="tel:0767080308">
-                Contacter pour devis B2B
+                {tServices('b2b.description')}
               </Button>
             </div>
           </div>
@@ -433,16 +459,16 @@ export default function ServicesPage() {
         <section className="section border-t">
           <div className="container text-center">
             <div className="max-w-2xl mx-auto space-y-8">
-              <h2 className="text-h2">Besoin d'une réparation rapide ?</h2>
+              <h2 className="text-h2">{tServices('cta.title')}</h2>
               <p className="text-body text-lg">
-                Appelez-nous ou passez directement à l'atelier à Savièse
+                {tServices('cta.subtitle')}
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="primary" size="lg" icon={Phone} iconPosition="left" href="tel:0767080308">
-                  076 708 03 08
+                  {tServices('cta.phone')}
                 </Button>
                 <Button variant="outline" size="lg" icon={ArrowRight} iconPosition="right" href="/contact">
-                  Nous trouver
+                  {tCta('findUs')}
                 </Button>
               </div>
             </div>

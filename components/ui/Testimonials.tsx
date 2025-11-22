@@ -107,7 +107,7 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
         {/* Note pour développeur */}
         <div className="mt-12 card bg-rouge-light border-rouge text-center max-w-2xl mx-auto">
           <p className="text-sm text-rouge-dark font-medium">
-            {tAtelier('note')}
+            {tAtelier('testimonialsNote')}
           </p>
         </div>
       </div>

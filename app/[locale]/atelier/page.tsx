@@ -108,23 +108,23 @@ export default function AtelierPage() {
   const values = [
     {
       icon: Heart,
-      title: tAtelier('values.proximity.title'),
-      description: tAtelier('values.proximity.description')
+      title: tAtelier('values.value1Title'),
+      description: tAtelier('values.value1Desc')
     },
     {
       icon: Clock,
-      title: tAtelier('values.speed.title'),
-      description: tAtelier('values.speed.description')
+      title: tAtelier('values.value2Title'),
+      description: tAtelier('values.value2Desc')
     },
     {
       icon: Target,
-      title: tAtelier('values.quality.title'),
-      description: tAtelier('values.quality.description')
+      title: tAtelier('values.value3Title'),
+      description: tAtelier('values.value3Desc')
     },
     {
       icon: Award,
-      title: tAtelier('values.transparency.title'),
-      description: tAtelier('values.transparency.description')
+      title: tAtelier('values.value4Title'),
+      description: tAtelier('values.value4Desc')
     }
   ];
 
@@ -322,15 +322,15 @@ export default function AtelierPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-5xl font-bold text-teal mb-2">{tAtelier('commitment.metric1')}</div>
+                <div className="text-5xl font-bold text-teal mb-2">{tAtelier('commitment.metric1Value')}</div>
                 <p className="text-gray-400">{tAtelier('commitment.metric1Label')}</p>
               </div>
               <div className="text-center">
-                <div className="text-5xl font-bold text-teal mb-2">{tAtelier('commitment.metric2')}</div>
+                <div className="text-5xl font-bold text-teal mb-2">{tAtelier('commitment.metric2Value')}</div>
                 <p className="text-gray-400">{tAtelier('commitment.metric2Label')}</p>
               </div>
               <div className="text-center">
-                <div className="text-5xl font-bold text-teal mb-2">{tAtelier('commitment.metric3')}</div>
+                <div className="text-5xl font-bold text-teal mb-2">{tAtelier('commitment.metric3Value')}</div>
                 <p className="text-gray-400">{tAtelier('commitment.metric3Label')}</p>
               </div>
             </div>
@@ -375,13 +375,13 @@ export default function AtelierPage() {
                   iconPosition="left"
                   href="tel:0767080308"
                 >
-                  {tAtelier('cta.phone')}
+                  {tCta('call')}
                 </Button>
                 <a
                   href="/contact"
                   className="btn btn-lg btn-outline-teal bg-white text-gray-900 border-white hover:bg-gray-100"
                 >
-                  <span>{tAtelier('cta.findUs')}</span>
+                  <span>{tCta('findUs')}</span>
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </div>

@@ -29,7 +29,7 @@ export default function HomePage() {
                 {/* Location Badge */}
                 <div className="inline-flex items-center gap-2 px-3 py-1 bg-teal-light text-teal-dark text-sm font-semibold rounded-full border border-teal animate-slideUp">
                   <MapPin className="w-4 h-4" />
-                  <span>Savièse, Valais</span>
+                  <span>{t('hero.location')}</span>
                 </div>
 
                 {/* Hero Title */}
@@ -92,7 +92,7 @@ export default function HomePage() {
                 <div className="card card-elevated p-12 bg-gray-50 flex items-center justify-center min-h-[400px]">
                   <div className="text-center space-y-4">
                     <Settings className="w-24 h-24 text-teal mx-auto" />
-                    <p className="text-sm text-gray-500">Photo atelier à venir</p>
+                    <p className="text-sm text-gray-500">{t('hero.photoPlaceholder')}</p>
                   </div>
                 </div>
               </div>
@@ -107,10 +107,10 @@ export default function HomePage() {
             {/* Section Header */}
             <div className="max-w-2xl mx-auto mb-12">
               <h2 className="text-h2 mb-4">
-                Nos services de réparation
+                {t('services.title')}
               </h2>
               <p className="text-body text-lg">
-                Expertise complète en réparation de machines et cycles
+                {t('services.subtitle')}
               </p>
             </div>
 
@@ -214,7 +214,7 @@ export default function HomePage() {
                 {t('why.title')}
               </h2>
               <p className="text-body text-lg">
-                Ce qui nous différencie de la concurrence
+                {t('why.subtitle')}
               </p>
             </div>
 
@@ -306,7 +306,7 @@ export default function HomePage() {
 
             <div className="max-w-2xl mx-auto text-center space-y-8">
               <h2 className="text-h2">
-                Besoin d'une réparation rapide ?
+                {t('cta.title')}
               </h2>
               <p className="text-lg text-gray-300">
                 {tCta('visitUs')}

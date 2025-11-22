@@ -1,34 +1,39 @@
 import { Phone, Mail, MapPin, Clock, MessageCircle, HelpCircle } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Button from '@/components/ui/Button';
 import ContactForm from '@/components/ui/ContactForm';
 
 export default function ContactPage() {
+  const tContact = useTranslations('contact');
+  const tCommon = useTranslations('common');
+  const tCta = useTranslations('cta');
+
   const faq = [
     {
-      question: 'Quel est le délai de réparation ?',
-      answer: 'Nous garantissons un délai maximum de 48h pour la plupart des réparations. Certaines pièces spéciales peuvent nécessiter un délai supplémentaire, nous vous informons toujours à l\'avance.'
+      question: tContact('faq.q1'),
+      answer: tContact('faq.a1')
     },
     {
-      question: 'Faut-il prendre rendez-vous ?',
-      answer: 'Non, vous pouvez passer directement à l\'atelier aux heures d\'ouverture. Pour un diagnostic approfondi, un appel préalable est recommandé mais pas obligatoire.'
+      question: tContact('faq.q2'),
+      answer: tContact('faq.a2')
     },
     {
-      question: 'Le diagnostic est-il payant ?',
-      answer: 'Le diagnostic coûte X CHF, mais ce montant est entièrement déduit si vous acceptez la réparation.'
+      question: tContact('faq.q3'),
+      answer: tContact('faq.a3')
     },
     {
-      question: 'Proposez-vous un service de récupération ?',
-      answer: 'Nous pouvons récupérer et livrer votre machine selon votre zone géographique. Contactez-nous pour connaître les modalités et tarifs.'
+      question: tContact('faq.q4'),
+      answer: tContact('faq.a4')
     },
     {
-      question: 'Quels moyens de paiement acceptez-vous ?',
-      answer: 'Nous acceptons les paiements en espèces, carte bancaire et TWINT.'
+      question: tContact('faq.q5'),
+      answer: tContact('faq.a5')
     },
     {
-      question: 'Avez-vous une garantie sur les réparations ?',
-      answer: 'Oui, toutes nos réparations sont garanties. La durée dépend du type d\'intervention. Détails indiqués sur votre facture.'
+      question: tContact('faq.q6'),
+      answer: tContact('faq.a6')
     }
   ];
 
@@ -41,10 +46,10 @@ export default function ContactPage() {
         <section className="section border-b bg-gray-50 animate-fadeIn">
           <div className="container text-center">
             <h1 className="text-display mb-4 animate-slideUp">
-              Nous Contacter
+              {tContact('hero.title')}
             </h1>
             <p className="text-body text-xl max-w-2xl mx-auto animate-slideUp animation-delay-100">
-              Une question ? Un devis ? Passez nous voir ou contactez-nous !
+              {tContact('hero.subtitle')}
             </p>
           </div>
         </section>
@@ -61,9 +66,9 @@ export default function ContactPage() {
                     <Phone className="w-6 h-6 text-rouge group-hover:text-white transition-colors" />
                   </div>
                   <div>
-                    <h3 className="text-h4 mb-2">Téléphone</h3>
+                    <h3 className="text-h4 mb-2">{tContact('cards.phone')}</h3>
                     <p className="text-xl font-bold text-rouge">076 708 03 08</p>
-                    <p className="text-sm text-gray-600 mt-1">Lun-Sam • Appel direct</p>
+                    <p className="text-sm text-gray-600 mt-1">{tContact('cards.phoneHours')}</p>
                   </div>
                 </div>
               </a>
@@ -75,9 +80,9 @@ export default function ContactPage() {
                     <Mail className="w-6 h-6 text-teal group-hover:text-white transition-colors" />
                   </div>
                   <div>
-                    <h3 className="text-h4 mb-2">Email</h3>
+                    <h3 className="text-h4 mb-2">{tContact('cards.email')}</h3>
                     <p className="text-lg font-semibold text-teal">info@mecaval.ch</p>
-                    <p className="text-sm text-gray-600 mt-1">Réponse sous 24h</p>
+                    <p className="text-sm text-gray-600 mt-1">{tContact('cards.emailResponse')}</p>
                   </div>
                 </div>
               </a>
@@ -89,9 +94,9 @@ export default function ContactPage() {
                     <MessageCircle className="w-6 h-6 text-teal group-hover:text-white transition-colors" />
                   </div>
                   <div>
-                    <h3 className="text-h4 mb-2">WhatsApp</h3>
+                    <h3 className="text-h4 mb-2">{tContact('cards.whatsapp')}</h3>
                     <p className="text-lg font-semibold text-teal">076 708 03 08</p>
-                    <p className="text-sm text-gray-600 mt-1">Message rapide</p>
+                    <p className="text-sm text-gray-600 mt-1">{tContact('cards.whatsappQuick')}</p>
                   </div>
                 </div>
               </a>
@@ -107,7 +112,7 @@ export default function ContactPage() {
               {/* Formulaire */}
               <div>
                 <h2 className="text-h2 mb-6">
-                  Envoyez-nous un message
+                  {tContact('form.title')}
                 </h2>
                 <div className="card card-elevated">
                   <ContactForm />
@@ -123,27 +128,27 @@ export default function ContactPage() {
                     <div className="w-12 h-12 bg-teal-light border border-teal rounded-lg flex items-center justify-center">
                       <Clock className="w-6 h-6 text-teal" />
                     </div>
-                    <h3 className="text-h3">Horaires d'ouverture</h3>
+                    <h3 className="text-h3">{tContact('hours.title')}</h3>
                   </div>
 
                   <div className="space-y-3">
                     <div className="flex justify-between py-3 border-b border-gray-200">
-                      <span className="font-semibold text-gray-900">Lundi - Vendredi</span>
-                      <span className="text-gray-700">À définir</span>
+                      <span className="font-semibold text-gray-900">{tContact('hours.weekdays')}</span>
+                      <span className="text-gray-700">{tContact('hours.weekdaysHours')}</span>
                     </div>
                     <div className="flex justify-between py-3 border-b border-gray-200">
-                      <span className="font-semibold text-gray-900">Samedi</span>
-                      <span className="text-gray-700">À définir</span>
+                      <span className="font-semibold text-gray-900">{tContact('hours.saturday')}</span>
+                      <span className="text-gray-700">{tContact('hours.saturdayHours')}</span>
                     </div>
                     <div className="flex justify-between py-3">
-                      <span className="font-semibold text-gray-900">Dimanche</span>
-                      <span className="text-rouge font-semibold">Fermé</span>
+                      <span className="font-semibold text-gray-900">{tContact('hours.sunday')}</span>
+                      <span className="text-rouge font-semibold">{tContact('hours.sundayHours')}</span>
                     </div>
                   </div>
 
                   <div className="mt-6 card bg-teal-light border-teal">
                     <p className="text-sm text-teal-dark font-medium">
-                      Ouvert le samedi pour votre commodité !
+                      {tContact('hours.note')}
                     </p>
                   </div>
                 </div>
@@ -154,14 +159,14 @@ export default function ContactPage() {
                     <div className="w-12 h-12 bg-rouge-light border border-rouge rounded-lg flex items-center justify-center">
                       <MapPin className="w-6 h-6 text-rouge" />
                     </div>
-                    <h3 className="text-h3">Notre Atelier</h3>
+                    <h3 className="text-h3">{tContact('location.title')}</h3>
                   </div>
 
                   <p className="text-body mb-6">
-                    <strong className="text-gray-900">Mecaval</strong><br />
-                    [Adresse complète]<br />
-                    1965 Savièse<br />
-                    Valais, Suisse
+                    <strong className="text-gray-900">{tContact('location.name')}</strong><br />
+                    {tContact('location.addressLine1')}<br />
+                    {tContact('location.addressLine2')}<br />
+                    {tContact('location.addressLine3')}
                   </p>
 
                   <Button
@@ -172,7 +177,7 @@ export default function ContactPage() {
                     href="https://maps.google.com/?q=Savièse"
                     fullWidth
                   >
-                    Ouvrir dans Google Maps
+                    {tCta('openGoogleMaps')}
                   </Button>
                 </div>
               </div>
@@ -187,8 +192,8 @@ export default function ContactPage() {
               <div className="inline-flex items-center justify-center w-16 h-16 bg-white border border-gray-300 rounded-lg mb-4">
                 <MapPin className="w-8 h-8 text-gray-500" />
               </div>
-              <p className="text-lg font-semibold text-gray-700">Google Maps à intégrer</p>
-              <p className="text-sm text-gray-600">Coordonnées exactes à définir</p>
+              <p className="text-lg font-semibold text-gray-700">{tContact('location.mapPlaceholder')}</p>
+              <p className="text-sm text-gray-600">{tContact('location.mapPlaceholderSubtext')}</p>
             </div>
           </div>
         </section>
@@ -201,10 +206,10 @@ export default function ContactPage() {
                 <HelpCircle className="w-7 h-7 text-teal" />
               </div>
               <h2 className="text-h2 mb-4">
-                Questions Fréquentes
+                {tContact('faq.title')}
               </h2>
               <p className="text-body text-lg">
-                Trouvez rapidement les réponses à vos questions
+                {tContact('faq.subtitle')}
               </p>
             </div>
 
@@ -212,11 +217,11 @@ export default function ContactPage() {
               {faq.map((item, index) => (
                 <div key={index} className="card hover:border-teal transition-colors">
                   <h3 className="text-h4 mb-3 flex items-start gap-2">
-                    <span className="text-teal flex-shrink-0">Q:</span>
+                    <span className="text-teal flex-shrink-0">{tCommon('question')}</span>
                     <span>{item.question}</span>
                   </h3>
                   <p className="text-body text-sm pl-6">
-                    <strong className="text-teal">R:</strong> {item.answer}
+                    <strong className="text-teal">{tCommon('answer')}</strong> {item.answer}
                   </p>
                 </div>
               ))}
@@ -224,7 +229,7 @@ export default function ContactPage() {
 
             <div className="mt-12 card bg-gray-100 border-gray-300 text-center">
               <p className="text-body text-lg mb-6">
-                Vous n'avez pas trouvé la réponse à votre question ?
+                {tContact('faq.notFound')}
               </p>
               <Button
                 variant="primary"
@@ -233,7 +238,7 @@ export default function ContactPage() {
                 iconPosition="left"
                 href="tel:0767080308"
               >
-                Appelez-nous : 076 708 03 08
+                {tContact('faq.callUs')}
               </Button>
             </div>
           </div>

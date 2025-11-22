@@ -3,27 +3,30 @@
     "home": "Startseite",
     "services": "Dienstleistungen",
     "atelier": "Werkstatt",
-    "contact": "Kontakt"
+    "contact": "Kontakt",
+    "phone": "076 708 03 08"
   },
   "cta": {
-    "seeRates": "Preise ansehen",
-    "requestDiagnostic": "Diagnose anfordern",
-    "callUs": "Rufen Sie uns an",
-    "findUs": "Finden Sie uns",
-    "requestQuote": "Angebot anfordern",
+    "call": "Anrufen",
+    "quote": "Kostenloser Kostenvoranschlag",
     "learnMore": "Mehr erfahren",
+    "visitUs": "Besuchen Sie die Werkstatt",
     "contactUs": "Kontaktieren Sie uns",
-    "ourServices": "Unsere Dienstleistungen",
-    "goToServices": "Zu den Dienstleistungen",
-    "viewAtelier": "Werkstatt ansehen",
+    "seeRates": "Preise ansehen",
+    "findUs": "Finden Sie uns",
+    "requestDiagnostic": "Diagnose anfordern",
+    "contactB2B": "Kontakt für B2B-Angebot",
     "sendMessage": "Nachricht senden",
-    "phone": "076 708 03 08"
+    "sending": "Senden...",
+    "openGoogleMaps": "In Google Maps öffnen"
   },
   "common": {
     "from": "Ab",
     "step": "SCHRITT",
     "whatYouGet": "Was Sie erhalten:",
-    "skills": "Kompetenzen"
+    "skills": "Kompetenzen",
+    "question": "F:",
+    "answer": "A:"
   },
   "home": {
     "hero": {
@@ -32,6 +35,8 @@
       "badge3": "Direkter Kontakt",
       "title": "Schnelle Reparatur in Savièse",
       "subtitle": "Reparatur von Maschinen in 48 Stunden, nicht 3 Wochen. Ihr lokaler Mechaniker-Experte im Wallis.",
+      "location": "Savièse, Wallis",
+      "photoPlaceholder": "Werkstattfoto folgt",
       "ctaPrimary": "076 708 03 08",
       "ctaSecondary": "Unsere Dienstleistungen"
     },
@@ -53,8 +58,8 @@
     },
     "why": {
       "title": "Warum Mecaval wählen",
-      "subtitle": "Ihre Garantie für qualitativ hochwertige Reparaturen",
-      "rapid": {
+      "subtitle": "Was uns von der Konkurrenz unterscheidet",
+      "fast": {
         "title": "Schneller Service",
         "description": "48-Stunden-Frist vs. 2-3 Wochen bei der Konkurrenz"
       },
@@ -62,14 +67,18 @@
         "title": "Garantierte Qualität",
         "description": "Unser Unternehmen, unser Ruf. Kein desinteressiertes Personal."
       },
-      "contact": {
+      "direct": {
         "title": "Direkter Kontakt",
         "description": "Sprechen Sie direkt mit Ihrem Mechaniker, ohne Vermittler"
       },
-      "norms": {
-        "title": "Elektrische Normen",
-        "description": "Zertifizierung mit spezialisierter Maschine. Garantierte Sicherheit."
+      "certified": {
+        "title": "Zertifizierte Normen",
+        "description": "Kontrollmaschine für elektrische Normen zur vollständigen Zertifizierung"
       }
+    },
+    "cta": {
+      "title": "Benötigen Sie eine schnelle Reparatur?",
+      "subtitle": "Besuchen Sie uns in der Werkstatt in Savièse"
     },
     "zone": {
       "title": "Einsatzgebiet",
@@ -403,21 +412,12 @@
       "subtitle": "Wir sind hier, um Ihnen zu helfen. Rufen Sie an, schreiben Sie oder besuchen Sie uns!"
     },
     "cards": {
-      "phone": {
-        "title": "Telefonieren Sie uns",
-        "description": "Schnellste und direkteste Kontaktmethode",
-        "action": "076 708 03 08"
-      },
-      "email": {
-        "title": "Schreiben Sie uns",
-        "description": "Wir antworten innerhalb von 24 Stunden",
-        "action": "info@mecaval.ch"
-      },
-      "visit": {
-        "title": "Besuchen Sie uns",
-        "description": "Kommen Sie direkt zur Werkstatt",
-        "action": "Route planen"
-      }
+      "phone": "Telefon",
+      "phoneHours": "Mo-Sa • Direktanruf",
+      "email": "E-Mail",
+      "emailResponse": "Antwort innerhalb 24h",
+      "whatsapp": "WhatsApp",
+      "whatsappQuick": "Schnelle Nachricht"
     },
     "form": {
       "title": "Kontaktformular",
@@ -455,26 +455,30 @@
     },
     "location": {
       "title": "Unsere Werkstatt",
-      "address": "Mecaval",
-      "street": "Route de ...",
-      "city": "1965 Savièse",
-      "country": "Schweiz",
-      "directions": "Route planen"
+      "name": "Mecaval",
+      "addressLine1": "[Vollständige Adresse]",
+      "addressLine2": "1965 Savièse",
+      "addressLine3": "Wallis, Schweiz",
+      "mapPlaceholder": "Google Maps zu integrieren",
+      "mapPlaceholderSubtext": "Genaue Koordinaten festzulegen"
     },
     "faq": {
       "title": "Häufig gestellte Fragen",
+      "subtitle": "Finden Sie schnell Antworten auf Ihre Fragen",
       "q1": "Wie lange dauert eine Reparatur?",
       "a1": "Die meisten Reparaturen werden innerhalb von 48 Stunden durchgeführt. Bei speziellen Teilen kann es etwas länger dauern, wir informieren Sie.",
       "q2": "Ist die Diagnose kostenpflichtig?",
       "a2": "Die professionelle Diagnose kostet X CHF, wird aber bei Reparatur abgezogen.",
-      "q3": "Reparieren Sie alle Marken?",
-      "a3": "Ja, wir reparieren alle Marken von Elektro- und Thermikmaschinen sowie alle Fahrradtypen.",
-      "q4": "Bieten Sie einen Heimservice an?",
-      "a4": "Ja, wir können Ihre Maschine abholen und liefern. Kontaktieren Sie uns für weitere Informationen.",
-      "q5": "Wird eine Garantie auf Reparaturen gewährt?",
-      "a5": "Ja, alle unsere Reparaturen sind garantiert. Details im detaillierten Kostenvoranschlag.",
-      "q6": "Wie erhalte ich einen Kostenvoranschlag?",
-      "a6": "Rufen Sie uns an oder verwenden Sie das Kontaktformular. Wir werden Ihnen nach der Diagnose einen detaillierten Kostenvoranschlag zusenden."
+      "q3": "Ist ein Termin erforderlich?",
+      "a3": "Nein, Sie können während der Öffnungszeiten direkt zur Werkstatt kommen. Für eine gründliche Diagnose empfehlen wir einen Anruf im Voraus.",
+      "q4": "Bieten Sie einen Abhol-Service an?",
+      "a4": "Ja, wir können Ihre Maschine abholen und liefern je nach Region. Kontaktieren Sie uns für Modalitäten und Preise.",
+      "q5": "Welche Zahlungsmittel akzeptieren Sie?",
+      "a5": "Wir akzeptieren Barzahlung, Bankkarte und TWINT.",
+      "q6": "Gibt es eine Garantie auf Reparaturen?",
+      "a6": "Ja, alle unsere Reparaturen sind garantiert. Die Dauer hängt von der Art der Intervention ab. Details auf Ihrer Rechnung.",
+      "notFound": "Sie haben die Antwort auf Ihre Frage nicht gefunden?",
+      "callUs": "Rufen Sie uns an: 076 708 03 08"
     }
   },
   "footer": {
