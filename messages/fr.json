@@ -1,0 +1,76 @@
+{
+  "nav": {
+    "home": "Accueil",
+    "services": "Services",
+    "atelier": "Atelier",
+    "contact": "Contact",
+    "phone": "076 708 03 08"
+  },
+  "cta": {
+    "call": "Appeler",
+    "quote": "Devis gratuit",
+    "learnMore": "En savoir plus",
+    "visitUs": "Passer à l'atelier",
+    "contactUs": "Nous contacter"
+  },
+  "home": {
+    "hero": {
+      "title": "Votre machine réparée en 48h, pas en 3 semaines",
+      "subtitle": "Contact direct avec votre réparateur",
+      "location": "Savièse, Valais",
+      "badge1": "48h max",
+      "badge2": "Normes certifiées",
+      "badge3": "Prix transparents"
+    },
+    "pyramid": {
+      "level1": "FIABILITÉ",
+      "level2": "RAPIDITÉ 48H",
+      "level3": "EXPERTISE TECHNIQUE",
+      "level4": "NORMES CERTIFIÉES"
+    },
+    "services": {
+      "title": "Nos Services de Réparation",
+      "electric": {
+        "title": "Machines Électriques",
+        "description": "Moteurs, normes, charbons, électronique"
+      },
+      "thermal": {
+        "title": "Machines Thermiques",
+        "description": "Tondeuses, démarrage, entretien complet"
+      },
+      "bikes": {
+        "title": "Vélos & E-bikes",
+        "description": "Entretien et réparations tous types"
+      }
+    },
+    "why": {
+      "title": "Pourquoi nous choisir",
+      "fast": {
+        "title": "Service RAPIDE",
+        "description": "Délai 2-3 jours maximum, pas 2-3 semaines comme ailleurs"
+      },
+      "quality": {
+        "title": "Qualité garantie",
+        "description": "Notre entreprise, notre réputation. Pas d'employés désintéressés."
+      },
+      "direct": {
+        "title": "Contact direct",
+        "description": "Vous parlez directement avec le réparateur, aucun intermédiaire"
+      },
+      "certified": {
+        "title": "Machines aux normes",
+        "description": "Machine de contrôle électrique pour certification complète"
+      }
+    },
+    "zone": {
+      "title": "Zone d'intervention",
+      "subtitle": "Savièse et région - Valais romand et germanophone"
+    }
+  },
+  "footer": {
+    "address": "Savièse, Valais, Suisse",
+    "hours": "Ouvert du lundi au samedi",
+    "copyright": "Mecaval. Tous droits réservés.",
+    "legal": "Mentions légales"
+  }
+}

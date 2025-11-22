@@ -1,0 +1,76 @@
+{
+  "nav": {
+    "home": "Startseite",
+    "services": "Dienstleistungen",
+    "atelier": "Werkstatt",
+    "contact": "Kontakt",
+    "phone": "076 708 03 08"
+  },
+  "cta": {
+    "call": "Anrufen",
+    "quote": "Kostenlose Offerte",
+    "learnMore": "Mehr erfahren",
+    "visitUs": "Werkstatt besuchen",
+    "contactUs": "Kontaktieren Sie uns"
+  },
+  "home": {
+    "hero": {
+      "title": "Ihre Maschine in 48h repariert, nicht in 3 Wochen",
+      "subtitle": "Direkter Kontakt mit Ihrem Reparateur",
+      "location": "Savièse, Wallis",
+      "badge1": "Max. 48h",
+      "badge2": "Zertifizierte Normen",
+      "badge3": "Transparente Preise"
+    },
+    "pyramid": {
+      "level1": "ZUVERLÄSSIGKEIT",
+      "level2": "SCHNELLIGKEIT 48H",
+      "level3": "TECHNISCHES FACHWISSEN",
+      "level4": "ZERTIFIZIERTE NORMEN"
+    },
+    "services": {
+      "title": "Unsere Reparaturdienstleistungen",
+      "electric": {
+        "title": "Elektrische Maschinen",
+        "description": "Motoren, Normen, Kohlebürsten, Elektronik"
+      },
+      "thermal": {
+        "title": "Thermische Maschinen",
+        "description": "Rasenmäher, Start, komplette Wartung"
+      },
+      "bikes": {
+        "title": "Fahrräder & E-Bikes",
+        "description": "Wartung und Reparaturen aller Typen"
+      }
+    },
+    "why": {
+      "title": "Warum uns wählen",
+      "fast": {
+        "title": "SCHNELLER Service",
+        "description": "Lieferzeit 2-3 Tage maximal, nicht 2-3 Wochen wie anderswo"
+      },
+      "quality": {
+        "title": "Garantierte Qualität",
+        "description": "Unser Unternehmen, unser Ruf. Keine desinteressierten Angestellten."
+      },
+      "direct": {
+        "title": "Direkter Kontakt",
+        "description": "Sie sprechen direkt mit dem Reparateur, kein Mittelsmann"
+      },
+      "certified": {
+        "title": "Normgerechte Maschinen",
+        "description": "Elektrische Prüfmaschine für vollständige Zertifizierung"
+      }
+    },
+    "zone": {
+      "title": "Einsatzgebiet",
+      "subtitle": "Savièse und Region - Deutsch- und französischsprachiges Wallis"
+    }
+  },
+  "footer": {
+    "address": "Savièse, Wallis, Schweiz",
+    "hours": "Geöffnet von Montag bis Samstag",
+    "copyright": "Mecaval. Alle Rechte vorbehalten.",
+    "legal": "Rechtliche Hinweise"
+  }
+}
