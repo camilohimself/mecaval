@@ -13,11 +13,13 @@ export default function HomePage() {
       <Header />
       <main>
 
-        {/* Hero Section - Clean & Professional */}
-        <section className="section border-b relative overflow-hidden animate-fadeIn">
-          {/* Background gradient - TRÈS subtil avec couleurs Mecaval */}
-          <div className="absolute inset-0 pointer-events-none">
-            <div className="absolute inset-0 bg-gradient-to-br from-teal-light/15 via-white to-rouge-light/10" />
+        {/* Hero Section - Premium Teal Gradient */}
+        <section className="section border-b relative overflow-hidden">
+          {/* Premium Teal gradient background with mesh */}
+          <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-teal-dark via-teal to-teal-dark">
+            <div className="absolute inset-0" style={{
+              background: 'radial-gradient(at 40% 20%, rgba(255, 255, 255, 0.1) 0px, transparent 50%), radial-gradient(at 80% 0%, rgba(214, 59, 75, 0.15) 0px, transparent 50%), radial-gradient(at 0% 80%, rgba(255, 255, 255, 0.08) 0px, transparent 50%)'
+            }} />
           </div>
 
           <div className="container relative z-10">
@@ -27,60 +29,56 @@ export default function HomePage() {
               <div className="lg:col-span-7 space-y-8 text-center lg:text-left">
 
                 {/* Location Badge */}
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-teal-light text-teal-dark text-sm font-semibold rounded-full border border-teal animate-slideUp">
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm text-white text-sm font-semibold rounded-full border border-white/20 animate-slideUp">
                   <MapPin className="w-4 h-4" />
                   <span>{t('hero.location')}</span>
                 </div>
 
-                {/* Hero Title */}
-                <div className="space-y-4 animate-slideUp animation-delay-100">
-                  <h1 className="text-display text-balance">
+                {/* Hero Title - BIGGER, BOLDER */}
+                <div className="space-y-6 animate-slideUp animation-delay-100">
+                  <h1 className="text-6xl md:text-7xl lg:text-8xl font-extrabold text-white leading-none tracking-tight text-balance">
                     {t('hero.title')}
                   </h1>
-                  <p className="text-body text-xl max-w-xl mx-auto lg:mx-0">
+                  <p className="text-xl md:text-2xl text-gray-300 max-w-xl mx-auto lg:mx-0 leading-relaxed">
                     {t('hero.subtitle')}
                   </p>
                 </div>
 
-                {/* CTAs */}
+                {/* CTAs - Premium Gradient */}
                 <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-slideUp animation-delay-200">
-                  <Button
-                    variant="primary"
-                    size="lg"
-                    icon={Phone}
-                    iconPosition="left"
+                  <a
                     href="tel:0767080308"
+                    className="btn btn-lg btn-gradient animate-pulse-glow inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-semibold rounded-lg"
                   >
-                    076 708 03 08
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    icon={ArrowRight}
-                    iconPosition="right"
+                    <Phone className="w-5 h-5" />
+                    <span>076 708 03 08</span>
+                  </a>
+                  <a
                     href="#contact"
+                    className="btn btn-lg bg-white/10 backdrop-blur-sm text-white border-2 border-white/20 hover:bg-white/20 hover:border-white/30 transition-all inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-semibold rounded-lg"
                   >
-                    {tCta('quote')}
-                  </Button>
+                    <span>{tCta('quote')}</span>
+                    <ArrowRight className="w-5 h-5" />
+                  </a>
                 </div>
 
-                {/* Trust Indicators - Clean Grid */}
+                {/* Trust Indicators - White on dark */}
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 pt-4 animate-slideUp animation-delay-300">
                   <div className="flex flex-col gap-1">
-                    <div className="flex items-center gap-2 text-gray-900">
-                      <CheckCircle className="w-5 h-5 text-teal" />
+                    <div className="flex items-center gap-2 text-white">
+                      <CheckCircle className="w-5 h-5 text-green-400" />
                       <span className="font-semibold text-sm">{t('hero.badge1')}</span>
                     </div>
                   </div>
                   <div className="flex flex-col gap-1">
-                    <div className="flex items-center gap-2 text-gray-900">
-                      <Award className="w-5 h-5 text-teal" />
+                    <div className="flex items-center gap-2 text-white">
+                      <Award className="w-5 h-5 text-yellow-400" />
                       <span className="font-semibold text-sm">{t('hero.badge2')}</span>
                     </div>
                   </div>
                   <div className="flex flex-col gap-1">
-                    <div className="flex items-center gap-2 text-gray-900">
-                      <Clock className="w-5 h-5 text-teal" />
+                    <div className="flex items-center gap-2 text-white">
+                      <Clock className="w-5 h-5 text-blue-400" />
                       <span className="font-semibold text-sm">{t('hero.badge3')}</span>
                     </div>
                   </div>
@@ -300,31 +298,35 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* CTA Final Section - Clean & Centered */}
-        <section className="section bg-gray-900 text-white">
-          <div className="container">
+        {/* CTA Final Section - Premium Teal Gradient */}
+        <section className="section relative overflow-hidden">
+          {/* Teal gradient background with mesh */}
+          <div className="absolute inset-0 bg-gradient-to-br from-teal-dark via-teal to-teal-dark">
+            <div className="absolute inset-0" style={{
+              background: 'radial-gradient(at 40% 20%, rgba(255, 255, 255, 0.1) 0px, transparent 50%), radial-gradient(at 80% 80%, rgba(214, 59, 75, 0.15) 0px, transparent 50%)'
+            }} />
+          </div>
 
-            <div className="max-w-2xl mx-auto text-center space-y-8">
-              <h2 className="text-h2">
+          <div className="container relative z-10">
+            <div className="max-w-3xl mx-auto text-center space-y-10">
+              <h2 className="text-5xl md:text-6xl font-extrabold text-white leading-tight">
                 {t('cta.title')}
               </h2>
-              <p className="text-lg text-gray-300">
+              <p className="text-xl text-gray-300 leading-relaxed">
                 {tCta('visitUs')}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button
-                  variant="primary"
-                  size="lg"
-                  icon={Phone}
-                  iconPosition="left"
+                <a
                   href="tel:0767080308"
+                  className="btn btn-lg btn-gradient animate-pulse-glow inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-semibold rounded-lg"
                 >
-                  076 708 03 08
-                </Button>
+                  <Phone className="w-5 h-5" />
+                  <span>076 708 03 08</span>
+                </a>
                 <a
                   href="/contact"
-                  className="btn btn-lg btn-outline-teal bg-white text-gray-900 border-white hover:bg-gray-100"
+                  className="btn btn-lg bg-white text-gray-900 hover:bg-gray-100 transition-all inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-semibold rounded-lg"
                 >
                   <span>{tCta('contactUs')}</span>
                   <ArrowRight className="w-5 h-5" />

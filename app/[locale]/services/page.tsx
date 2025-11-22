@@ -135,39 +135,54 @@ export default function ServicesPage() {
       <Header />
       <main>
 
-        {/* Hero Section - Ultra Minimal */}
-        <section className="section border-b animate-fadeIn">
-          <div className="container text-center max-w-4xl mx-auto space-y-8">
+        {/* Hero Section - Premium Rouge Gradient */}
+        <section className="section border-b relative overflow-hidden">
+          {/* Premium Rouge gradient background with mesh */}
+          <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-rouge-dark via-rouge to-rouge-dark">
+            <div className="absolute inset-0" style={{
+              background: 'radial-gradient(at 40% 20%, rgba(255, 255, 255, 0.1) 0px, transparent 50%), radial-gradient(at 80% 0%, rgba(37, 116, 129, 0.15) 0px, transparent 50%), radial-gradient(at 0% 80%, rgba(255, 255, 255, 0.08) 0px, transparent 50%)'
+            }} />
+          </div>
+
+          <div className="container relative z-10 text-center max-w-4xl mx-auto space-y-8">
 
             {/* Titre seul */}
-            <h1 className="text-display animate-slideUp">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-extrabold text-white leading-none tracking-tight text-balance animate-slideUp">
               {tServices('hero.title')}
             </h1>
 
             {/* Badges */}
             <div className="flex flex-wrap justify-center gap-3 animate-slideUp animation-delay-100">
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 border border-gray-300 rounded-full">
-                <Zap className="w-4 h-4 text-rouge" />
-                <span className="text-sm font-medium text-gray-900">{tServices('hero.badge1')}</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm text-white border border-white/20 rounded-full">
+                <Zap className="w-4 h-4" />
+                <span className="text-sm font-semibold">{tServices('hero.badge1')}</span>
               </div>
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 border border-gray-300 rounded-full">
-                <Shield className="w-4 h-4 text-teal" />
-                <span className="text-sm font-medium text-gray-900">{tServices('hero.badge2')}</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm text-white border border-white/20 rounded-full">
+                <Shield className="w-4 h-4" />
+                <span className="text-sm font-semibold">{tServices('hero.badge2')}</span>
               </div>
-              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 border border-gray-300 rounded-full">
-                <Target className="w-4 h-4 text-teal" />
-                <span className="text-sm font-medium text-gray-900">{tServices('hero.badge3')}</span>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/10 backdrop-blur-sm text-white border border-white/20 rounded-full">
+                <Target className="w-4 h-4" />
+                <span className="text-sm font-semibold">{tServices('hero.badge3')}</span>
               </div>
             </div>
 
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slideUp animation-delay-200">
-              <Button variant="primary" size="lg" icon={Phone} iconPosition="left" href="tel:0767080308">
-                076 708 03 08
-              </Button>
-              <Button variant="outline" size="lg" icon={ArrowRight} iconPosition="right" href="#pricing">
-                {tCta('seeRates')}
-              </Button>
+              <a
+                href="tel:0767080308"
+                className="btn btn-lg bg-white text-rouge hover:bg-gray-100 transition-all inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-semibold rounded-lg"
+              >
+                <Phone className="w-5 h-5" />
+                <span>076 708 03 08</span>
+              </a>
+              <a
+                href="#pricing"
+                className="btn btn-lg bg-white/10 backdrop-blur-sm text-white border-2 border-white/20 hover:bg-white/20 hover:border-white/30 transition-all inline-flex items-center justify-center gap-2 px-8 py-4 text-lg font-semibold rounded-lg"
+              >
+                <span>{tCta('seeRates')}</span>
+                <ArrowRight className="w-5 h-5" />
+              </a>
             </div>
 
           </div>

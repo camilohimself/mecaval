@@ -133,13 +133,20 @@ export default function AtelierPage() {
       <Header />
       <main>
 
-        {/* Hero Section */}
-        <section className="section border-b bg-gray-50 animate-fadeIn">
-          <div className="container text-center">
-            <h1 className="text-display mb-4 animate-slideUp">
+        {/* Hero Section - Premium Teal Gradient */}
+        <section className="section border-b relative overflow-hidden">
+          {/* Premium Teal gradient background with mesh */}
+          <div className="absolute inset-0 pointer-events-none bg-gradient-to-br from-teal-dark via-teal to-teal-dark">
+            <div className="absolute inset-0" style={{
+              background: 'radial-gradient(at 40% 20%, rgba(255, 255, 255, 0.1) 0px, transparent 50%), radial-gradient(at 80% 0%, rgba(214, 59, 75, 0.15) 0px, transparent 50%), radial-gradient(at 0% 80%, rgba(255, 255, 255, 0.08) 0px, transparent 50%)'
+            }} />
+          </div>
+
+          <div className="container relative z-10 text-center">
+            <h1 className="text-6xl md:text-7xl lg:text-8xl font-extrabold text-white leading-none tracking-tight text-balance mb-6 animate-slideUp">
               {tAtelier('hero.title')}
             </h1>
-            <p className="text-body text-xl max-w-2xl mx-auto animate-slideUp animation-delay-100">
+            <p className="text-xl md:text-2xl text-gray-300 max-w-2xl mx-auto leading-relaxed animate-slideUp animation-delay-100">
               {tAtelier('hero.subtitle')}
             </p>
           </div>
