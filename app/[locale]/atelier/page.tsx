@@ -3,6 +3,8 @@ import { Phone, CheckCircle, Clock, FileText, Wrench, Award, User, Heart, Target
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Button from '@/components/ui/Button';
+import AtelierGallery from '@/components/ui/AtelierGallery';
+import Testimonials from '@/components/ui/Testimonials';
 
 export default function AtelierPage() {
   const tCta = useTranslations('cta');
@@ -260,6 +262,9 @@ export default function AtelierPage() {
           </div>
         </section>
 
+        {/* Gallery Atelier */}
+        <AtelierGallery />
+
         {/* Nos Valeurs */}
         <section className="section">
           <div className="container">
@@ -292,6 +297,9 @@ export default function AtelierPage() {
             </div>
           </div>
         </section>
+
+        {/* Testimonials Clients */}
+        <Testimonials />
 
         {/* Notre Engagement */}
         <section className="section bg-gray-900 text-white">
