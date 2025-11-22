@@ -97,12 +97,12 @@ export default function HomePage() {
 
         {/* Services Section - Grid Professional */}
         <section className="section bg-gray">
-          <div className="container">
+          <div className="container text-center">
 
             {/* Section Header */}
-            <div className="text-center max-w-2xl mx-auto mb-12">
+            <div className="max-w-2xl mx-auto mb-12">
               <h2 className="text-h2 mb-4">
-                {t('services.title')}
+                Nos services de réparation
               </h2>
               <p className="text-body text-lg">
                 Expertise complète en réparation de machines et cycles
@@ -110,7 +110,7 @@ export default function HomePage() {
             </div>
 
             {/* Services Grid */}
-            <div className="grid-3">
+            <div className="grid-3 text-left">
 
               {/* Service 1 - Machines Électriques */}
               <div className="card card-elevated group cursor-pointer">
@@ -297,9 +297,9 @@ export default function HomePage() {
 
         {/* CTA Final Section - Clean & Centered */}
         <section className="section bg-gray-900 text-white">
-          <div className="container text-center">
+          <div className="container">
 
-            <div className="max-w-2xl mx-auto space-y-8">
+            <div className="max-w-2xl mx-auto text-center space-y-8">
               <h2 className="text-h2">
                 Besoin d'une réparation rapide ?
               </h2>
