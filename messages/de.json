@@ -3,74 +3,494 @@
     "home": "Startseite",
     "services": "Dienstleistungen",
     "atelier": "Werkstatt",
-    "contact": "Kontakt",
-    "phone": "076 708 03 08"
+    "contact": "Kontakt"
   },
   "cta": {
-    "call": "Anrufen",
-    "quote": "Kostenlose Offerte",
+    "seeRates": "Preise ansehen",
+    "requestDiagnostic": "Diagnose anfordern",
+    "callUs": "Rufen Sie uns an",
+    "findUs": "Finden Sie uns",
+    "requestQuote": "Angebot anfordern",
     "learnMore": "Mehr erfahren",
-    "visitUs": "Werkstatt besuchen",
-    "contactUs": "Kontaktieren Sie uns"
+    "contactUs": "Kontaktieren Sie uns",
+    "ourServices": "Unsere Dienstleistungen",
+    "goToServices": "Zu den Dienstleistungen",
+    "viewAtelier": "Werkstatt ansehen",
+    "sendMessage": "Nachricht senden",
+    "phone": "076 708 03 08"
+  },
+  "common": {
+    "from": "Ab",
+    "step": "SCHRITT",
+    "whatYouGet": "Was Sie erhalten:",
+    "skills": "Kompetenzen"
   },
   "home": {
     "hero": {
-      "title": "Ihre Maschine in 48h repariert, nicht in 3 Wochen",
-      "subtitle": "Direkter Kontakt mit Ihrem Reparateur",
-      "location": "Savièse, Wallis",
-      "badge1": "Max. 48h",
+      "badge1": "48h garantiert",
       "badge2": "Zertifizierte Normen",
-      "badge3": "Transparente Preise"
-    },
-    "pyramid": {
-      "level1": "ZUVERLÄSSIGKEIT",
-      "level2": "SCHNELLIGKEIT 48H",
-      "level3": "TECHNISCHES FACHWISSEN",
-      "level4": "ZERTIFIZIERTE NORMEN"
+      "badge3": "Direkter Kontakt",
+      "title": "Schnelle Reparatur in Savièse",
+      "subtitle": "Reparatur von Maschinen in 48 Stunden, nicht 3 Wochen. Ihr lokaler Mechaniker-Experte im Wallis.",
+      "ctaPrimary": "076 708 03 08",
+      "ctaSecondary": "Unsere Dienstleistungen"
     },
     "services": {
-      "title": "Unsere Reparaturdienstleistungen",
+      "title": "Unsere Dienstleistungen",
+      "subtitle": "Vollständige Reparatur von Elektro- und Thermikmaschinen, Fahrrädern und E-Bikes",
       "electric": {
         "title": "Elektrische Maschinen",
-        "description": "Motoren, Normen, Kohlebürsten, Elektronik"
+        "description": "Diagnose und Reparatur von Elektromotoren, defekten Kabeln, Elektronik. Zertifizierung nach elektrischen Normen."
       },
       "thermal": {
         "title": "Thermische Maschinen",
-        "description": "Rasenmäher, Start, komplette Wartung"
+        "description": "Startprobleme, komplette Wartung, Filter, Vergaser. Vorbeugende Wartung für optimale Lebensdauer."
       },
       "bikes": {
         "title": "Fahrräder & E-Bikes",
-        "description": "Wartung und Reparaturen aller Typen"
+        "description": "Wartung und Reparatur aller Fahrradtypen. Speedped-Partnerschaft für maßgeschneiderte Bestellungen."
       }
     },
     "why": {
-      "title": "Warum uns wählen",
-      "fast": {
-        "title": "SCHNELLER Service",
-        "description": "Lieferzeit 2-3 Tage maximal, nicht 2-3 Wochen wie anderswo"
+      "title": "Warum Mecaval wählen",
+      "subtitle": "Ihre Garantie für qualitativ hochwertige Reparaturen",
+      "rapid": {
+        "title": "Schneller Service",
+        "description": "48-Stunden-Frist vs. 2-3 Wochen bei der Konkurrenz"
       },
       "quality": {
         "title": "Garantierte Qualität",
-        "description": "Unser Unternehmen, unser Ruf. Keine desinteressierten Angestellten."
+        "description": "Unser Unternehmen, unser Ruf. Kein desinteressiertes Personal."
       },
-      "direct": {
+      "contact": {
         "title": "Direkter Kontakt",
-        "description": "Sie sprechen direkt mit dem Reparateur, kein Mittelsmann"
+        "description": "Sprechen Sie direkt mit Ihrem Mechaniker, ohne Vermittler"
       },
-      "certified": {
-        "title": "Normgerechte Maschinen",
-        "description": "Elektrische Prüfmaschine für vollständige Zertifizierung"
+      "norms": {
+        "title": "Elektrische Normen",
+        "description": "Zertifizierung mit spezialisierter Maschine. Garantierte Sicherheit."
       }
     },
     "zone": {
       "title": "Einsatzgebiet",
-      "subtitle": "Savièse und Region - Deutsch- und französischsprachiges Wallis"
+      "subtitle": "Savièse und Region - Französisch- und deutschsprachiges Wallis",
+      "description": "Lokaler Service für das gesamte Wallis. Werkstattbesuche oder Reparaturen bei Ihnen zu Hause nach Vereinbarung."
+    },
+    "testimonials": {
+      "title": "Was unsere Kunden sagen",
+      "subtitle": "Echte Erfahrungsberichte zufriedener Kunden"
+    },
+    "cta": {
+      "title": "Benötigen Sie eine Reparatur?",
+      "subtitle": "Rufen Sie uns an oder besuchen Sie uns in der Werkstatt in Savièse",
+      "phone": "076 708 03 08",
+      "visit": "Besuchen Sie uns"
+    }
+  },
+  "services": {
+    "hero": {
+      "title": "Reparatur in 48 Stunden.",
+      "badge1": "48h garantiert",
+      "badge2": "Zertifizierte Normen",
+      "badge3": "Direkter Kontakt",
+      "subtitle": "Komplette Reparatur von Elektro- und Thermikmaschinen, Fahrrädern. Transparente Preise, garantierte Fristen, Normenkonformität.",
+      "ctaPrimary": "076 708 03 08",
+      "ctaSecondary": "Angebot anfordern"
+    },
+    "essential": {
+      "title": "Unsere drei wesentlichen Dienstleistungen",
+      "subtitle": "Reparatur, Wartung und Zertifizierung - Alles an einem Ort"
+    },
+    "electric": {
+      "title": "Elektrische Maschinen",
+      "badge": "DRINGEND",
+      "description": "Vollständige Reparatur + Zertifizierung nach elektrischen Normen",
+      "startingPrice": "50 CHF",
+      "feature1": "Professionelle Diagnose",
+      "feature2": "Reparatur aller Marken",
+      "feature3": "Konformitätsbescheinigung",
+      "feature4": "Garantie inbegriffen",
+      "issue1": "Durchgebrannte Motoren",
+      "issue2": "Defekte Kabel",
+      "issue3": "Kohlenersatz",
+      "issue4": "Elektronikprobleme",
+      "detail1": "Schnelle und präzise Diagnose",
+      "detail2": "Reparatur mit Qualitätsteilen",
+      "detail3": "Elektrische Normenkontrolle",
+      "detail4": "Tests vor Rückgabe"
+    },
+    "thermal": {
+      "title": "Thermische Maschinen",
+      "badge": "WARTUNG",
+      "description": "Probleme + vorbeugende Wartung",
+      "startingPrice": "70 CHF",
+      "feature1": "Startdiagnose",
+      "feature2": "Vollständige Wartung",
+      "feature3": "Filter + Vergaser",
+      "feature4": "Vorbeugende Wartung",
+      "issue1": "Startprobleme",
+      "issue2": "Unregelmäßiger Betrieb",
+      "issue3": "Mangelnde Wartung",
+      "issue4": "Vergaserprobleme",
+      "detail1": "Komplette Diagnose",
+      "detail2": "Filter-Service",
+      "detail3": "Vergaserreinigung",
+      "detail4": "Funktionstests"
+    },
+    "bikes": {
+      "title": "Fahrräder & E-Bikes",
+      "badge": "EXPERTE",
+      "description": "Wartung + Speedped-Partnerschaft",
+      "startingPrice": "40 CHF",
+      "feature1": "Alle Fahrradtypen",
+      "feature2": "Komplette Wartung",
+      "feature3": "Speedped-Partner",
+      "feature4": "Maßgeschneiderte Bestellung",
+      "service1": "Komplette Wartung",
+      "service2": "Bremsreparatur",
+      "service3": "Gangschaltung",
+      "service4": "E-Bike-Elektronik",
+      "detail1": "Wartung aller Fahrräder",
+      "detail2": "Präzise Reparaturen",
+      "detail3": "Speedped-Bestellung",
+      "detail4": "Fachkundiger Rat"
+    },
+    "callout": {
+      "badge": "SICHERHEIT",
+      "title": "Elektrische Normenkontrolle",
+      "subtitle": "Ihre Maschine entspricht den Schweizer elektrischen Normen",
+      "description": "Wir besitzen eine spezialisierte Maschine für den elektrischen Normentest. Jede reparierte Maschine wird zertifiziert und entspricht den aktuellen Normen.",
+      "benefit1": "Konformitätsbescheinigung",
+      "benefit2": "Garantierte Sicherheit",
+      "benefit3": "Vollständige Tests",
+      "benefit4": "Schweizer Normen"
+    },
+    "metrics": {
+      "title": "Mecaval-Zahlen",
+      "metric1": {
+        "value": "48h",
+        "label": "Garantierte maximale Frist",
+        "detail": "vs. 2-3 Wochen bei der Konkurrenz"
+      },
+      "metric2": {
+        "value": "100%",
+        "label": "Getestete Maschinen",
+        "detail": "Elektrischer Test + Funktionskontrolle"
+      },
+      "metric3": {
+        "value": "0 CHF",
+        "label": "Versteckte Kosten",
+        "detail": "Detaillierter Kostenvoranschlag vor Intervention"
+      }
+    },
+    "pricing": {
+      "title": "Transparente Preise",
+      "subtitle": "Detaillierte Kostenvoranschläge vor jeder Intervention",
+      "diagnostic": {
+        "title": "Professionelle Diagnose",
+        "price": "X CHF",
+        "refund": "(abgezogen bei Reparatur)",
+        "item1": "Präzise Pannenanalyse",
+        "item2": "Detaillierter schriftlicher Kostenvoranschlag",
+        "item3": "Klare Problemerklärung",
+        "item4": "Empfehlungen",
+        "duration": "30-60 Min."
+      },
+      "repair": {
+        "title": "Qualitätsreparatur",
+        "price": "Je nach Intervention",
+        "item1": "Qualitätsteile",
+        "item2": "Inklusive Arbeitszeit",
+        "item3": "Normenkontrolle",
+        "item4": "Garantie auf Reparatur",
+        "duration": "24-48h"
+      },
+      "certification": {
+        "title": "Elektrische Zertifizierung",
+        "price": "In Reparatur inbegriffen",
+        "item1": "Spezialisierte Maschine",
+        "item2": "Schweizer Normen",
+        "item3": "Offizielle Bescheinigung",
+        "item4": "Vollständige Tests",
+        "duration": "15-30 Min."
+      }
+    },
+    "b2b": {
+      "title": "Lösungen für Profis",
+      "subtitle": "Verträge und Prioritätsintervention für Unternehmen",
+      "description": "Auf Bau-, Baugewerbe- und Landschaftsgestaltungsberufe spezialisiert. Schneller Service, um Ihre Ausfallzeiten zu begrenzen.",
+      "contracts": {
+        "title": "Wartungsverträge",
+        "description": "Regelmäßige Wartung Ihrer Maschinen",
+        "benefit1": "Vorbeugende Wartung",
+        "benefit2": "Vorzugspreise",
+        "benefit3": "Garantierte Fristen"
+      },
+      "construction": {
+        "title": "Baugewerbe & BTP",
+        "description": "Prioritäre Reparatur von Bauwerkzeugen",
+        "benefit1": "Prioritäre Intervention",
+        "benefit2": "Service an 7 Tagen",
+        "benefit3": "Detaillierte Rechnung"
+      },
+      "landscaping": {
+        "title": "Grünpflege & Landschaft",
+        "description": "Wartung von Rasenmähern, Heckenscheren, Motorsägen",
+        "benefit1": "Saisonale Wartung",
+        "benefit2": "Materialausleihe",
+        "benefit3": "Fachkundiger Rat"
+      }
+    },
+    "cta": {
+      "title": "Benötigen Sie eine Reparatur?",
+      "subtitle": "Kontaktieren Sie uns für einen detaillierten Kostenvoranschlag",
+      "phone": "076 708 03 08",
+      "quote": "Angebot anfordern"
+    }
+  },
+  "atelier": {
+    "hero": {
+      "title": "Unsere Werkstatt",
+      "subtitle": "Fachwissen, Schnelligkeit und Proximität in Savièse"
+    },
+    "methodology": {
+      "title": "Unsere Methode in 5 Schritten",
+      "subtitle": "Transparenter und effizienter Prozess für eine erfolgreiche Reparatur",
+      "step1": {
+        "title": "KONTAKT",
+        "duration": "Sofort",
+        "description": "Sie rufen uns unter 076 708 03 08 an oder kommen direkt zur Werkstatt.",
+        "benefit1": "Sofortiger Empfang (kein Warten)",
+        "benefit2": "Kostenlose telefonische Beratung",
+        "benefit3": "Kostenloser Kostenvoranschlag ohne Verpflichtung"
+      },
+      "step2": {
+        "title": "DIAGNOSE",
+        "duration": "30-60 Min.",
+        "cost": "X CHF (abgezogen bei Reparatur)",
+        "description": "Professionelle Diagnose mit unseren spezialisierten Werkzeugen zur Identifizierung der genauen Panne.",
+        "benefit1": "Präzise Pannendiagnose",
+        "benefit2": "Detaillierter schriftlicher Kostenvoranschlag",
+        "benefit3": "Klare Problemerklärung"
+      },
+      "step3": {
+        "title": "REPARATUR",
+        "duration": "⚡ Maximal 48h",
+        "description": "Reparatur in unserer Werkstatt mit Qualitätsteilen. Vollständige Transparenz bei den Interventionen.",
+        "benefit1": "Garantierte Frist 48h (außer Spezialteile)",
+        "benefit2": "Zertifizierte Qualitätsteile",
+        "benefit3": "Fortschrittsinformation"
+      },
+      "step4": {
+        "title": "QUALITÄTSKONTROLLE",
+        "duration": "15-30 Min.",
+        "description": "Vollständige Tests und Kontrolle nach elektrischen Normen mit unserer spezialisierten Maschine.",
+        "benefit1": "Vollständige Funktionstests",
+        "benefit2": "Kontrolle elektrischer Normen",
+        "benefit3": "Konformitätsbescheinigung"
+      },
+      "step5": {
+        "title": "LIEFERUNG",
+        "duration": "Nach Ihren Wünschen",
+        "description": "Rücknahme Ihrer reparierten, sauberen und funktionsfähigen Maschine mit detaillierten Erklärungen.",
+        "benefit1": "Getestete und bereite Maschine",
+        "benefit2": "Detaillierte Rechnung + Bescheinigung",
+        "benefit3": "Garantie auf unsere Reparaturen"
+      }
+    },
+    "team": {
+      "title": "Das Mecaval-Team",
+      "subtitle": "Eine Familienwerkstatt zu Ihren Diensten",
+      "sylvain": {
+        "name": "Sylvain",
+        "role": "Mechaniker & Techniker",
+        "description": "Experte für die Reparatur von Elektro- und Thermikmaschinen. Sylvain repariert Ihre Werkzeuge mit Präzision und Leidenschaft.",
+        "skill1": "Elektromechanik",
+        "skill2": "Diagnose",
+        "skill3": "Normenkontrolle"
+      },
+      "cyrielle": {
+        "name": "Cyrielle",
+        "role": "Empfang & Verwaltung",
+        "description": "Cyrielle gewährleistet den Empfang, die Verwaltung und die Koordination der Interventionen.",
+        "skill1": "Kundenbeziehung",
+        "skill2": "Kostenvoranschlag",
+        "skill3": "Planung"
+      }
+    },
+    "gallery": {
+      "title": "Unsere Werkstatt in Bildern",
+      "subtitle": "Entdecken Sie unsere Arbeitsumgebung und professionelle Ausrüstung",
+      "image1Alt": "Mecaval-Werkstatt - Gesamtansicht",
+      "image2Alt": "Sylvain bei der Arbeit",
+      "image3Alt": "Maschine zur Kontrolle elektrischer Normen",
+      "image4Alt": "Reparatur von Elektromotor",
+      "image5Alt": "Organisierter Arbeitsbereich",
+      "image6Alt": "Professionelle Werkzeuge",
+      "note": "📸 Hinzuzufügende Fotos: Bilder in /public/images/ platzieren"
+    },
+    "values": {
+      "title": "Unsere Werte",
+      "subtitle": "Was den Mecaval-Unterschied ausmacht",
+      "proximity": {
+        "title": "Nähe & Lokaler Service",
+        "description": "Familienwerkstatt in Savièse. Direkter Kontakt mit Ihrem Mechaniker."
+      },
+      "speed": {
+        "title": "Schnelle Intervention",
+        "description": "Garantierte Frist 48h vs. 2-3 Wochen bei der Konkurrenz."
+      },
+      "quality": {
+        "title": "Qualität & Zuverlässigkeit",
+        "description": "Dauerhafte Reparaturen, Qualitätsteile, Zufriedenheit garantiert."
+      },
+      "transparency": {
+        "title": "Transparenz & Beratung",
+        "description": "Angezeigte Preise, detaillierte Kostenvoranschläge, ehrliche Beratung."
+      }
+    },
+    "testimonials": {
+      "title": "Was unsere Kunden sagen",
+      "subtitle": "Echte Erfahrungsberichte zufriedener Kunden",
+      "testimonial1Quote": "Schneller und professioneller Service. Mein Rasenmäher war in 2 Tagen wie neu. Sehr empfehlenswert!",
+      "testimonial1Author": "Jean-Pierre M.",
+      "testimonial1Location": "Sitten",
+      "testimonial1Service": "Rasenmäher-Reparatur",
+      "testimonial2Quote": "Ausgezeichneter Empfang und präzise Diagnose. Sylvain nahm sich Zeit, die Panne zu erklären. Ehrlicher Preis.",
+      "testimonial2Author": "Marie D.",
+      "testimonial2Location": "Savièse",
+      "testimonial2Service": "Maschinendiagnose",
+      "testimonial3Quote": "Endlich eine seriöse Werkstatt in der Region! Frist eingehalten und Maschine nach Normen zertifiziert. Perfekt.",
+      "testimonial3Author": "François R.",
+      "testimonial3Location": "Conthey",
+      "testimonial3Service": "Elektrische Zertifizierung",
+      "testimonial4Quote": "Direkter Kontakt mit dem Mechaniker, das ist so viel einfacher. Tadellose Arbeit an meinem E-Bike.",
+      "testimonial4Author": "Sophie L.",
+      "testimonial4Location": "Sitten",
+      "testimonial4Service": "E-Bike-Reparatur",
+      "testimonial5Quote": "Ausgezeichnetes Preis-Leistungs-Verhältnis. Kein Bedarf mehr, bis Pfefferlé zu gehen und 3 Wochen zu warten!",
+      "testimonial5Author": "Alain B.",
+      "testimonial5Location": "Savièse",
+      "testimonial5Service": "Maschinenwartung",
+      "note": "💬 Zu sammelnde Kundenmeinungen: Platzhalter durch echte Erfahrungsberichte ersetzen"
+    },
+    "commitment": {
+      "title": "Unser Qualitätsversprechen",
+      "metric1": "48h",
+      "metric1Label": "Maximale Frist",
+      "metric2": "100%",
+      "metric2Label": "Getestete Maschinen",
+      "metric3": "0",
+      "metric3Label": "Versteckte Kosten",
+      "promiseTitle": "Unser Versprechen",
+      "promise1": "Dauerhafte Reparaturen mit Qualitätsteilen",
+      "promise2": "Ehrliche und personalisierte Beratung",
+      "promise3": "Detaillierter Kostenvoranschlag vor Intervention",
+      "promise4": "Garantie auf unsere Reparaturen",
+      "promise5": "Direkter Kontakt mit dem Mechaniker",
+      "promise6": "Vollständige Transparenz bei den Preisen"
+    },
+    "cta": {
+      "title": "Besuchen Sie uns in der Werkstatt!",
+      "subtitle": "Savièse, Wallis • Geöffnet von Montag bis Samstag",
+      "phone": "076 708 03 08",
+      "findUs": "Finden Sie uns"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Kontaktieren Sie uns",
+      "subtitle": "Wir sind hier, um Ihnen zu helfen. Rufen Sie an, schreiben Sie oder besuchen Sie uns!"
+    },
+    "cards": {
+      "phone": {
+        "title": "Telefonieren Sie uns",
+        "description": "Schnellste und direkteste Kontaktmethode",
+        "action": "076 708 03 08"
+      },
+      "email": {
+        "title": "Schreiben Sie uns",
+        "description": "Wir antworten innerhalb von 24 Stunden",
+        "action": "info@mecaval.ch"
+      },
+      "visit": {
+        "title": "Besuchen Sie uns",
+        "description": "Kommen Sie direkt zur Werkstatt",
+        "action": "Route planen"
+      }
+    },
+    "form": {
+      "title": "Kontaktformular",
+      "subtitle": "Senden Sie uns eine Nachricht, wir antworten schnell",
+      "labelName": "Vor- und Nachname",
+      "placeholderName": "Max Mustermann",
+      "labelEmail": "E-Mail",
+      "placeholderEmail": "max@beispiel.ch",
+      "labelPhone": "Telefon",
+      "placeholderPhone": "076 123 45 67",
+      "labelMachine": "Maschinentyp",
+      "optionElectric": "Elektrische Maschine",
+      "optionThermal": "Thermische Maschine",
+      "optionBike": "Fahrrad / E-Bike",
+      "optionOther": "Sonstiges",
+      "labelMessage": "Nachricht",
+      "placeholderMessage": "Beschreiben Sie Ihr Problem oder Ihre Anfrage...",
+      "checkboxQuote": "Ich möchte einen Kostenvoranschlag erhalten",
+      "submit": "Nachricht senden",
+      "sending": "Wird gesendet...",
+      "successTitle": "Nachricht gesendet!",
+      "successMessage": "Wir werden uns so schnell wie möglich bei Ihnen melden.",
+      "errorTitle": "Fehler",
+      "errorMessage": "Beim Senden ist ein Fehler aufgetreten. Bitte versuchen Sie es später erneut."
+    },
+    "hours": {
+      "title": "Öffnungszeiten",
+      "weekdays": "Montag - Freitag",
+      "weekdaysHours": "08:00 - 12:00 | 13:30 - 18:00",
+      "saturday": "Samstag",
+      "saturdayHours": "08:00 - 12:00",
+      "sunday": "Sonntag",
+      "sundayHours": "Geschlossen",
+      "note": "📞 Für Notfälle rufen Sie bitte an"
+    },
+    "location": {
+      "title": "Unsere Werkstatt",
+      "address": "Mecaval",
+      "street": "Route de ...",
+      "city": "1965 Savièse",
+      "country": "Schweiz",
+      "directions": "Route planen"
+    },
+    "faq": {
+      "title": "Häufig gestellte Fragen",
+      "q1": "Wie lange dauert eine Reparatur?",
+      "a1": "Die meisten Reparaturen werden innerhalb von 48 Stunden durchgeführt. Bei speziellen Teilen kann es etwas länger dauern, wir informieren Sie.",
+      "q2": "Ist die Diagnose kostenpflichtig?",
+      "a2": "Die professionelle Diagnose kostet X CHF, wird aber bei Reparatur abgezogen.",
+      "q3": "Reparieren Sie alle Marken?",
+      "a3": "Ja, wir reparieren alle Marken von Elektro- und Thermikmaschinen sowie alle Fahrradtypen.",
+      "q4": "Bieten Sie einen Heimservice an?",
+      "a4": "Ja, wir können Ihre Maschine abholen und liefern. Kontaktieren Sie uns für weitere Informationen.",
+      "q5": "Wird eine Garantie auf Reparaturen gewährt?",
+      "a5": "Ja, alle unsere Reparaturen sind garantiert. Details im detaillierten Kostenvoranschlag.",
+      "q6": "Wie erhalte ich einen Kostenvoranschlag?",
+      "a6": "Rufen Sie uns an oder verwenden Sie das Kontaktformular. Wir werden Ihnen nach der Diagnose einen detaillierten Kostenvoranschlag zusenden."
     }
   },
   "footer": {
+    "tagline": "Ihr Reparaturexperte in Savièse",
     "address": "Savièse, Wallis, Schweiz",
-    "hours": "Geöffnet von Montag bis Samstag",
-    "copyright": "Mecaval. Alle Rechte vorbehalten.",
-    "legal": "Rechtliche Hinweise"
+    "phone": "076 708 03 08",
+    "email": "info@mecaval.ch",
+    "hours": "Mo-Fr: 08:00-18:00 | Sa: 08:00-12:00",
+    "quickLinks": "Schnellzugriff",
+    "services": "Dienstleistungen",
+    "legalLinks": "Rechtliches",
+    "privacy": "Datenschutz",
+    "terms": "AGB",
+    "legal": "Rechtliche Hinweise",
+    "copyright": "© 2025 Mecaval. Alle Rechte vorbehalten.",
+    "madeWith": "Erstellt mit",
+    "by": "von"
   }
 }

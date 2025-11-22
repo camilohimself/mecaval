@@ -1,4 +1,5 @@
 import { Quote } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 interface Testimonial {
   quote: string;
@@ -12,37 +13,39 @@ interface TestimonialsProps {
 }
 
 export default function Testimonials({ testimonials }: TestimonialsProps) {
-  // Placeholder testimonials - À remplacer avec vrais avis clients
+  const tAtelier = useTranslations('atelier.testimonials');
+
+  // Placeholder testimonials - Using translations
   const defaultTestimonials: Testimonial[] = [
     {
-      quote: "Service rapide et professionnel. Ma tondeuse est repartie comme neuve en 2 jours. Je recommande vivement !",
-      author: "Jean-Pierre M.",
-      location: "Sion",
-      service: "Réparation tondeuse"
+      quote: tAtelier('testimonial1Quote'),
+      author: tAtelier('testimonial1Author'),
+      location: tAtelier('testimonial1Location'),
+      service: tAtelier('testimonial1Service')
     },
     {
-      quote: "Excellent accueil et diagnostic précis. Sylvain a pris le temps d'expliquer la panne. Prix honnête.",
-      author: "Marie D.",
-      location: "Savièse",
-      service: "Diagnostic machine"
+      quote: tAtelier('testimonial2Quote'),
+      author: tAtelier('testimonial2Author'),
+      location: tAtelier('testimonial2Location'),
+      service: tAtelier('testimonial2Service')
     },
     {
-      quote: "Enfin un atelier sérieux dans la région ! Délai respecté et machine certifiée aux normes. Parfait.",
-      author: "François R.",
-      location: "Conthey",
-      service: "Certification électrique"
+      quote: tAtelier('testimonial3Quote'),
+      author: tAtelier('testimonial3Author'),
+      location: tAtelier('testimonial3Location'),
+      service: tAtelier('testimonial3Service')
     },
     {
-      quote: "Contact direct avec le réparateur, c'est tellement plus simple. Travail impeccable sur mon vélo électrique.",
-      author: "Sophie L.",
-      location: "Sion",
-      service: "Réparation VAE"
+      quote: tAtelier('testimonial4Quote'),
+      author: tAtelier('testimonial4Author'),
+      location: tAtelier('testimonial4Location'),
+      service: tAtelier('testimonial4Service')
     },
     {
-      quote: "Rapport qualité-prix excellent. Plus besoin d'aller jusqu'à Pfefferlé et attendre 3 semaines !",
-      author: "Alain B.",
-      location: "Savièse",
-      service: "Entretien machines"
+      quote: tAtelier('testimonial5Quote'),
+      author: tAtelier('testimonial5Author'),
+      location: tAtelier('testimonial5Location'),
+      service: tAtelier('testimonial5Service')
     }
   ];
 
@@ -58,10 +61,10 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
             <Quote className="w-7 h-7 text-teal" />
           </div>
           <h2 className="text-h2 mb-4">
-            Ce que disent nos clients
+            {tAtelier('title')}
           </h2>
           <p className="text-body text-lg max-w-2xl mx-auto">
-            Témoignages authentiques de clients satisfaits
+            {tAtelier('subtitle')}
           </p>
         </div>
 
@@ -104,10 +107,7 @@ export default function Testimonials({ testimonials }: TestimonialsProps) {
         {/* Note pour développeur */}
         <div className="mt-12 card bg-rouge-light border-rouge text-center max-w-2xl mx-auto">
           <p className="text-sm text-rouge-dark font-medium">
-            💬 Avis clients à collecter : Remplacer les placeholders par de vrais témoignages
-          </p>
-          <p className="text-xs text-rouge-dark/70 mt-2">
-            Format recommandé : Citation courte (2-3 lignes) + Prénom + Initiale nom + Ville
+            {tAtelier('note')}
           </p>
         </div>
       </div>

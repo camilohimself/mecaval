@@ -1,4 +1,5 @@
 import { Camera } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 interface GalleryImage {
   src: string;
@@ -11,14 +12,16 @@ interface AtelierGalleryProps {
 }
 
 export default function AtelierGallery({ images }: AtelierGalleryProps) {
-  // Placeholder images structure - À remplacer avec vraies photos
+  const tAtelier = useTranslations('atelier.gallery');
+
+  // Placeholder images structure - Using translations
   const defaultImages: GalleryImage[] = [
-    { src: '/images/placeholder-atelier-1.jpg', alt: 'Atelier Mecaval - Vue générale', category: 'atelier' },
-    { src: '/images/placeholder-atelier-2.jpg', alt: 'Sylvain au travail', category: 'atelier' },
-    { src: '/images/placeholder-machine-1.jpg', alt: 'Machine de contrôle normes électriques', category: 'equipement' },
-    { src: '/images/placeholder-machine-2.jpg', alt: 'Réparation moteur électrique', category: 'machines' },
-    { src: '/images/placeholder-atelier-3.jpg', alt: 'Espace de travail organisé', category: 'atelier' },
-    { src: '/images/placeholder-equipement-1.jpg', alt: 'Outils professionnels', category: 'equipement' },
+    { src: '/images/placeholder-atelier-1.jpg', alt: tAtelier('image1Alt'), category: 'atelier' },
+    { src: '/images/placeholder-atelier-2.jpg', alt: tAtelier('image2Alt'), category: 'atelier' },
+    { src: '/images/placeholder-machine-1.jpg', alt: tAtelier('image3Alt'), category: 'equipement' },
+    { src: '/images/placeholder-machine-2.jpg', alt: tAtelier('image4Alt'), category: 'machines' },
+    { src: '/images/placeholder-atelier-3.jpg', alt: tAtelier('image5Alt'), category: 'atelier' },
+    { src: '/images/placeholder-equipement-1.jpg', alt: tAtelier('image6Alt'), category: 'equipement' },
   ];
 
   const galleryImages = images || defaultImages;
@@ -29,9 +32,9 @@ export default function AtelierGallery({ images }: AtelierGalleryProps) {
 
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-h2 mb-4">Notre Atelier en Images</h2>
+          <h2 className="text-h2 mb-4">{tAtelier('title')}</h2>
           <p className="text-body text-lg max-w-2xl mx-auto">
-            Découvrez notre environnement de travail et notre équipement professionnel
+            {tAtelier('subtitle')}
           </p>
         </div>
 
@@ -76,7 +79,7 @@ export default function AtelierGallery({ images }: AtelierGalleryProps) {
         {/* Note pour développeur */}
         <div className="mt-8 card bg-teal-light border-teal text-center">
           <p className="text-sm text-teal-dark font-medium">
-            📸 Photos à ajouter : Placer les images dans <code className="bg-teal/10 px-2 py-1 rounded">/public/images/</code>
+            {tAtelier('note')}
           </p>
         </div>
       </div>

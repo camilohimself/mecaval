@@ -8,71 +8,73 @@ import Testimonials from '@/components/ui/Testimonials';
 
 export default function AtelierPage() {
   const tCta = useTranslations('cta');
+  const tCommon = useTranslations('common');
+  const tAtelier = useTranslations('atelier');
 
   const methodology = [
     {
       step: 1,
       icon: Phone,
-      title: 'CONTACT',
-      duration: 'Immédiat',
-      description: 'Vous nous appelez au 076 708 03 08 ou passez directement à l\'atelier.',
+      title: tAtelier('methodology.step1.title'),
+      duration: tAtelier('methodology.step1.duration'),
+      description: tAtelier('methodology.step1.description'),
       benefits: [
-        'Accueil immédiat (pas d\'attente)',
-        'Conseil téléphonique gratuit',
-        'Devis gratuit sans engagement'
+        tAtelier('methodology.step1.benefit1'),
+        tAtelier('methodology.step1.benefit2'),
+        tAtelier('methodology.step1.benefit3')
       ],
       color: 'teal'
     },
     {
       step: 2,
       icon: FileText,
-      title: 'DIAGNOSTIC',
-      duration: '30-60 min',
-      cost: 'X CHF (déduit si réparation)',
-      description: 'Diagnostic professionnel avec nos outils spécialisés pour identifier la panne exacte.',
+      title: tAtelier('methodology.step2.title'),
+      duration: tAtelier('methodology.step2.duration'),
+      cost: tAtelier('methodology.step2.cost'),
+      description: tAtelier('methodology.step2.description'),
       benefits: [
-        'Diagnostic précis de la panne',
-        'Devis détaillé écrit',
-        'Explication claire du problème'
+        tAtelier('methodology.step2.benefit1'),
+        tAtelier('methodology.step2.benefit2'),
+        tAtelier('methodology.step2.benefit3')
       ],
       color: 'rouge'
     },
     {
       step: 3,
       icon: Wrench,
-      title: 'RÉPARATION',
-      duration: '⚡ 48h maximum',
-      description: 'Réparation dans notre atelier avec des pièces de qualité. Transparence totale sur les interventions.',
+      title: tAtelier('methodology.step3.title'),
+      duration: tAtelier('methodology.step3.duration'),
+      description: tAtelier('methodology.step3.description'),
       benefits: [
-        'Délai garanti 48h (sauf pièces spéciales)',
-        'Pièces de qualité certifiées',
-        'Information de l\'avancement'
+        tAtelier('methodology.step3.benefit1'),
+        tAtelier('methodology.step3.benefit2'),
+        tAtelier('methodology.step3.benefit3')
       ],
       color: 'teal'
     },
     {
       step: 4,
       icon: Award,
-      title: 'CONTRÔLE QUALITÉ',
-      duration: '15-30 min',
-      description: 'Tests complets et contrôle aux normes électriques avec notre machine spécialisée.',
+      title: tAtelier('methodology.step4.title'),
+      duration: tAtelier('methodology.step4.duration'),
+      description: tAtelier('methodology.step4.description'),
       benefits: [
-        'Tests de fonctionnement complets',
-        'Contrôle normes électriques',
-        'Certificat de conformité'
+        tAtelier('methodology.step4.benefit1'),
+        tAtelier('methodology.step4.benefit2'),
+        tAtelier('methodology.step4.benefit3')
       ],
       color: 'rouge'
     },
     {
       step: 5,
       icon: CheckCircle,
-      title: 'LIVRAISON',
-      duration: 'À votre convenance',
-      description: 'Récupération de votre machine réparée, propre et fonctionnelle avec explications détaillées.',
+      title: tAtelier('methodology.step5.title'),
+      duration: tAtelier('methodology.step5.duration'),
+      description: tAtelier('methodology.step5.description'),
       benefits: [
-        'Machine testée et prête',
-        'Facture détaillée + certificat',
-        'Garantie sur nos réparations'
+        tAtelier('methodology.step5.benefit1'),
+        tAtelier('methodology.step5.benefit2'),
+        tAtelier('methodology.step5.benefit3')
       ],
       color: 'teal'
     }
@@ -80,17 +82,25 @@ export default function AtelierPage() {
 
   const team = [
     {
-      name: 'Sylvain',
-      role: 'Réparateur & Technicien',
-      description: 'Expert en réparation de machines électriques et thermiques. Sylvain répare vos outils avec précision et passion.',
-      skills: ['Électromécanique', 'Diagnostic', 'Contrôle normes'],
+      name: tAtelier('team.sylvain.name'),
+      role: tAtelier('team.sylvain.role'),
+      description: tAtelier('team.sylvain.description'),
+      skills: [
+        tAtelier('team.sylvain.skill1'),
+        tAtelier('team.sylvain.skill2'),
+        tAtelier('team.sylvain.skill3')
+      ],
       icon: Wrench
     },
     {
-      name: 'Cyrielle',
-      role: 'Accueil & Administration',
-      description: 'Cyrielle assure l\'accueil, la gestion administrative et la coordination des interventions.',
-      skills: ['Relation client', 'Devis', 'Planification'],
+      name: tAtelier('team.cyrielle.name'),
+      role: tAtelier('team.cyrielle.role'),
+      description: tAtelier('team.cyrielle.description'),
+      skills: [
+        tAtelier('team.cyrielle.skill1'),
+        tAtelier('team.cyrielle.skill2'),
+        tAtelier('team.cyrielle.skill3')
+      ],
       icon: Users
     }
   ];
@@ -98,23 +108,23 @@ export default function AtelierPage() {
   const values = [
     {
       icon: Heart,
-      title: 'Proximité & Service Local',
-      description: 'Atelier familial à Savièse. Contact direct avec votre réparateur.'
+      title: tAtelier('values.proximity.title'),
+      description: tAtelier('values.proximity.description')
     },
     {
       icon: Clock,
-      title: 'Rapidité d\'Intervention',
-      description: 'Délai 48h garanti vs 2-3 semaines chez la concurrence.'
+      title: tAtelier('values.speed.title'),
+      description: tAtelier('values.speed.description')
     },
     {
       icon: Target,
-      title: 'Qualité & Fiabilité',
-      description: 'Réparations durables, pièces de qualité, satisfaction garantie.'
+      title: tAtelier('values.quality.title'),
+      description: tAtelier('values.quality.description')
     },
     {
       icon: Award,
-      title: 'Transparence & Conseil',
-      description: 'Prix affichés, devis détaillés, conseils honnêtes.'
+      title: tAtelier('values.transparency.title'),
+      description: tAtelier('values.transparency.description')
     }
   ];
 
@@ -127,10 +137,10 @@ export default function AtelierPage() {
         <section className="section border-b bg-gray-50 animate-fadeIn">
           <div className="container text-center">
             <h1 className="text-display mb-4 animate-slideUp">
-              Notre Atelier
+              {tAtelier('hero.title')}
             </h1>
             <p className="text-body text-xl max-w-2xl mx-auto animate-slideUp animation-delay-100">
-              Expertise, Rapidité et Service de Proximité à Savièse
+              {tAtelier('hero.subtitle')}
             </p>
           </div>
         </section>
@@ -140,10 +150,10 @@ export default function AtelierPage() {
           <div className="container">
             <div className="text-center mb-12">
               <h2 className="text-h2 mb-4">
-                Notre Méthodologie en 5 Étapes
+                {tAtelier('methodology.title')}
               </h2>
               <p className="text-body text-lg max-w-2xl mx-auto">
-                Processus transparent et efficace pour une réparation réussie
+                {tAtelier('methodology.subtitle')}
               </p>
             </div>
 
@@ -176,7 +186,7 @@ export default function AtelierPage() {
                           </div>
                           <div className="flex-1">
                             <h3 className="text-h3 mb-2">
-                              ÉTAPE {step.step} - {step.title}
+                              {tCommon('step')} {step.step} - {step.title}
                             </h3>
                             <div className="flex flex-wrap gap-3 text-sm text-gray-600">
                               <span className="flex items-center gap-1">
@@ -197,7 +207,7 @@ export default function AtelierPage() {
                         </p>
 
                         <div className="space-y-2">
-                          <p className="font-semibold text-gray-900 mb-3 text-sm">Ce que vous obtenez:</p>
+                          <p className="font-semibold text-gray-900 mb-3 text-sm">{tCommon('whatYouGet')}</p>
                           {step.benefits.map((benefit, i) => (
                             <div key={i} className="flex items-start gap-2">
                               <CheckCircle className={`w-5 h-5 ${checkColor} flex-shrink-0 mt-0.5`} />
@@ -219,10 +229,10 @@ export default function AtelierPage() {
           <div className="container">
             <div className="text-center mb-12">
               <h2 className="text-h2 mb-4">
-                L'Équipe Mecaval
+                {tAtelier('team.title')}
               </h2>
               <p className="text-body text-lg">
-                Un atelier familial à votre service
+                {tAtelier('team.subtitle')}
               </p>
             </div>
 
@@ -246,7 +256,7 @@ export default function AtelierPage() {
                     </p>
 
                     <div>
-                      <p className="font-semibold text-gray-900 mb-3 text-sm">Compétences</p>
+                      <p className="font-semibold text-gray-900 mb-3 text-sm">{tCommon('skills')}</p>
                       <div className="flex flex-wrap gap-2">
                         {member.skills.map((skill, i) => (
                           <span key={i} className="badge badge-teal text-xs">
@@ -270,10 +280,10 @@ export default function AtelierPage() {
           <div className="container">
             <div className="text-center mb-12">
               <h2 className="text-h2 mb-4">
-                Nos Valeurs
+                {tAtelier('values.title')}
               </h2>
               <p className="text-body text-lg">
-                Ce qui fait la différence Mecaval
+                {tAtelier('values.subtitle')}
               </p>
             </div>
 
@@ -306,35 +316,35 @@ export default function AtelierPage() {
           <div className="container">
             <div className="text-center mb-12">
               <h2 className="text-h2 text-white mb-4">
-                Notre Engagement Qualité
+                {tAtelier('commitment.title')}
               </h2>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-5xl font-bold text-teal mb-2">48h</div>
-                <p className="text-gray-400">Délai maximum</p>
+                <div className="text-5xl font-bold text-teal mb-2">{tAtelier('commitment.metric1')}</div>
+                <p className="text-gray-400">{tAtelier('commitment.metric1Label')}</p>
               </div>
               <div className="text-center">
-                <div className="text-5xl font-bold text-teal mb-2">100%</div>
-                <p className="text-gray-400">Machines testées</p>
+                <div className="text-5xl font-bold text-teal mb-2">{tAtelier('commitment.metric2')}</div>
+                <p className="text-gray-400">{tAtelier('commitment.metric2Label')}</p>
               </div>
               <div className="text-center">
-                <div className="text-5xl font-bold text-teal mb-2">0</div>
-                <p className="text-gray-400">Frais cachés</p>
+                <div className="text-5xl font-bold text-teal mb-2">{tAtelier('commitment.metric3')}</div>
+                <p className="text-gray-400">{tAtelier('commitment.metric3Label')}</p>
               </div>
             </div>
 
             <div className="card bg-gray-800 border-gray-700 max-w-2xl mx-auto">
-              <h3 className="text-h3 text-white mb-6 text-center">Notre Promesse</h3>
+              <h3 className="text-h3 text-white mb-6 text-center">{tAtelier('commitment.promiseTitle')}</h3>
               <div className="space-y-3">
                 {[
-                  'Réparations durables avec pièces de qualité',
-                  'Conseils honnêtes et personnalisés',
-                  'Devis détaillé avant intervention',
-                  'Garantie sur nos réparations',
-                  'Contact direct avec le réparateur',
-                  'Transparence totale sur les tarifs'
+                  tAtelier('commitment.promise1'),
+                  tAtelier('commitment.promise2'),
+                  tAtelier('commitment.promise3'),
+                  tAtelier('commitment.promise4'),
+                  tAtelier('commitment.promise5'),
+                  tAtelier('commitment.promise6')
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
                     <CheckCircle className="w-5 h-5 text-teal flex-shrink-0" />
@@ -351,10 +361,10 @@ export default function AtelierPage() {
           <div className="container text-center">
             <div className="max-w-2xl mx-auto space-y-8">
               <h2 className="text-h2 text-white">
-                Passez nous voir à l'atelier !
+                {tAtelier('cta.title')}
               </h2>
               <p className="text-lg text-gray-300">
-                Savièse, Valais • Ouvert du lundi au samedi
+                {tAtelier('cta.subtitle')}
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -365,13 +375,13 @@ export default function AtelierPage() {
                   iconPosition="left"
                   href="tel:0767080308"
                 >
-                  076 708 03 08
+                  {tAtelier('cta.phone')}
                 </Button>
                 <a
                   href="/contact"
                   className="btn btn-lg btn-outline-teal bg-white text-gray-900 border-white hover:bg-gray-100"
                 >
-                  <span>Nous trouver</span>
+                  <span>{tAtelier('cta.findUs')}</span>
                   <ArrowRight className="w-5 h-5" />
                 </a>
               </div>

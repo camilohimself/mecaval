@@ -11,7 +11,22 @@
     "quote": "Devis gratuit",
     "learnMore": "En savoir plus",
     "visitUs": "Passer à l'atelier",
-    "contactUs": "Nous contacter"
+    "contactUs": "Nous contacter",
+    "seeRates": "Voir les tarifs",
+    "findUs": "Nous trouver",
+    "requestDiagnostic": "Demander un diagnostic",
+    "contactB2B": "Contacter pour devis B2B",
+    "sendMessage": "Envoyer le message",
+    "sending": "Envoi en cours...",
+    "openGoogleMaps": "Ouvrir dans Google Maps"
+  },
+  "common": {
+    "from": "À partir de",
+    "step": "ÉTAPE",
+    "whatYouGet": "Ce que vous obtenez:",
+    "skills": "Compétences",
+    "question": "Q:",
+    "answer": "R:"
   },
   "home": {
     "hero": {
@@ -20,16 +35,12 @@
       "location": "Savièse, Valais",
       "badge1": "48h max",
       "badge2": "Normes certifiées",
-      "badge3": "Prix transparents"
-    },
-    "pyramid": {
-      "level1": "FIABILITÉ",
-      "level2": "RAPIDITÉ 48H",
-      "level3": "EXPERTISE TECHNIQUE",
-      "level4": "NORMES CERTIFIÉES"
+      "badge3": "Prix transparents",
+      "photoPlaceholder": "Photo atelier à venir"
     },
     "services": {
-      "title": "Nos Services de Réparation",
+      "title": "Nos services de réparation",
+      "subtitle": "Expertise complète en réparation de machines et cycles",
       "electric": {
         "title": "Machines Électriques",
         "description": "Moteurs, normes, charbons, électronique"
@@ -45,6 +56,7 @@
     },
     "why": {
       "title": "Pourquoi nous choisir",
+      "subtitle": "Ce qui nous différencie de la concurrence",
       "fast": {
         "title": "Service RAPIDE",
         "description": "Délai 2-3 jours maximum, pas 2-3 semaines comme ailleurs"
@@ -62,9 +74,365 @@
         "description": "Machine de contrôle électrique pour certification complète"
       }
     },
-    "zone": {
-      "title": "Zone d'intervention",
-      "subtitle": "Savièse et région - Valais romand et germanophone"
+    "cta": {
+      "title": "Besoin d'une réparation rapide ?",
+      "subtitle": "Passez nous voir à l'atelier à Savièse"
+    }
+  },
+  "services": {
+    "hero": {
+      "title": "Réparation en 48 heures.",
+      "badge1": "48h garanti",
+      "badge2": "Normes certifiées",
+      "badge3": "Contact direct"
+    },
+    "essential": {
+      "title": "Services Essentiels",
+      "subtitle": "Réparation rapide et professionnelle"
+    },
+    "electric": {
+      "title": "Machines Électriques",
+      "badge": "URGENT",
+      "description": "Réparation complète + certification normes électriques",
+      "startingPrice": "50 CHF",
+      "feature1": "Diagnostic professionnel",
+      "feature2": "Réparation toutes marques",
+      "feature3": "Certificat de conformité",
+      "feature4": "Garantie incluse"
+    },
+    "thermal": {
+      "title": "Machines Thermiques",
+      "badge": "SAISON",
+      "description": "Entretien et réparation moteurs essence",
+      "startingPrice": "80 CHF",
+      "feature1": "Révision complète",
+      "feature2": "Nettoyage carburateur",
+      "feature3": "Affûtage lames",
+      "feature4": "Hivernage",
+      "detailTitle": "Tondeuses, débroussailleuses, tronçonneuses - Entretien saisonnier complet",
+      "serviceTitle": "Révision Complète",
+      "serviceFeature1": "Vidange + filtres",
+      "serviceFeature2": "Nettoyage carburateur",
+      "serviceFeature3": "Réglage moteur",
+      "serviceFeature4": "Test performance",
+      "repairTitle": "Réparations Courantes",
+      "repairFeature1": "Problème démarrage",
+      "repairFeature2": "Remplacement lanceur",
+      "repairFeature3": "Affûtage lames",
+      "repairFeature4": "Diagnostic panne"
+    },
+    "bikes": {
+      "title": "Vélos & E-bikes",
+      "badge": "EXPRESS",
+      "description": "Tous types de vélos et vélos électriques",
+      "startingPrice": "60 CHF",
+      "feature1": "Révision complète",
+      "feature2": "Réglage précis",
+      "feature3": "Diagnostic VAE",
+      "feature4": "Service rapide",
+      "detailTitle": "VTT, route, ville, électriques - Entretien et réparation tous types",
+      "serviceTitle": "Services Vélos",
+      "serviceFeature1": "Révision complète",
+      "serviceFeature2": "Réglage freins/vitesses",
+      "serviceFeature3": "Changement pneus",
+      "serviceFeature4": "Entretien transmission",
+      "electricTitle": "Vélos Électriques",
+      "electricFeature1": "Diagnostic VAE",
+      "electricFeature2": "Batterie & moteur",
+      "electricFeature3": "Électronique embarquée",
+      "electricFeature4": "Mise à jour système",
+      "speedpedNote": "Partenariat Speedped - Commande de vélos sur demande"
+    },
+    "callout": {
+      "badge": "DIFFÉRENCIATEUR MAJEUR",
+      "title": "Contrôle Normes Électriques",
+      "subtitle": "Seul atelier du Valais avec machine de certification complète",
+      "feature1": "Machine de diagnostic professionnelle",
+      "feature2": "Certificat de conformité officiel",
+      "feature3": "Remise aux normes garantie",
+      "feature4": "Sécurité totale pour vos assurances",
+      "photoPlaceholder": "Photo machine de contrôle à venir"
+    },
+    "metrics": {
+      "metric1Value": "48h",
+      "metric1Label": "Délai maximum",
+      "metric1Sub": "vs 2-3 semaines ailleurs",
+      "metric2Value": "100%",
+      "metric2Label": "Machines testées",
+      "metric2Sub": "Avant livraison",
+      "metric3Value": "0 CHF",
+      "metric3Label": "Frais cachés",
+      "metric3Sub": "Devis transparent"
+    },
+    "pricing": {
+      "title": "Tarification Transparente",
+      "subtitle": "Pas de surprises - Devis détaillé avant intervention",
+      "diagnostic": {
+        "title": "Diagnostic",
+        "price": "50 CHF",
+        "note": "Déduit si réparation",
+        "feature1": "Analyse complète",
+        "feature2": "Devis détaillé",
+        "feature3": "Explications"
+      },
+      "repair": {
+        "title": "Réparation",
+        "price": "Variable",
+        "note": "Selon panne",
+        "feature1": "Pièces qualité",
+        "feature2": "Délai 48h",
+        "feature3": "Garantie"
+      },
+      "certification": {
+        "title": "Certification",
+        "price": "Inclus",
+        "note": "Gratuit",
+        "feature1": "Test normes",
+        "feature2": "Certificat",
+        "feature3": "Conformité"
+      },
+      "disclaimer": "Tarifs indicatifs hors pièces détachées. Prix final selon état de la machine. Devis gratuit."
+    },
+    "b2b": {
+      "badge": "PROFESSIONNELS",
+      "title": "Solutions B2B",
+      "subtitle": "Services sur mesure pour entreprises du bâtiment et de la construction",
+      "contracts": {
+        "title": "Contrats Annuels",
+        "description": "Maintenance préventive avec tarifs négociés",
+        "benefit1": "Planning fixe",
+        "benefit2": "Tarifs -15%",
+        "benefit3": "Priorité"
+      },
+      "construction": {
+        "title": "BTP & Construction",
+        "description": "Service dédié métiers du bâtiment",
+        "benefit1": "Dépannage rapide",
+        "benefit2": "Devis 24h",
+        "benefit3": "Factures détaillées"
+      },
+      "landscaping": {
+        "title": "Paysagistes",
+        "description": "Entretien saisonnier parc machines",
+        "benefit1": "Remise en service",
+        "benefit2": "Suivi saison",
+        "benefit3": "Hivernage"
+      }
+    },
+    "cta": {
+      "title": "Besoin d'une réparation rapide ?",
+      "subtitle": "Appelez-nous ou passez directement à l'atelier à Savièse"
+    }
+  },
+  "atelier": {
+    "hero": {
+      "title": "Notre Atelier",
+      "subtitle": "Expertise, Rapidité et Service de Proximité à Savièse"
+    },
+    "methodology": {
+      "title": "Notre Méthodologie en 5 Étapes",
+      "subtitle": "Processus transparent et efficace pour une réparation réussie",
+      "step1": {
+        "title": "CONTACT",
+        "duration": "Immédiat",
+        "description": "Vous nous appelez au 076 708 03 08 ou passez directement à l'atelier.",
+        "benefit1": "Accueil immédiat (pas d'attente)",
+        "benefit2": "Conseil téléphonique gratuit",
+        "benefit3": "Devis gratuit sans engagement"
+      },
+      "step2": {
+        "title": "DIAGNOSTIC",
+        "duration": "30-60 min",
+        "cost": "X CHF (déduit si réparation)",
+        "description": "Diagnostic professionnel avec nos outils spécialisés pour identifier la panne exacte.",
+        "benefit1": "Diagnostic précis de la panne",
+        "benefit2": "Devis détaillé écrit",
+        "benefit3": "Explication claire du problème"
+      },
+      "step3": {
+        "title": "RÉPARATION",
+        "duration": "⚡ 48h maximum",
+        "description": "Réparation dans notre atelier avec des pièces de qualité. Transparence totale sur les interventions.",
+        "benefit1": "Délai garanti 48h (sauf pièces spéciales)",
+        "benefit2": "Pièces de qualité certifiées",
+        "benefit3": "Information de l'avancement"
+      },
+      "step4": {
+        "title": "CONTRÔLE QUALITÉ",
+        "duration": "15-30 min",
+        "description": "Tests complets et contrôle aux normes électriques avec notre machine spécialisée.",
+        "benefit1": "Tests de fonctionnement complets",
+        "benefit2": "Contrôle normes électriques",
+        "benefit3": "Certificat de conformité"
+      },
+      "step5": {
+        "title": "LIVRAISON",
+        "duration": "À votre convenance",
+        "description": "Récupération de votre machine réparée, propre et fonctionnelle avec explications détaillées.",
+        "benefit1": "Machine testée et prête",
+        "benefit2": "Facture détaillée + certificat",
+        "benefit3": "Garantie sur nos réparations"
+      }
+    },
+    "team": {
+      "title": "L'Équipe Mecaval",
+      "subtitle": "Un atelier familial à votre service",
+      "sylvain": {
+        "name": "Sylvain",
+        "role": "Réparateur & Technicien",
+        "description": "Expert en réparation de machines électriques et thermiques. Sylvain répare vos outils avec précision et passion.",
+        "skill1": "Électromécanique",
+        "skill2": "Diagnostic",
+        "skill3": "Contrôle normes"
+      },
+      "cyrielle": {
+        "name": "Cyrielle",
+        "role": "Accueil & Administration",
+        "description": "Cyrielle assure l'accueil, la gestion administrative et la coordination des interventions.",
+        "skill1": "Relation client",
+        "skill2": "Devis",
+        "skill3": "Planification"
+      }
+    },
+    "gallery": {
+      "title": "Notre Atelier en Images",
+      "subtitle": "Découvrez notre environnement de travail et notre équipement professionnel",
+      "image1Alt": "Atelier Mecaval - Vue générale",
+      "image2Alt": "Sylvain au travail",
+      "image3Alt": "Machine de contrôle normes électriques",
+      "image4Alt": "Réparation moteur électrique",
+      "image5Alt": "Espace de travail organisé",
+      "image6Alt": "Outils professionnels",
+      "photoNote": "📸 Photos à ajouter : Placer les images dans"
+    },
+    "values": {
+      "title": "Nos Valeurs",
+      "subtitle": "Ce qui fait la différence Mecaval",
+      "value1Title": "Proximité & Service Local",
+      "value1Desc": "Atelier familial à Savièse. Contact direct avec votre réparateur.",
+      "value2Title": "Rapidité d'Intervention",
+      "value2Desc": "Délai 48h garanti vs 2-3 semaines chez la concurrence.",
+      "value3Title": "Qualité & Fiabilité",
+      "value3Desc": "Réparations durables, pièces de qualité, satisfaction garantie.",
+      "value4Title": "Transparence & Conseil",
+      "value4Desc": "Prix affichés, devis détaillés, conseils honnêtes."
+    },
+    "testimonials": {
+      "title": "Ce que disent nos clients",
+      "subtitle": "Témoignages authentiques de clients satisfaits",
+      "testimonial1Quote": "Service rapide et professionnel. Ma tondeuse est repartie comme neuve en 2 jours. Je recommande vivement !",
+      "testimonial1Author": "Jean-Pierre M.",
+      "testimonial1Location": "Sion",
+      "testimonial1Service": "Réparation tondeuse",
+      "testimonial2Quote": "Excellent accueil et diagnostic précis. Sylvain a pris le temps d'expliquer la panne. Prix honnête.",
+      "testimonial2Author": "Marie D.",
+      "testimonial2Location": "Savièse",
+      "testimonial2Service": "Diagnostic machine",
+      "testimonial3Quote": "Enfin un atelier sérieux dans la région ! Délai respecté et machine certifiée aux normes. Parfait.",
+      "testimonial3Author": "François R.",
+      "testimonial3Location": "Conthey",
+      "testimonial3Service": "Certification électrique",
+      "testimonial4Quote": "Contact direct avec le réparateur, c'est tellement plus simple. Travail impeccable sur mon vélo électrique.",
+      "testimonial4Author": "Sophie L.",
+      "testimonial4Location": "Sion",
+      "testimonial4Service": "Réparation VAE",
+      "testimonial5Quote": "Rapport qualité-prix excellent. Plus besoin d'aller jusqu'à Pfefferlé et attendre 3 semaines !",
+      "testimonial5Author": "Alain B.",
+      "testimonial5Location": "Savièse",
+      "testimonial5Service": "Entretien machines",
+      "testimonialsNote": "💬 Avis clients à collecter : Remplacer les placeholders par de vrais témoignages",
+      "testimonialsNoteFormat": "Format recommandé : Citation courte (2-3 lignes) + Prénom + Initiale nom + Ville"
+    },
+    "commitment": {
+      "title": "Notre Engagement Qualité",
+      "metric1Value": "48h",
+      "metric1Label": "Délai maximum",
+      "metric2Value": "100%",
+      "metric2Label": "Machines testées",
+      "metric3Value": "0",
+      "metric3Label": "Frais cachés",
+      "promiseTitle": "Notre Promesse",
+      "promise1": "Réparations durables avec pièces de qualité",
+      "promise2": "Conseils honnêtes et personnalisés",
+      "promise3": "Devis détaillé avant intervention",
+      "promise4": "Garantie sur nos réparations",
+      "promise5": "Contact direct avec le réparateur",
+      "promise6": "Transparence totale sur les tarifs"
+    },
+    "cta": {
+      "title": "Passez nous voir à l'atelier !",
+      "subtitle": "Savièse, Valais • Ouvert du lundi au samedi"
+    }
+  },
+  "contact": {
+    "hero": {
+      "title": "Nous Contacter",
+      "subtitle": "Une question ? Un devis ? Passez nous voir ou contactez-nous !"
+    },
+    "cards": {
+      "phone": "Téléphone",
+      "phoneHours": "Lun-Sam • Appel direct",
+      "email": "Email",
+      "emailResponse": "Réponse sous 24h",
+      "whatsapp": "WhatsApp",
+      "whatsappQuick": "Message rapide"
+    },
+    "form": {
+      "title": "Envoyez-nous un message",
+      "labelName": "Nom complet *",
+      "placeholderName": "Jean Dupont",
+      "labelEmail": "Email *",
+      "placeholderEmail": "jean@example.com",
+      "labelPhone": "Téléphone *",
+      "placeholderPhone": "076 123 45 67",
+      "labelMachineType": "Type de machine *",
+      "selectPlaceholder": "Sélectionnez...",
+      "optionElectric": "Machine électrique",
+      "optionThermal": "Machine thermique",
+      "optionBike": "Vélo / E-bike",
+      "optionOther": "Autre",
+      "labelMessage": "Décrivez votre demande *",
+      "placeholderMessage": "Décrivez le problème ou votre demande...",
+      "checkboxQuote": "Je souhaite recevoir un devis détaillé",
+      "successMessage": "Message envoyé avec succès ! Nous vous répondrons rapidement.",
+      "disclaimer": "* Champs obligatoires • Vos données sont confidentielles"
+    },
+    "hours": {
+      "title": "Horaires d'ouverture",
+      "weekdays": "Lundi - Vendredi",
+      "weekdaysHours": "À définir",
+      "saturday": "Samedi",
+      "saturdayHours": "À définir",
+      "sunday": "Dimanche",
+      "sundayHours": "Fermé",
+      "note": "Ouvert le samedi pour votre commodité !"
+    },
+    "location": {
+      "title": "Notre Atelier",
+      "name": "Mecaval",
+      "addressLine1": "[Adresse complète]",
+      "addressLine2": "1965 Savièse",
+      "addressLine3": "Valais, Suisse",
+      "mapPlaceholder": "Google Maps à intégrer",
+      "mapPlaceholderSubtext": "Coordonnées exactes à définir"
+    },
+    "faq": {
+      "title": "Questions Fréquentes",
+      "subtitle": "Trouvez rapidement les réponses à vos questions",
+      "q1": "Quel est le délai de réparation ?",
+      "a1": "Nous garantissons un délai maximum de 48h pour la plupart des réparations. Certaines pièces spéciales peuvent nécessiter un délai supplémentaire, nous vous informons toujours à l'avance.",
+      "q2": "Faut-il prendre rendez-vous ?",
+      "a2": "Non, vous pouvez passer directement à l'atelier aux heures d'ouverture. Pour un diagnostic approfondi, un appel préalable est recommandé mais pas obligatoire.",
+      "q3": "Le diagnostic est-il payant ?",
+      "a3": "Le diagnostic coûte X CHF, mais ce montant est entièrement déduit si vous acceptez la réparation.",
+      "q4": "Proposez-vous un service de récupération ?",
+      "a4": "Nous pouvons récupérer et livrer votre machine selon votre zone géographique. Contactez-nous pour connaître les modalités et tarifs.",
+      "q5": "Quels moyens de paiement acceptez-vous ?",
+      "a5": "Nous acceptons les paiements en espèces, carte bancaire et TWINT.",
+      "q6": "Avez-vous une garantie sur les réparations ?",
+      "a6": "Oui, toutes nos réparations sont garanties. La durée dépend du type d'intervention. Détails indiqués sur votre facture.",
+      "notFound": "Vous n'avez pas trouvé la réponse à votre question ?",
+      "callUs": "Appelez-nous : 076 708 03 08"
     }
   },
   "footer": {
