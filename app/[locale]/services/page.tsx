@@ -1,453 +1,449 @@
 import { useTranslations } from 'next-intl';
-import { Zap, Settings, Bike, Building2, CheckCircle, Phone, ArrowRight } from 'lucide-react';
+import { Zap, Settings, Bike, Building2, CheckCircle, Phone, ArrowRight, Award, Clock, Target, Wrench, Shield, TrendingUp } from 'lucide-react';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import Button from '@/components/ui/Button';
-import PricingTable from '@/components/ui/PricingTable';
 
 export default function ServicesPage() {
   const tCta = useTranslations('cta');
+
+  const essentialServices = [
+    {
+      icon: Zap,
+      title: 'Machines Électriques',
+      badge: 'URGENT',
+      badgeColor: 'rouge',
+      description: 'Réparation complète + certification normes électriques',
+      startingPrice: '50 CHF',
+      features: [
+        'Diagnostic professionnel',
+        'Réparation toutes marques',
+        'Certificat de conformité',
+        'Garantie incluse'
+      ],
+      link: '#electric'
+    },
+    {
+      icon: Settings,
+      title: 'Machines Thermiques',
+      badge: 'SAISON',
+      badgeColor: 'teal',
+      description: 'Entretien et réparation moteurs essence',
+      startingPrice: '80 CHF',
+      features: [
+        'Révision complète',
+        'Nettoyage carburateur',
+        'Affûtage lames',
+        'Hivernage'
+      ],
+      link: '#thermal'
+    },
+    {
+      icon: Bike,
+      title: 'Vélos & E-bikes',
+      badge: 'EXPRESS',
+      badgeColor: 'teal',
+      description: 'Tous types de vélos et vélos électriques',
+      startingPrice: '60 CHF',
+      features: [
+        'Révision complète',
+        'Réglage précis',
+        'Diagnostic VAE',
+        'Service rapide'
+      ],
+      link: '#bikes'
+    }
+  ];
+
+  const metrics = [
+    { value: '48h', label: 'Délai maximum', subtext: 'vs 2-3 semaines ailleurs' },
+    { value: '100%', label: 'Machines testées', subtext: 'Avant livraison' },
+    { value: '0€', label: 'Frais cachés', subtext: 'Devis transparent' }
+  ];
+
+  const pricingCategories = [
+    {
+      title: 'Diagnostic',
+      price: '50 CHF',
+      note: 'Déduit si réparation',
+      features: ['Analyse complète', 'Devis détaillé', 'Explications']
+    },
+    {
+      title: 'Réparation',
+      price: 'Variable',
+      note: 'Selon panne',
+      features: ['Pièces qualité', 'Délai 48h', 'Garantie']
+    },
+    {
+      title: 'Certification',
+      price: 'Inclus',
+      note: 'Gratuit',
+      features: ['Test normes', 'Certificat', 'Conformité'],
+      highlight: true
+    }
+  ];
+
+  const b2bServices = [
+    {
+      icon: Building2,
+      title: 'Contrats Annuels',
+      description: 'Maintenance préventive avec tarifs négociés',
+      benefits: ['Planning fixe', 'Tarifs -15%', 'Priorité']
+    },
+    {
+      icon: Wrench,
+      title: 'BTP & Construction',
+      description: 'Service dédié métiers du bâtiment',
+      benefits: ['Dépannage rapide', 'Devis 24h', 'Factures détaillées']
+    },
+    {
+      icon: TrendingUp,
+      title: 'Paysagistes',
+      description: 'Entretien saisonnier parc machines',
+      benefits: ['Remise en service', 'Suivi saison', 'Hivernage']
+    }
+  ];
 
   return (
     <>
       <Header />
       <main>
 
-        {/* Hero Section - Clean */}
-        <section className="section border-b bg-gray-50">
+        {/* Hero Section - Vercel Style */}
+        <section className="section border-b">
           <div className="container text-center">
-            <h1 className="text-display mb-4">
-              Services de Réparation Professionnels
+            <h1 className="text-display mb-4 max-w-4xl mx-auto">
+              Réparations en 48h. <br className="hidden sm:block" />
+              Pas en 3 semaines.
             </h1>
-            <p className="text-body text-xl max-w-3xl mx-auto">
-              Machines électriques, thermiques et vélos • Grille tarifaire transparente • Savièse, Valais
+            <p className="text-body text-xl max-w-2xl mx-auto mb-8">
+              Machines électriques • Thermiques • Vélos | Savièse, Valais
             </p>
-          </div>
-        </section>
 
-        {/* Jump Links Navigation - Sticky */}
-        <section className="sticky top-16 z-40 bg-white border-b border-gray-200">
-          <div className="container">
-            <nav className="flex gap-2 md:gap-3 overflow-x-auto py-4 -mx-4 px-4">
-              <a href="#electric" className="whitespace-nowrap px-4 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-teal-light hover:text-teal-dark transition-colors">
-                Électriques
-              </a>
-              <a href="#thermal" className="whitespace-nowrap px-4 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-rouge-light hover:text-rouge-dark transition-colors">
-                Thermiques
-              </a>
-              <a href="#bikes" className="whitespace-nowrap px-4 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-teal-light hover:text-teal-dark transition-colors">
-                Vélos
-              </a>
-              <a href="#b2b" className="whitespace-nowrap px-4 py-2 rounded-lg text-sm font-medium text-gray-700 hover:bg-gray-100 transition-colors">
-                B2B
-              </a>
-              <a href="#pricing" className="whitespace-nowrap px-4 py-2 rounded-lg text-sm font-medium bg-rouge text-white hover:bg-rouge-dark transition-colors">
-                Tarifs
-              </a>
-            </nav>
-          </div>
-        </section>
-
-        {/* Section 1 - Machines Électriques */}
-        <section id="electric" className="section">
-          <div className="container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-
-              {/* Left Column */}
-              <div>
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 bg-teal-light border border-teal rounded-lg flex items-center justify-center">
-                    <Zap className="w-6 h-6 text-teal" />
-                  </div>
-                  <h2 className="text-h2">Machines Électriques</h2>
-                </div>
-
-                <div className="mb-6">
-                  <span className="inline-block px-3 py-1 bg-teal-light text-teal-dark text-sm font-semibold rounded-full border border-teal mb-4">
-                    Remise aux normes certifiée
-                  </span>
-                  <p className="text-body mb-4">
-                    Nous réparons tous types d'outils électriques professionnels et domestiques avec notre machine de diagnostic électrique professionnelle.
-                  </p>
-                  <p className="text-body">
-                    Chaque machine réparée est contrôlée et remise aux normes électriques avant livraison. Certificat de conformité inclus.
-                  </p>
-                </div>
-
-                <div className="card bg-teal-light border-teal">
-                  <h3 className="text-h4 mb-4">Ce que nous réparons</h3>
-                  <ul className="space-y-2">
-                    {[
-                      'Perceuses, visseuses, meuleuses',
-                      'Scies circulaires et scies sauteuses',
-                      'Ponceuses, raboteuses, défonceuses',
-                      'Marteaux perforateurs',
-                      'Compresseurs électriques',
-                      'Aspirateurs professionnels'
-                    ].map((item, index) => (
-                      <li key={index} className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-gray-700">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+            {/* Social Proof Badges - Next.js Style */}
+            <div className="flex flex-wrap justify-center gap-4 mb-8">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 border border-gray-300 rounded-full">
+                <Zap className="w-4 h-4 text-rouge" />
+                <span className="text-sm font-medium text-gray-900">48h garanti</span>
               </div>
-
-              {/* Right Column */}
-              <div>
-                <div className="card border-teal">
-                  <h3 className="text-h4 mb-6">Types de réparations</h3>
-                  <div className="space-y-4">
-                    {[
-                      { title: 'Remplacement charbons moteur', desc: 'Perte de puissance, charbons usés' },
-                      { title: 'Réparation câble alimentation', desc: 'Câbles coupés, dénudés, abîmés' },
-                      { title: 'Remplacement interrupteurs', desc: 'Interrupteur défectueux ou cassé' },
-                      { title: 'Réparation cartes électroniques', desc: 'Variateurs de vitesse, régulateurs' },
-                      { title: 'Bobinage moteur', desc: 'Moteur brûlé ou court-circuit' },
-                      { title: 'Contrôle normes électriques', desc: 'Certification + certificat officiel' }
-                    ].map((item, index) => (
-                      <div key={index} className="flex items-start gap-3 pb-4 border-b border-gray-200 last:border-0 last:pb-0">
-                        <div className="w-2 h-2 bg-teal rounded-full mt-2 flex-shrink-0"></div>
-                        <div>
-                          <h4 className="font-semibold text-gray-900 mb-1">{item.title}</h4>
-                          <p className="text-sm text-gray-600">{item.desc}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 border border-gray-300 rounded-full">
+                <Shield className="w-4 h-4 text-teal" />
+                <span className="text-sm font-medium text-gray-900">Normes certifiées</span>
               </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Section 2 - Machines Thermiques */}
-        <section id="thermal" className="section bg-gray-50">
-          <div className="container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-
-              {/* Left Column - Reverse Order on Mobile */}
-              <div className="order-2 lg:order-1">
-                <div className="card border-rouge">
-                  <h3 className="text-h4 mb-6">Services d'entretien</h3>
-                  <div className="space-y-4">
-                    {[
-                      { title: 'Révision complète', desc: 'Vidange, filtres, bougies, carburateur' },
-                      { title: 'Réparation démarrage', desc: 'Lanceur cassé, starter défectueux' },
-                      { title: 'Nettoyage carburateur', desc: 'Machine qui ne démarre plus' },
-                      { title: 'Remplacement filtres', desc: 'Filtre à air et filtre à essence' },
-                      { title: 'Affûtage lames', desc: 'Tondeuses, débroussailleuses' },
-                      { title: 'Diagnostic panne moteur', desc: 'Perte de puissance, fumée' }
-                    ].map((item, index) => (
-                      <div key={index} className="flex items-start gap-3 pb-4 border-b border-gray-200 last:border-0 last:pb-0">
-                        <div className="w-2 h-2 bg-rouge rounded-full mt-2 flex-shrink-0"></div>
-                        <div>
-                          <h4 className="font-semibold text-gray-900 mb-1">{item.title}</h4>
-                          <p className="text-sm text-gray-600">{item.desc}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-
-              {/* Right Column */}
-              <div className="order-1 lg:order-2">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 bg-rouge-light border border-rouge rounded-lg flex items-center justify-center">
-                    <Settings className="w-6 h-6 text-rouge" />
-                  </div>
-                  <h2 className="text-h2">Machines Thermiques</h2>
-                </div>
-
-                <div className="mb-6">
-                  <span className="inline-block px-3 py-1 bg-rouge-light text-rouge-dark text-sm font-semibold rounded-full border border-rouge mb-4">
-                    Entretien moteurs essence
-                  </span>
-                  <p className="text-body mb-4">
-                    Tondeuses, débroussailleuses, tronçonneuses, taille-haies : nous entretenons et réparons tous vos outils de jardin.
-                  </p>
-                  <p className="text-body">
-                    La majorité des pannes proviennent d'un mauvais entretien. Nous effectuons des révisions complètes pour prolonger la durée de vie de vos machines.
-                  </p>
-                </div>
-
-                <div className="card bg-rouge-light border-rouge">
-                  <h3 className="text-h4 mb-4">Machines thermiques</h3>
-                  <ul className="space-y-2">
-                    {[
-                      'Tondeuses à gazon (autoportées, poussées)',
-                      'Débroussailleuses et taille-bordures',
-                      'Tronçonneuses thermiques',
-                      'Taille-haies thermiques',
-                      'Souffleuses et aspirateurs de jardin',
-                      'Motoculteurs et motobineuses'
-                    ].map((item, index) => (
-                      <li key={index} className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-rouge flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-gray-700">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Section 3 - Vélos & E-bikes */}
-        <section id="bikes" className="section">
-          <div className="container">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-
-              {/* Left Column */}
-              <div>
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-12 h-12 bg-teal-light border border-teal rounded-lg flex items-center justify-center">
-                    <Bike className="w-6 h-6 text-teal" />
-                  </div>
-                  <h2 className="text-h2">Vélos & E-bikes</h2>
-                </div>
-
-                <div className="mb-6">
-                  <span className="inline-block px-3 py-1 bg-teal-light text-teal-dark text-sm font-semibold rounded-full border border-teal mb-4">
-                    Tous types de vélos
-                  </span>
-                  <p className="text-body mb-4">
-                    Entretien et réparation de tous types de vélos : vélos classiques, VTT, vélos de route, et vélos électriques.
-                  </p>
-                  <p className="text-body">
-                    Partenariat Speedped : commande de vélos Speedped sur demande. Contactez-nous pour plus d'informations.
-                  </p>
-                </div>
-
-                <div className="card bg-teal-light border-teal">
-                  <h3 className="text-h4 mb-4">Services vélos</h3>
-                  <ul className="space-y-2">
-                    {[
-                      'Révision complète et mise au point',
-                      'Réglage freins et vitesses',
-                      'Changement pneus et chambres à air',
-                      'Entretien chaîne et transmission',
-                      'Diagnostic vélos électriques',
-                      'Commande vélos Speedped'
-                    ].map((item, index) => (
-                      <li key={index} className="flex items-start gap-2">
-                        <CheckCircle className="w-5 h-5 text-teal flex-shrink-0 mt-0.5" />
-                        <span className="text-sm text-gray-700">{item}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-
-              {/* Right Column */}
-              <div>
-                <div className="card border-teal">
-                  <h3 className="text-h4 mb-6">Types de vélos</h3>
-                  <div className="space-y-4">
-                    {[
-                      { title: 'Vélos classiques', desc: 'Vélos de ville, hollandais, vintage' },
-                      { title: 'VTT', desc: 'Cross-country, enduro, descente' },
-                      { title: 'Vélos de route', desc: 'Vélos de course, cyclocross' },
-                      { title: 'Vélos électriques (VAE)', desc: 'E-bikes urbains et VTT électriques' },
-                      { title: 'Vélos cargo', desc: 'Transport et cargos électriques' },
-                      { title: 'Vélos enfants', desc: 'Draisiennes, vélos avec roulettes' }
-                    ].map((item, index) => (
-                      <div key={index} className="flex items-start gap-3 pb-4 border-b border-gray-200 last:border-0 last:pb-0">
-                        <div className="w-2 h-2 bg-teal rounded-full mt-2 flex-shrink-0"></div>
-                        <div>
-                          <h4 className="font-semibold text-gray-900 mb-1">{item.title}</h4>
-                          <p className="text-sm text-gray-600">{item.desc}</p>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        {/* Section 4 - Services B2B */}
-        <section id="b2b" className="section bg-gray-900 text-white">
-          <div className="container">
-            <div className="text-center mb-12">
-              <div className="inline-flex items-center justify-center w-14 h-14 bg-rouge rounded-lg mb-4">
-                <Building2 className="w-7 h-7 text-white" />
-              </div>
-              <h2 className="text-h2 text-white mb-4">Services B2B Professionnels</h2>
-              <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-                Solutions sur mesure pour entreprises du bâtiment et de la construction
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-              <div className="card bg-gray-800 border-gray-700">
-                <h3 className="text-h4 text-white mb-3">Contrats d'entretien</h3>
-                <p className="text-gray-400 text-sm mb-4">
-                  Forfaits annuels pour l'entretien régulier de votre parc machines.
-                </p>
-                <ul className="space-y-2">
-                  {['Maintenance préventive', 'Intervention prioritaire', 'Tarifs négociés'].map((item, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-rouge flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="card bg-gray-800 border-gray-700">
-                <h3 className="text-h4 text-white mb-3">Entreprises BTP</h3>
-                <p className="text-gray-400 text-sm mb-4">
-                  Service adapté aux professionnels du bâtiment et de la construction.
-                </p>
-                <ul className="space-y-2">
-                  {['Dépannage rapide', 'Devis sous 24h', 'Factures détaillées'].map((item, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-rouge flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-
-              <div className="card bg-gray-800 border-gray-700">
-                <h3 className="text-h4 text-white mb-3">Paysagistes</h3>
-                <p className="text-gray-400 text-sm mb-4">
-                  Entretien de votre parc de machines de jardinage. Service saisonnier.
-                </p>
-                <ul className="space-y-2">
-                  {['Remise en service printemps', 'Entretien saison', 'Hivernage automne'].map((item, i) => (
-                    <li key={i} className="flex items-center gap-2 text-sm text-gray-300">
-                      <CheckCircle className="w-4 h-4 text-rouge flex-shrink-0" />
-                      {item}
-                    </li>
-                  ))}
-                </ul>
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 border border-gray-300 rounded-full">
+                <Target className="w-4 h-4 text-teal" />
+                <span className="text-sm font-medium text-gray-900">Contact direct</span>
               </div>
             </div>
 
-            <div className="text-center">
-              <p className="text-lg text-gray-300 mb-6">
-                Contactez-nous pour un devis personnalisé adapté à vos besoins professionnels
-              </p>
-              <Button
-                variant="primary"
-                size="lg"
-                icon={Phone}
-                iconPosition="left"
-                href="tel:0767080308"
-              >
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button variant="primary" size="lg" icon={Phone} iconPosition="left" href="tel:0767080308">
                 076 708 03 08
+              </Button>
+              <Button variant="outline" size="lg" icon={ArrowRight} iconPosition="right" href="#pricing">
+                Voir les tarifs
               </Button>
             </div>
           </div>
         </section>
 
-        {/* Section 5 - Grille Tarifaire */}
-        <section id="pricing" className="section bg-gray-50">
+        {/* Essential Services - Grid 3 colonnes Next.js */}
+        <section className="section bg-gray-50">
           <div className="container">
             <div className="text-center mb-12">
-              <h2 className="text-h2 mb-4">Grille Tarifaire Transparente</h2>
-              <p className="text-body text-lg">
-                Tarifs indicatifs hors pièces • Devis gratuit et sans engagement
-              </p>
+              <h2 className="text-h2 mb-4">Services Essentiels</h2>
+              <p className="text-body text-lg">Réparation rapide et professionnelle</p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-              <PricingTable
-                title="DIAGNOSTIC & SERVICES"
-                accentColor="teal"
-                rows={[
-                  { service: 'Diagnostic machine (déduit si réparation)', price: 'X CHF' },
-                  { service: 'Déplacement atelier (selon zone)', price: 'X CHF' },
-                  { service: 'Devis détaillé', price: 'Gratuit' },
-                  { service: 'Conseil téléphonique', price: 'Gratuit' }
-                ]}
-              />
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {essentialServices.map((service, index) => {
+                const Icon = service.icon;
+                const badgeBg = service.badgeColor === 'rouge' ? 'bg-rouge-light text-rouge-dark border-rouge' : 'bg-teal-light text-teal-dark border-teal';
 
-              <PricingTable
-                title="MACHINES ÉLECTRIQUES"
-                accentColor="teal"
-                rows={[
-                  { service: 'Remplacement charbons moteur', price: 'X CHF' },
-                  { service: 'Réparation câble alimentation', price: 'X CHF' },
-                  { service: 'Remplacement interrupteur', price: 'X CHF' },
-                  { service: 'Réparation carte électronique', price: 'X CHF' },
-                  { service: 'Bobinage moteur', price: 'Sur devis' },
-                  { service: 'Contrôle normes électriques', price: 'X CHF', highlight: true }
-                ]}
-              />
+                return (
+                  <a key={index} href={service.link} className="card hover:shadow-lg transition-all group">
+                    {/* Badge */}
+                    <div className="flex items-center justify-between mb-4">
+                      <div className={`inline-flex px-2 py-1 text-xs font-bold rounded border ${badgeBg}`}>
+                        {service.badge}
+                      </div>
+                      <div className={`w-10 h-10 ${service.badgeColor === 'rouge' ? 'bg-rouge-light' : 'bg-teal-light'} rounded-lg flex items-center justify-center`}>
+                        <Icon className={`w-5 h-5 ${service.badgeColor === 'rouge' ? 'text-rouge' : 'text-teal'}`} />
+                      </div>
+                    </div>
+
+                    {/* Title */}
+                    <h3 className="text-h3 mb-2">{service.title}</h3>
+                    <p className="text-body text-sm mb-4">{service.description}</p>
+
+                    {/* Price */}
+                    <div className="mb-4">
+                      <span className="text-sm text-gray-600">À partir de </span>
+                      <span className="text-2xl font-bold text-gray-900">{service.startingPrice}</span>
+                    </div>
+
+                    {/* Features */}
+                    <ul className="space-y-2">
+                      {service.features.map((feature, i) => (
+                        <li key={i} className="flex items-center gap-2 text-sm text-gray-700">
+                          <CheckCircle className="w-4 h-4 text-gray-400 flex-shrink-0" />
+                          {feature}
+                        </li>
+                      ))}
+                    </ul>
+                  </a>
+                );
+              })}
+            </div>
+          </div>
+        </section>
+
+        {/* Callout Premium - Différenciateur (comme React Server Components) */}
+        <section id="electric" className="section border-y bg-gradient-to-br from-teal-light to-white">
+          <div className="container">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+
+              {/* Left - Content */}
+              <div>
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-teal text-white text-xs font-bold rounded-full mb-4">
+                  <Award className="w-3 h-3" />
+                  DIFFÉRENCIATEUR MAJEUR
+                </div>
+
+                <h2 className="text-display mb-4">
+                  Contrôle Normes Électriques
+                </h2>
+
+                <p className="text-body text-xl mb-6">
+                  Seul atelier du Valais avec machine de certification complète
+                </p>
+
+                <div className="space-y-4 mb-8">
+                  {[
+                    'Machine de diagnostic professionnelle',
+                    'Certificat de conformité officiel',
+                    'Remise aux normes garantie',
+                    'Sécurité totale pour vos assurances'
+                  ].map((item, i) => (
+                    <div key={i} className="flex items-start gap-3">
+                      <div className="w-6 h-6 bg-teal rounded-lg flex items-center justify-center flex-shrink-0">
+                        <CheckCircle className="w-4 h-4 text-white" />
+                      </div>
+                      <span className="text-body">{item}</span>
+                    </div>
+                  ))}
+                </div>
+
+                <Button variant="primary" size="lg" href="tel:0767080308">
+                  Demander un diagnostic
+                </Button>
+              </div>
+
+              {/* Right - Visual Placeholder */}
+              <div className="card bg-white p-12 text-center">
+                <Shield className="w-32 h-32 text-teal mx-auto mb-4" />
+                <p className="text-sm text-gray-500">Photo machine de contrôle à venir</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Metrics - Vercel Style */}
+        <section className="section border-b">
+          <div className="container">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+              {metrics.map((metric, index) => (
+                <div key={index} className="text-center">
+                  <div className="text-5xl font-bold text-gray-900 mb-2">{metric.value}</div>
+                  <div className="text-lg font-semibold text-gray-700 mb-1">{metric.label}</div>
+                  <div className="text-sm text-gray-500">{metric.subtext}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Machines Thermiques - Détail rapide */}
+        <section id="thermal" className="section bg-gray-50">
+          <div className="container max-w-4xl">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center justify-center w-14 h-14 bg-rouge-light border border-rouge rounded-lg mb-4">
+                <Settings className="w-7 h-7 text-rouge" />
+              </div>
+              <h2 className="text-h2 mb-4">Machines Thermiques</h2>
+              <p className="text-body text-lg">Tondeuses, débroussailleuses, tronçonneuses - Entretien saisonnier complet</p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
-              <PricingTable
-                title="MACHINES THERMIQUES"
-                accentColor="rouge"
-                rows={[
-                  { service: 'Révision tondeuse complète', price: 'X CHF' },
-                  { service: 'Nettoyage carburateur', price: 'X CHF' },
-                  { service: 'Remplacement lanceur', price: 'X CHF' },
-                  { service: 'Vidange + filtres', price: 'X CHF' },
-                  { service: 'Affûtage lame tondeuse', price: 'X CHF' }
-                ]}
-              />
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="card">
+                <h3 className="text-h4 mb-4">Révision Complète</h3>
+                <ul className="space-y-2">
+                  {['Vidange + filtres', 'Nettoyage carburateur', 'Réglage moteur', 'Test performance'].map((item, i) => (
+                    <li key={i} className="flex items-center gap-2 text-sm">
+                      <CheckCircle className="w-4 h-4 text-rouge flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
 
-              <PricingTable
-                title="VÉLOS & E-BIKES"
-                accentColor="teal"
-                rows={[
-                  { service: 'Révision complète vélo classique', price: 'X CHF' },
-                  { service: 'Révision vélo électrique', price: 'X CHF' },
-                  { service: 'Réglage freins + vitesses', price: 'X CHF' },
-                  { service: 'Changement pneus (x2)', price: 'X CHF' },
-                  { service: 'Réparation crevaison', price: 'X CHF' }
-                ]}
-              />
+              <div className="card">
+                <h3 className="text-h4 mb-4">Réparations Courantes</h3>
+                <ul className="space-y-2">
+                  {['Problème démarrage', 'Remplacement lanceur', 'Affûtage lames', 'Diagnostic panne'].map((item, i) => (
+                    <li key={i} className="flex items-center gap-2 text-sm">
+                      <CheckCircle className="w-4 h-4 text-rouge flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Vélos - Détail rapide */}
+        <section id="bikes" className="section border-b">
+          <div className="container max-w-4xl">
+            <div className="text-center mb-8">
+              <div className="inline-flex items-center justify-center w-14 h-14 bg-teal-light border border-teal rounded-lg mb-4">
+                <Bike className="w-7 h-7 text-teal" />
+              </div>
+              <h2 className="text-h2 mb-4">Vélos & E-bikes</h2>
+              <p className="text-body text-lg">VTT, route, ville, électriques - Entretien et réparation tous types</p>
             </div>
 
-            <div className="card bg-white border-gray-300 text-center">
-              <p className="text-body font-semibold mb-3">
-                Tarifs indicatifs hors pièces détachées
-              </p>
-              <p className="text-sm text-gray-600">
-                Prix finaux selon l'état de la machine et les pièces à remplacer. Devis gratuit avant toute intervention.
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="card">
+                <h3 className="text-h4 mb-4">Services Vélos</h3>
+                <ul className="space-y-2">
+                  {['Révision complète', 'Réglage freins/vitesses', 'Changement pneus', 'Entretien transmission'].map((item, i) => (
+                    <li key={i} className="flex items-center gap-2 text-sm">
+                      <CheckCircle className="w-4 h-4 text-teal flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="card">
+                <h3 className="text-h4 mb-4">Vélos Électriques</h3>
+                <ul className="space-y-2">
+                  {['Diagnostic VAE', 'Batterie & moteur', 'Électronique embarquée', 'Mise à jour système'].map((item, i) => (
+                    <li key={i} className="flex items-center gap-2 text-sm">
+                      <CheckCircle className="w-4 h-4 text-teal flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+
+            <div className="mt-8 card bg-teal-light border-teal text-center">
+              <p className="text-sm text-teal-dark font-semibold">
+                Partenariat Speedped - Commande de vélos sur demande
               </p>
             </div>
           </div>
         </section>
 
-        {/* CTA Final */}
+        {/* Pricing - Vercel Pricing Style */}
+        <section id="pricing" className="section bg-gray-50">
+          <div className="container">
+            <div className="text-center mb-12">
+              <h2 className="text-h2 mb-4">Tarification Transparente</h2>
+              <p className="text-body text-lg">Pas de surprises - Devis détaillé avant intervention</p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+              {pricingCategories.map((category, index) => (
+                <div
+                  key={index}
+                  className={`card ${category.highlight ? 'border-teal bg-teal-light' : 'bg-white'}`}
+                >
+                  <h3 className="text-h3 mb-2">{category.title}</h3>
+                  <div className="mb-4">
+                    <div className="text-3xl font-bold text-gray-900">{category.price}</div>
+                    <div className="text-sm text-gray-600">{category.note}</div>
+                  </div>
+                  <ul className="space-y-2">
+                    {category.features.map((feature, i) => (
+                      <li key={i} className="flex items-center gap-2 text-sm">
+                        <CheckCircle className={`w-4 h-4 ${category.highlight ? 'text-teal' : 'text-gray-400'} flex-shrink-0`} />
+                        {feature}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+
+            <div className="mt-8 text-center card bg-white border-gray-300 max-w-2xl mx-auto">
+              <p className="text-sm text-gray-600">
+                Tarifs indicatifs hors pièces détachées. Prix final selon état de la machine. Devis gratuit.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        {/* B2B Services - Dark Section (Vercel AI Cloud style) */}
         <section className="section bg-gray-900 text-white">
+          <div className="container">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center gap-2 px-3 py-1 bg-rouge text-white text-xs font-bold rounded-full mb-4">
+                <Building2 className="w-3 h-3" />
+                PROFESSIONNELS
+              </div>
+              <h2 className="text-h2 text-white mb-4">Solutions B2B</h2>
+              <p className="text-lg text-gray-300 max-w-2xl mx-auto">
+                Services sur mesure pour entreprises du bâtiment et de la construction
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {b2bServices.map((service, index) => {
+                const Icon = service.icon;
+                return (
+                  <div key={index} className="card bg-gray-800 border-gray-700">
+                    <Icon className="w-8 h-8 text-rouge mb-4" />
+                    <h3 className="text-h4 text-white mb-3">{service.title}</h3>
+                    <p className="text-gray-400 text-sm mb-4">{service.description}</p>
+                    <ul className="space-y-2">
+                      {service.benefits.map((benefit, i) => (
+                        <li key={i} className="flex items-center gap-2 text-sm text-gray-300">
+                          <CheckCircle className="w-4 h-4 text-rouge flex-shrink-0" />
+                          {benefit}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              })}
+            </div>
+
+            <div className="mt-12 text-center">
+              <Button variant="primary" size="lg" icon={Phone} iconPosition="left" href="tel:0767080308">
+                Contacter pour devis B2B
+              </Button>
+            </div>
+          </div>
+        </section>
+
+        {/* CTA Final */}
+        <section className="section border-t">
           <div className="container text-center">
             <div className="max-w-2xl mx-auto space-y-8">
-              <h2 className="text-h2 text-white">
-                Besoin d'un devis personnalisé ?
-              </h2>
-              <p className="text-lg text-gray-300">
-                Contactez-nous pour obtenir un devis gratuit et détaillé adapté à votre machine
+              <h2 className="text-h2">Besoin d'une réparation rapide ?</h2>
+              <p className="text-body text-lg">
+                Appelez-nous ou passez directement à l'atelier à Savièse
               </p>
-
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button
-                  variant="primary"
-                  size="lg"
-                  icon={Phone}
-                  iconPosition="left"
-                  href="tel:0767080308"
-                >
+                <Button variant="primary" size="lg" icon={Phone} iconPosition="left" href="tel:0767080308">
                   076 708 03 08
                 </Button>
-                <a
-                  href="/contact"
-                  className="btn btn-lg btn-outline-teal bg-white text-gray-900 border-white hover:bg-gray-100"
-                >
-                  <span>Formulaire de contact</span>
-                  <ArrowRight className="w-5 h-5" />
-                </a>
+                <Button variant="outline" size="lg" icon={ArrowRight} iconPosition="right" href="/contact">
+                  Nous trouver
+                </Button>
               </div>
             </div>
           </div>
