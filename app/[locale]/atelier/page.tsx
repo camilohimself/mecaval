@@ -122,12 +122,12 @@ export default function AtelierPage() {
       <main>
 
         {/* Hero Section */}
-        <section className="section border-b bg-gray-50">
+        <section className="section border-b bg-gray-50 animate-fadeIn">
           <div className="container text-center">
-            <h1 className="text-display mb-4">
+            <h1 className="text-display mb-4 animate-slideUp">
               Notre Atelier
             </h1>
-            <p className="text-body text-xl max-w-2xl mx-auto">
+            <p className="text-body text-xl max-w-2xl mx-auto animate-slideUp animation-delay-100">
               Expertise, Rapidité et Service de Proximité à Savièse
             </p>
           </div>
@@ -167,7 +167,7 @@ export default function AtelierPage() {
 
                     {/* Content Card */}
                     <div className={`lg:col-span-10 ${isEven ? 'lg:order-2' : 'lg:order-1'}`}>
-                      <div className={`card ${bgColor} ${borderColor}`}>
+                      <div className={`card ${bgColor} ${borderColor} card-interactive`}>
                         <div className="flex items-start gap-4 mb-4">
                           <div className={`${iconBg} w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0`}>
                             <Icon className="w-6 h-6 text-white" />

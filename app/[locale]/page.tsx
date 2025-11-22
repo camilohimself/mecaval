@@ -14,21 +14,26 @@ export default function HomePage() {
       <main>
 
         {/* Hero Section - Clean & Professional */}
-        <section className="section border-b">
-          <div className="container">
+        <section className="section border-b relative overflow-hidden animate-fadeIn">
+          {/* Background gradient - TRÈS subtil avec couleurs Mecaval */}
+          <div className="absolute inset-0 pointer-events-none">
+            <div className="absolute inset-0 bg-gradient-to-br from-teal-light/15 via-white to-rouge-light/10" />
+          </div>
+
+          <div className="container relative z-10">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
               {/* Left Column - Content */}
               <div className="lg:col-span-7 space-y-8 text-center lg:text-left">
 
                 {/* Location Badge */}
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-teal-light text-teal-dark text-sm font-semibold rounded-full border border-teal">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-teal-light text-teal-dark text-sm font-semibold rounded-full border border-teal animate-slideUp">
                   <MapPin className="w-4 h-4" />
                   <span>Savièse, Valais</span>
                 </div>
 
                 {/* Hero Title */}
-                <div className="space-y-4">
+                <div className="space-y-4 animate-slideUp animation-delay-100">
                   <h1 className="text-display text-balance">
                     {t('hero.title')}
                   </h1>
@@ -38,7 +43,7 @@ export default function HomePage() {
                 </div>
 
                 {/* CTAs */}
-                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-slideUp animation-delay-200">
                   <Button
                     variant="primary"
                     size="lg"
@@ -60,7 +65,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Trust Indicators - Clean Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 animate-slideUp animation-delay-300">
                   <div className="flex flex-col gap-1">
                     <div className="flex items-center gap-2 text-gray-900">
                       <CheckCircle className="w-5 h-5 text-teal" />
@@ -113,11 +118,11 @@ export default function HomePage() {
             <div className="grid-3 text-left">
 
               {/* Service 1 - Machines Électriques */}
-              <div className="card card-elevated group cursor-pointer">
+              <div className="card card-elevated card-interactive animate-slideUp animation-delay-100">
 
                 {/* Icon */}
                 <div className="mb-6">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-teal-light border border-teal rounded-lg">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-teal-light border border-teal rounded-lg transition-transform duration-300 hover:scale-110">
                     <Zap className="w-6 h-6 text-teal" />
                   </div>
                 </div>
@@ -133,19 +138,19 @@ export default function HomePage() {
                 {/* CTA */}
                 <a
                   href="/services#electric"
-                  className="inline-flex items-center gap-2 text-teal font-medium text-sm hover:gap-3 transition-all"
+                  className="inline-flex items-center gap-2 text-teal font-medium text-sm hover:gap-3 transition-all duration-300"
                 >
                   {tCta('learnMore')}
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4 transition-transform hover:translate-x-1" />
                 </a>
               </div>
 
               {/* Service 2 - Machines Thermiques */}
-              <div className="card card-elevated group cursor-pointer">
+              <div className="card card-elevated card-interactive animate-slideUp animation-delay-200">
 
                 {/* Icon */}
                 <div className="mb-6">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-rouge-light border border-rouge rounded-lg">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-rouge-light border border-rouge rounded-lg transition-transform duration-300 hover:scale-110">
                     <Settings className="w-6 h-6 text-rouge" />
                   </div>
                 </div>
@@ -161,19 +166,19 @@ export default function HomePage() {
                 {/* CTA */}
                 <a
                   href="/services#thermal"
-                  className="inline-flex items-center gap-2 text-rouge font-medium text-sm hover:gap-3 transition-all"
+                  className="inline-flex items-center gap-2 text-rouge font-medium text-sm hover:gap-3 transition-all duration-300"
                 >
                   {tCta('learnMore')}
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4 transition-transform hover:translate-x-1" />
                 </a>
               </div>
 
               {/* Service 3 - Vélos */}
-              <div className="card card-elevated group cursor-pointer">
+              <div className="card card-elevated card-interactive animate-slideUp animation-delay-300">
 
                 {/* Icon */}
                 <div className="mb-6">
-                  <div className="inline-flex items-center justify-center w-12 h-12 bg-teal-light border border-teal rounded-lg">
+                  <div className="inline-flex items-center justify-center w-12 h-12 bg-teal-light border border-teal rounded-lg transition-transform duration-300 hover:scale-110">
                     <Bike className="w-6 h-6 text-teal" />
                   </div>
                 </div>
@@ -189,10 +194,10 @@ export default function HomePage() {
                 {/* CTA */}
                 <a
                   href="/services#bikes"
-                  className="inline-flex items-center gap-2 text-teal font-medium text-sm hover:gap-3 transition-all"
+                  className="inline-flex items-center gap-2 text-teal font-medium text-sm hover:gap-3 transition-all duration-300"
                 >
                   {tCta('learnMore')}
-                  <ArrowRight className="w-4 h-4" />
+                  <ArrowRight className="w-4 h-4 transition-transform hover:translate-x-1" />
                 </a>
               </div>
             </div>

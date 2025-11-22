@@ -110,16 +110,16 @@ export default function ServicesPage() {
       <main>
 
         {/* Hero Section - Ultra Minimal */}
-        <section className="section border-b">
+        <section className="section border-b animate-fadeIn">
           <div className="container text-center max-w-4xl mx-auto space-y-8">
 
             {/* Titre seul */}
-            <h1 className="text-display">
+            <h1 className="text-display animate-slideUp">
               Réparation en 48 heures.
             </h1>
 
             {/* Badges */}
-            <div className="flex flex-wrap justify-center gap-3">
+            <div className="flex flex-wrap justify-center gap-3 animate-slideUp animation-delay-100">
               <div className="inline-flex items-center gap-2 px-4 py-2 bg-gray-100 border border-gray-300 rounded-full">
                 <Zap className="w-4 h-4 text-rouge" />
                 <span className="text-sm font-medium text-gray-900">48h garanti</span>
@@ -135,7 +135,7 @@ export default function ServicesPage() {
             </div>
 
             {/* CTAs */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slideUp animation-delay-200">
               <Button variant="primary" size="lg" icon={Phone} iconPosition="left" href="tel:0767080308">
                 076 708 03 08
               </Button>
@@ -161,13 +161,13 @@ export default function ServicesPage() {
                 const badgeBg = service.badgeColor === 'rouge' ? 'bg-rouge-light text-rouge-dark border-rouge' : 'bg-teal-light text-teal-dark border-teal';
 
                 return (
-                  <a key={index} href={service.link} className="card hover:shadow-lg transition-all group">
+                  <a key={index} href={service.link} className={`card card-interactive animate-slideUp animation-delay-${(index + 1) * 100}`}>
                     {/* Badge */}
                     <div className="flex items-center justify-between mb-4">
                       <div className={`inline-flex px-2 py-1 text-xs font-bold rounded border ${badgeBg}`}>
                         {service.badge}
                       </div>
-                      <div className={`w-10 h-10 ${service.badgeColor === 'rouge' ? 'bg-rouge-light' : 'bg-teal-light'} rounded-lg flex items-center justify-center`}>
+                      <div className={`w-10 h-10 ${service.badgeColor === 'rouge' ? 'bg-rouge-light' : 'bg-teal-light'} rounded-lg flex items-center justify-center transition-transform duration-300 hover:scale-110`}>
                         <Icon className={`w-5 h-5 ${service.badgeColor === 'rouge' ? 'text-rouge' : 'text-teal'}`} />
                       </div>
                     </div>

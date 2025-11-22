@@ -38,12 +38,12 @@ export default function ContactPage() {
       <main>
 
         {/* Hero Section */}
-        <section className="section border-b bg-gray-50">
+        <section className="section border-b bg-gray-50 animate-fadeIn">
           <div className="container text-center">
-            <h1 className="text-display mb-4">
+            <h1 className="text-display mb-4 animate-slideUp">
               Nous Contacter
             </h1>
-            <p className="text-body text-xl max-w-2xl mx-auto">
+            <p className="text-body text-xl max-w-2xl mx-auto animate-slideUp animation-delay-100">
               Une question ? Un devis ? Passez nous voir ou contactez-nous !
             </p>
           </div>
@@ -55,7 +55,7 @@ export default function ContactPage() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
 
               {/* Téléphone */}
-              <a href="tel:0767080308" className="card hover:border-rouge transition-all group">
+              <a href="tel:0767080308" className="card card-interactive animate-slideUp animation-delay-100">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-rouge-light border border-rouge rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-rouge transition-colors">
                     <Phone className="w-6 h-6 text-rouge group-hover:text-white transition-colors" />
@@ -69,7 +69,7 @@ export default function ContactPage() {
               </a>
 
               {/* Email */}
-              <a href="mailto:info@mecaval.ch" className="card hover:border-teal transition-all group">
+              <a href="mailto:info@mecaval.ch" className="card card-interactive animate-slideUp animation-delay-200">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-teal-light border border-teal rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-teal transition-colors">
                     <Mail className="w-6 h-6 text-teal group-hover:text-white transition-colors" />
@@ -83,7 +83,7 @@ export default function ContactPage() {
               </a>
 
               {/* WhatsApp */}
-              <a href="https://wa.me/41767080308" target="_blank" rel="noopener noreferrer" className="card hover:border-teal transition-all group">
+              <a href="https://wa.me/41767080308" target="_blank" rel="noopener noreferrer" className="card card-interactive animate-slideUp animation-delay-300">
                 <div className="flex items-start gap-4">
                   <div className="w-12 h-12 bg-teal-light border border-teal rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-teal transition-colors">
                     <MessageCircle className="w-6 h-6 text-teal group-hover:text-white transition-colors" />
