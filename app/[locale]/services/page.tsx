@@ -58,7 +58,7 @@ export default function ServicesPage() {
   const metrics = [
     { value: '48h', label: 'Délai maximum', subtext: 'vs 2-3 semaines ailleurs' },
     { value: '100%', label: 'Machines testées', subtext: 'Avant livraison' },
-    { value: '0€', label: 'Frais cachés', subtext: 'Devis transparent' }
+    { value: '0 CHF', label: 'Frais cachés', subtext: 'Devis transparent' }
   ];
 
   const pricingCategories = [
