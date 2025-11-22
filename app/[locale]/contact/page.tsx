@@ -75,7 +75,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-h4 mb-2">{tContact('cards.phone')}</h3>
                     <p className="text-xl font-bold text-rouge">076 708 03 08</p>
-                    <p className="text-sm text-gray-600 mt-1">{tContact('cards.phoneHours')}</p>
+                    <p className="text-sm text-gray-600 mt-1 leading-loose">{tContact('cards.phoneHours')}</p>
                   </div>
                 </div>
               </a>
@@ -89,7 +89,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-h4 mb-2">{tContact('cards.email')}</h3>
                     <p className="text-lg font-semibold text-teal">info@mecaval.ch</p>
-                    <p className="text-sm text-gray-600 mt-1">{tContact('cards.emailResponse')}</p>
+                    <p className="text-sm text-gray-600 mt-1 leading-loose">{tContact('cards.emailResponse')}</p>
                   </div>
                 </div>
               </a>
@@ -103,7 +103,7 @@ export default function ContactPage() {
                   <div>
                     <h3 className="text-h4 mb-2">{tContact('cards.whatsapp')}</h3>
                     <p className="text-lg font-semibold text-teal">076 708 03 08</p>
-                    <p className="text-sm text-gray-600 mt-1">{tContact('cards.whatsappQuick')}</p>
+                    <p className="text-sm text-gray-600 mt-1 leading-loose">{tContact('cards.whatsappQuick')}</p>
                   </div>
                 </div>
               </a>
@@ -169,7 +169,7 @@ export default function ContactPage() {
                     <h3 className="text-h3">{tContact('location.title')}</h3>
                   </div>
 
-                  <p className="text-body mb-6">
+                  <p className="text-body mb-6 leading-loose">
                     <strong className="text-gray-900">{tContact('location.name')}</strong><br />
                     {tContact('location.addressLine1')}<br />
                     {tContact('location.addressLine2')}<br />
@@ -215,7 +215,7 @@ export default function ContactPage() {
               <h2 className="text-h2 mb-4">
                 {tContact('faq.title')}
               </h2>
-              <p className="text-body text-lg">
+              <p className="text-body text-lg leading-loose">
                 {tContact('faq.subtitle')}
               </p>
             </div>
@@ -227,7 +227,7 @@ export default function ContactPage() {
                     <span className="text-teal flex-shrink-0">{tCommon('question')}</span>
                     <span>{item.question}</span>
                   </h3>
-                  <p className="text-body text-sm pl-6">
+                  <p className="text-body text-sm pl-6 leading-loose">
                     <strong className="text-teal">{tCommon('answer')}</strong> {item.answer}
                   </p>
                 </div>
@@ -235,7 +235,7 @@ export default function ContactPage() {
             </div>
 
             <div className="mt-12 card bg-gray-100 border-gray-300 text-center">
-              <p className="text-body text-lg mb-6">
+              <p className="text-body text-lg mb-6 leading-loose">
                 {tContact('faq.notFound')}
               </p>
               <Button

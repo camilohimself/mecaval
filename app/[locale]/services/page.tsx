@@ -215,7 +215,7 @@ export default function ServicesPage() {
 
                     {/* Title */}
                     <h3 className="text-h3 mb-2">{service.title}</h3>
-                    <p className="text-body text-sm mb-4">{service.description}</p>
+                    <p className="text-body text-sm mb-4 leading-loose">{service.description}</p>
 
                     {/* Price */}
                     <div className="mb-4">
@@ -224,9 +224,9 @@ export default function ServicesPage() {
                     </div>
 
                     {/* Features */}
-                    <ul className="space-y-2">
+                    <ul className="space-y-3">
                       {service.features.map((feature, i) => (
-                        <li key={i} className="flex items-center gap-2 text-sm text-gray-700">
+                        <li key={i} className="flex items-center gap-2 text-sm text-gray-700 leading-loose">
                           <CheckCircle className="w-4 h-4 text-gray-400 flex-shrink-0" />
                           {feature}
                         </li>
@@ -255,7 +255,7 @@ export default function ServicesPage() {
                   {tServices('callout.title')}
                 </h2>
 
-                <p className="text-body text-xl mb-6">
+                <p className="text-body text-xl mb-6 leading-loose">
                   {tServices('callout.subtitle')}
                 </p>
 
@@ -270,7 +270,7 @@ export default function ServicesPage() {
                       <div className="w-6 h-6 bg-teal rounded-lg flex items-center justify-center flex-shrink-0">
                         <CheckCircle className="w-4 h-4 text-white" />
                       </div>
-                      <span className="text-body">{item}</span>
+                      <span className="text-body leading-loose">{item}</span>
                     </div>
                   ))}
                 </div>

@@ -129,7 +129,7 @@ export default function HomePage() {
                 <h3 className="text-h3 mb-3">
                   {t('services.electric.title')}
                 </h3>
-                <p className="text-body mb-6">
+                <p className="text-body mb-6 leading-loose">
                   {t('services.electric.description')}
                 </p>
 
@@ -157,7 +157,7 @@ export default function HomePage() {
                 <h3 className="text-h3 mb-3">
                   {t('services.thermal.title')}
                 </h3>
-                <p className="text-body mb-6">
+                <p className="text-body mb-6 leading-loose">
                   {t('services.thermal.description')}
                 </p>
 
@@ -185,7 +185,7 @@ export default function HomePage() {
                 <h3 className="text-h3 mb-3">
                   {t('services.bikes.title')}
                 </h3>
-                <p className="text-body mb-6">
+                <p className="text-body mb-6 leading-loose">
                   {t('services.bikes.description')}
                 </p>
 
@@ -231,7 +231,7 @@ export default function HomePage() {
                     <h3 className="text-h4 mb-2">
                       {t('why.fast.title')}
                     </h3>
-                    <p className="text-body text-sm">
+                    <p className="text-body text-sm leading-loose">
                       {t('why.fast.description')}
                     </p>
                   </div>
@@ -250,7 +250,7 @@ export default function HomePage() {
                     <h3 className="text-h4 mb-2">
                       {t('why.quality.title')}
                     </h3>
-                    <p className="text-body text-sm">
+                    <p className="text-body text-sm leading-loose">
                       {t('why.quality.description')}
                     </p>
                   </div>
@@ -269,7 +269,7 @@ export default function HomePage() {
                     <h3 className="text-h4 mb-2">
                       {t('why.direct.title')}
                     </h3>
-                    <p className="text-body text-sm">
+                    <p className="text-body text-sm leading-loose">
                       {t('why.direct.description')}
                     </p>
                   </div>
@@ -288,7 +288,7 @@ export default function HomePage() {
                     <h3 className="text-h4 mb-2">
                       {t('why.certified.title')}
                     </h3>
-                    <p className="text-body text-sm">
+                    <p className="text-body text-sm leading-loose">
                       {t('why.certified.description')}
                     </p>
                   </div>

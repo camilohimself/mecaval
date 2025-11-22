@@ -587,6 +587,18 @@ button:disabled,
   animation: icon-bounce 0.6s ease-in-out;
 }
 
+/* Timeline scroll animation */
+.timeline-step {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+}
+
+.timeline-step-visible {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
 /* Badge styles */
 .badge-popular {
   position: absolute;
