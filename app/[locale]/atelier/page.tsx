@@ -26,8 +26,8 @@ export default function AtelierPage() {
       icon: FileText,
       title: 'DIAGNOSTIC',
       duration: '30-60 min',
-      cost: 'X CHF (déduit si réparation acceptée)',
-      description: 'Nous examinons votre machine avec nos outils de diagnostic professionnels pour identifier la panne exacte.',
+      cost: 'X CHF (déduit si réparation)',
+      description: 'Diagnostic professionnel avec nos outils spécialisés pour identifier la panne exacte.',
       benefits: [
         'Diagnostic précis de la panne',
         'Devis détaillé écrit',
@@ -40,11 +40,11 @@ export default function AtelierPage() {
       icon: Wrench,
       title: 'RÉPARATION',
       duration: '⚡ 48h maximum',
-      description: 'Nous réparons votre machine dans notre atelier avec des pièces de qualité. Transparence totale sur les interventions.',
+      description: 'Réparation dans notre atelier avec des pièces de qualité. Transparence totale sur les interventions.',
       benefits: [
         'Délai garanti 48h (sauf pièces spéciales)',
         'Pièces de qualité certifiées',
-        'Vous informons de l\'avancement'
+        'Information de l\'avancement'
       ],
       color: 'teal'
     },
@@ -53,11 +53,11 @@ export default function AtelierPage() {
       icon: Award,
       title: 'CONTRÔLE QUALITÉ',
       duration: '15-30 min',
-      description: 'Chaque machine réparée est testée et contrôlée. Pour les machines électriques : contrôle aux normes avec notre machine spécialisée.',
+      description: 'Tests complets et contrôle aux normes électriques avec notre machine spécialisée.',
       benefits: [
         'Tests de fonctionnement complets',
-        'Contrôle normes électriques (si applicable)',
-        'Certificat de conformité délivré'
+        'Contrôle normes électriques',
+        'Certificat de conformité'
       ],
       color: 'rouge'
     },
@@ -66,10 +66,10 @@ export default function AtelierPage() {
       icon: CheckCircle,
       title: 'LIVRAISON',
       duration: 'À votre convenance',
-      description: 'Vous récupérez votre machine réparée, propre et fonctionnelle. Explications sur les réparations effectuées et conseils d\'entretien.',
+      description: 'Récupération de votre machine réparée, propre et fonctionnelle avec explications détaillées.',
       benefits: [
-        'Machine testée et prête à l\'emploi',
-        'Facture détaillée et certificat',
+        'Machine testée et prête',
+        'Facture détaillée + certificat',
         'Garantie sur nos réparations'
       ],
       color: 'teal'
@@ -80,14 +80,14 @@ export default function AtelierPage() {
     {
       name: 'Sylvain',
       role: 'Réparateur & Technicien',
-      description: 'Expert en réparation de machines électriques et thermiques. Sylvain répare vos outils avec précision et passion depuis de nombreuses années.',
+      description: 'Expert en réparation de machines électriques et thermiques. Sylvain répare vos outils avec précision et passion.',
       skills: ['Électromécanique', 'Diagnostic', 'Contrôle normes'],
       icon: Wrench
     },
     {
       name: 'Cyrielle',
       role: 'Accueil & Administration',
-      description: 'Cyrielle assure l\'accueil des clients, la gestion administrative et la coordination des interventions. Votre interlocutrice privilégiée.',
+      description: 'Cyrielle assure l\'accueil, la gestion administrative et la coordination des interventions.',
       skills: ['Relation client', 'Devis', 'Planification'],
       icon: Users
     }
@@ -97,22 +97,22 @@ export default function AtelierPage() {
     {
       icon: Heart,
       title: 'Proximité & Service Local',
-      description: 'Atelier familial à Savièse. Contact direct avec votre réparateur, sans intermédiaires.'
+      description: 'Atelier familial à Savièse. Contact direct avec votre réparateur.'
     },
     {
       icon: Clock,
       title: 'Rapidité d\'Intervention',
-      description: 'Délai 48h garanti vs 2-3 semaines chez la concurrence. Votre temps est précieux.'
+      description: 'Délai 48h garanti vs 2-3 semaines chez la concurrence.'
     },
     {
       icon: Target,
       title: 'Qualité & Fiabilité',
-      description: 'Notre réputation est en jeu. Réparations durables, pièces de qualité, satisfaction garantie.'
+      description: 'Réparations durables, pièces de qualité, satisfaction garantie.'
     },
     {
       icon: Award,
       title: 'Transparence & Conseil',
-      description: 'Prix affichés, devis détaillés, conseils honnêtes. Pas de surprises, pas de vente forcée.'
+      description: 'Prix affichés, devis détaillés, conseils honnêtes.'
     }
   ];
 
@@ -120,93 +120,89 @@ export default function AtelierPage() {
     <>
       <Header />
       <main>
+
         {/* Hero Section */}
-        <section className="bg-gradient-teal py-12 sm:py-16 md:py-20">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="text-center">
-              <h1 className="text-4xl sm:text-5xl font-bold text-gris-900 mb-4">
-                Notre Atelier
-              </h1>
-              <p className="text-xl text-gris-700 mb-6">
-                Expertise, Rapidité et Service de Proximité à Savièse
-              </p>
-            </div>
+        <section className="section border-b bg-gray-50">
+          <div className="container text-center">
+            <h1 className="text-display mb-4">
+              Notre Atelier
+            </h1>
+            <p className="text-body text-xl max-w-2xl mx-auto">
+              Expertise, Rapidité et Service de Proximité à Savièse
+            </p>
           </div>
         </section>
 
         {/* Notre Méthode en 5 Étapes */}
-        <section className="py-12 sm:py-16 md:py-20 bg-white">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gris-900 mb-4">
+        <section className="section">
+          <div className="container">
+            <div className="text-center mb-12">
+              <h2 className="text-h2 mb-4">
                 Notre Méthodologie en 5 Étapes
               </h2>
-              <p className="text-xl text-gris-700">
+              <p className="text-body text-lg max-w-2xl mx-auto">
                 Processus transparent et efficace pour une réparation réussie
               </p>
             </div>
 
-            <div className="space-y-8">
+            <div className="space-y-12">
               {methodology.map((step, index) => {
                 const Icon = step.icon;
                 const isEven = index % 2 === 0;
-                const bgColor = step.color === 'teal' ? 'bg-teal-50' : 'bg-rouge-50';
-                const borderColor = step.color === 'teal' ? 'border-teal-700' : 'border-rouge-700';
-                const iconBg = step.color === 'teal' ? 'bg-teal-700' : 'bg-rouge-700';
-                const stepBg = step.color === 'teal' ? 'bg-teal-700' : 'bg-rouge-700';
+                const bgColor = step.color === 'teal' ? 'bg-teal-light' : 'bg-rouge-light';
+                const borderColor = step.color === 'teal' ? 'border-teal' : 'border-rouge';
+                const iconBg = step.color === 'teal' ? 'bg-teal' : 'bg-rouge';
+                const numberBg = step.color === 'teal' ? 'bg-teal' : 'bg-rouge';
+                const checkColor = step.color === 'teal' ? 'text-teal' : 'text-rouge';
 
                 return (
-                  <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-8 items-center ${isEven ? '' : 'lg:flex-row-reverse'}`}>
-                    {/* Numéro d'étape (mobile) */}
-                    <div className="lg:hidden flex justify-center">
-                      <div className={`${stepBg} text-white w-16 h-16 rounded-full flex items-center justify-center text-2xl font-bold`}>
+                  <div key={index} className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+
+                    {/* Numéro étape - Desktop */}
+                    <div className={`hidden lg:flex justify-center ${isEven ? 'lg:col-span-2 lg:order-1' : 'lg:col-span-2 lg:order-3'}`}>
+                      <div className={`${numberBg} text-white w-20 h-20 rounded-lg flex items-center justify-center text-3xl font-bold`}>
                         {step.step}
                       </div>
                     </div>
 
-                    {/* Content */}
-                    <div className={`${isEven ? 'lg:order-1' : 'lg:order-2'} ${bgColor} rounded-xl border-2 ${borderColor} p-8`}>
-                      <div className="flex items-start gap-4 mb-4">
-                        <div className={`${iconBg} w-14 h-14 rounded-lg flex items-center justify-center flex-shrink-0`}>
-                          <Icon className="w-7 h-7 text-white" />
-                        </div>
-                        <div>
-                          <h3 className="text-2xl font-bold text-gris-900 mb-1">
-                            ÉTAPE {step.step} - {step.title}
-                          </h3>
-                          <div className="flex flex-wrap gap-3 text-sm">
-                            <span className="text-gris-700">
-                              <Clock className="w-4 h-4 inline mr-1" />
-                              {step.duration}
-                            </span>
-                            {step.cost && (
-                              <span className="text-gris-700 font-semibold">
-                                {step.cost}
+                    {/* Content Card */}
+                    <div className={`lg:col-span-10 ${isEven ? 'lg:order-2' : 'lg:order-1'}`}>
+                      <div className={`card ${bgColor} ${borderColor}`}>
+                        <div className="flex items-start gap-4 mb-4">
+                          <div className={`${iconBg} w-12 h-12 rounded-lg flex items-center justify-center flex-shrink-0`}>
+                            <Icon className="w-6 h-6 text-white" />
+                          </div>
+                          <div className="flex-1">
+                            <h3 className="text-h3 mb-2">
+                              ÉTAPE {step.step} - {step.title}
+                            </h3>
+                            <div className="flex flex-wrap gap-3 text-sm text-gray-600">
+                              <span className="flex items-center gap-1">
+                                <Clock className="w-4 h-4" />
+                                {step.duration}
                               </span>
-                            )}
+                              {step.cost && (
+                                <span className="font-semibold">
+                                  {step.cost}
+                                </span>
+                              )}
+                            </div>
                           </div>
                         </div>
-                      </div>
 
-                      <p className="text-gris-700 mb-6">
-                        {step.description}
-                      </p>
+                        <p className="text-body mb-6">
+                          {step.description}
+                        </p>
 
-                      <div className="space-y-2">
-                        <p className="font-semibold text-gris-900 mb-3">Ce que vous obtenez :</p>
-                        {step.benefits.map((benefit, i) => (
-                          <div key={i} className="flex items-start gap-2">
-                            <CheckCircle className={`w-5 h-5 ${step.color === 'teal' ? 'text-teal-700' : 'text-rouge-700'} flex-shrink-0 mt-0.5`} />
-                            <span className="text-gris-700">{benefit}</span>
-                          </div>
-                        ))}
-                      </div>
-                    </div>
-
-                    {/* Numéro d'étape (desktop) */}
-                    <div className={`hidden lg:flex justify-center ${isEven ? 'lg:order-2' : 'lg:order-1'}`}>
-                      <div className={`${stepBg} text-white w-32 h-32 rounded-full flex items-center justify-center text-5xl font-bold shadow-xl`}>
-                        {step.step}
+                        <div className="space-y-2">
+                          <p className="font-semibold text-gray-900 mb-3 text-sm">Ce que vous obtenez:</p>
+                          {step.benefits.map((benefit, i) => (
+                            <div key={i} className="flex items-start gap-2">
+                              <CheckCircle className={`w-5 h-5 ${checkColor} flex-shrink-0 mt-0.5`} />
+                              <span className="text-sm text-gray-700">{benefit}</span>
+                            </div>
+                          ))}
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -217,41 +213,41 @@ export default function AtelierPage() {
         </section>
 
         {/* L'équipe */}
-        <section className="py-12 sm:py-16 md:py-20 bg-gris-50">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gris-900 mb-4">
+        <section className="section bg-gray-50">
+          <div className="container">
+            <div className="text-center mb-12">
+              <h2 className="text-h2 mb-4">
                 L'Équipe Mecaval
               </h2>
-              <p className="text-xl text-gris-700">
+              <p className="text-body text-lg">
                 Un atelier familial à votre service
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
               {team.map((member, index) => {
                 const Icon = member.icon;
                 return (
-                  <div key={index} className="bg-white rounded-xl border-2 border-gris-200 p-8 hover:border-teal-700 hover:shadow-xl transition-all">
-                    <div className="flex items-start gap-6 mb-6">
-                      <div className="w-20 h-20 bg-gradient-to-br from-teal-700 to-teal-500 rounded-full flex items-center justify-center flex-shrink-0">
-                        <Icon className="w-10 h-10 text-white" />
+                  <div key={index} className="card card-elevated hover:shadow-lg transition-shadow">
+                    <div className="flex items-start gap-4 mb-6">
+                      <div className="w-16 h-16 bg-teal rounded-lg flex items-center justify-center flex-shrink-0">
+                        <Icon className="w-8 h-8 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-2xl font-bold text-gris-900 mb-1">{member.name}</h3>
-                        <p className="text-lg text-teal-700 font-semibold">{member.role}</p>
+                        <h3 className="text-h3 mb-1">{member.name}</h3>
+                        <p className="text-sm text-teal font-semibold">{member.role}</p>
                       </div>
                     </div>
 
-                    <p className="text-gris-700 mb-6">
+                    <p className="text-body mb-6">
                       {member.description}
                     </p>
 
                     <div>
-                      <p className="font-semibold text-gris-900 mb-3">Compétences :</p>
+                      <p className="font-semibold text-gray-900 mb-3 text-sm">Compétences</p>
                       <div className="flex flex-wrap gap-2">
                         {member.skills.map((skill, i) => (
-                          <span key={i} className="px-3 py-1.5 bg-teal-100 text-teal-900 rounded-full text-sm font-medium">
+                          <span key={i} className="badge badge-teal text-xs">
                             {skill}
                           </span>
                         ))}
@@ -265,13 +261,13 @@ export default function AtelierPage() {
         </section>
 
         {/* Nos Valeurs */}
-        <section className="py-12 sm:py-16 md:py-20 bg-white">
-          <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-            <div className="text-center mb-16">
-              <h2 className="text-3xl sm:text-4xl font-bold text-gris-900 mb-4">
+        <section className="section">
+          <div className="container">
+            <div className="text-center mb-12">
+              <h2 className="text-h2 mb-4">
                 Nos Valeurs
               </h2>
-              <p className="text-xl text-gris-700">
+              <p className="text-body text-lg">
                 Ce qui fait la différence Mecaval
               </p>
             </div>
@@ -281,13 +277,13 @@ export default function AtelierPage() {
                 const Icon = value.icon;
                 return (
                   <div key={index} className="text-center">
-                    <div className="inline-flex items-center justify-center w-16 h-16 bg-teal-100 rounded-full mb-4">
-                      <Icon className="w-8 h-8 text-teal-700" />
+                    <div className="inline-flex items-center justify-center w-14 h-14 bg-teal-light border border-teal rounded-lg mb-4">
+                      <Icon className="w-7 h-7 text-teal" />
                     </div>
-                    <h3 className="text-xl font-bold text-gris-900 mb-3">
+                    <h3 className="text-h4 mb-3">
                       {value.title}
                     </h3>
-                    <p className="text-gris-600">
+                    <p className="text-body text-sm">
                       {value.description}
                     </p>
                   </div>
@@ -298,43 +294,43 @@ export default function AtelierPage() {
         </section>
 
         {/* Notre Engagement */}
-        <section className="py-12 sm:py-16 md:py-20 bg-gris-900 text-white">
-          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8">
+        <section className="section bg-gray-900 text-white">
+          <div className="container">
             <div className="text-center mb-12">
-              <h2 className="text-3xl sm:text-4xl font-bold mb-6">
+              <h2 className="text-h2 text-white mb-4">
                 Notre Engagement Qualité
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 max-w-4xl mx-auto">
               <div className="text-center">
-                <div className="text-5xl font-bold text-teal-300 mb-2">48h</div>
-                <p className="text-gris-300">Délai maximum de réparation</p>
+                <div className="text-5xl font-bold text-teal mb-2">48h</div>
+                <p className="text-gray-400">Délai maximum</p>
               </div>
               <div className="text-center">
-                <div className="text-5xl font-bold text-teal-300 mb-2">100%</div>
-                <p className="text-gris-300">Machines testées avant livraison</p>
+                <div className="text-5xl font-bold text-teal mb-2">100%</div>
+                <p className="text-gray-400">Machines testées</p>
               </div>
               <div className="text-center">
-                <div className="text-5xl font-bold text-teal-300 mb-2">0</div>
-                <p className="text-gris-300">Frais cachés ou surprises</p>
+                <div className="text-5xl font-bold text-teal mb-2">0</div>
+                <p className="text-gray-400">Frais cachés</p>
               </div>
             </div>
 
-            <div className="bg-gris-800 rounded-xl p-8">
-              <h3 className="text-2xl font-bold mb-4 text-center">Notre Promesse</h3>
+            <div className="card bg-gray-800 border-gray-700 max-w-2xl mx-auto">
+              <h3 className="text-h3 text-white mb-6 text-center">Notre Promesse</h3>
               <div className="space-y-3">
                 {[
-                  'Réparations durables avec des pièces de qualité',
+                  'Réparations durables avec pièces de qualité',
                   'Conseils honnêtes et personnalisés',
-                  'Devis détaillé avant toute intervention',
+                  'Devis détaillé avant intervention',
                   'Garantie sur nos réparations',
                   'Contact direct avec le réparateur',
                   'Transparence totale sur les tarifs'
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3">
-                    <CheckCircle className="w-5 h-5 text-teal-300 flex-shrink-0" />
-                    <span className="text-gris-200">{item}</span>
+                    <CheckCircle className="w-5 h-5 text-teal flex-shrink-0" />
+                    <span className="text-gray-300 text-sm">{item}</span>
                   </div>
                 ))}
               </div>
@@ -343,37 +339,38 @@ export default function AtelierPage() {
         </section>
 
         {/* CTA Final */}
-        <section className="py-12 sm:py-16 md:py-20 bg-teal-700 text-white">
-          <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold mb-6">
-              Passez nous voir à l'atelier !
-            </h2>
-            <p className="text-xl mb-8 text-teal-100">
-              Savièse, Valais • Ouvert du lundi au samedi
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button
-                variant="primary"
-                size="lg"
-                icon={Phone}
-                iconPosition="left"
-                href="tel:0767080308"
-              >
-                076 708 03 08
-              </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                icon={ArrowRight}
-                iconPosition="right"
-                href="/contact"
-                className="border-white text-white hover:bg-white hover:text-teal-700"
-              >
-                Nous trouver
-              </Button>
+        <section className="section bg-gray-900 text-white border-t border-gray-800">
+          <div className="container text-center">
+            <div className="max-w-2xl mx-auto space-y-8">
+              <h2 className="text-h2 text-white">
+                Passez nous voir à l'atelier !
+              </h2>
+              <p className="text-lg text-gray-300">
+                Savièse, Valais • Ouvert du lundi au samedi
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button
+                  variant="primary"
+                  size="lg"
+                  icon={Phone}
+                  iconPosition="left"
+                  href="tel:0767080308"
+                >
+                  076 708 03 08
+                </Button>
+                <a
+                  href="/contact"
+                  className="btn btn-lg btn-outline-teal bg-white text-gray-900 border-white hover:bg-gray-100"
+                >
+                  <span>Nous trouver</span>
+                  <ArrowRight className="w-5 h-5" />
+                </a>
+              </div>
             </div>
           </div>
         </section>
+
       </main>
       <Footer />
     </>
