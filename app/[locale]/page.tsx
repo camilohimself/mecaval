@@ -19,10 +19,10 @@ export default function HomePage() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 
               {/* Left Column - Content */}
-              <div className="lg:col-span-7 space-y-8">
+              <div className="lg:col-span-7 space-y-8 text-center lg:text-left">
 
                 {/* Location Badge */}
-                <div className="badge badge-teal">
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-teal-light text-teal-dark text-sm font-semibold rounded-full border border-teal">
                   <MapPin className="w-4 h-4" />
                   <span>Savièse, Valais</span>
                 </div>
@@ -32,13 +32,13 @@ export default function HomePage() {
                   <h1 className="text-display text-balance">
                     {t('hero.title')}
                   </h1>
-                  <p className="text-body text-xl max-w-xl">
+                  <p className="text-body text-xl max-w-xl mx-auto lg:mx-0">
                     {t('hero.subtitle')}
                   </p>
                 </div>
 
                 {/* CTAs */}
-                <div className="flex flex-col sm:flex-row gap-4">
+                <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                   <Button
                     variant="primary"
                     size="lg"
@@ -60,7 +60,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Trust Indicators - Clean Grid */}
-                <div className="grid grid-cols-3 gap-4 pt-4">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4">
                   <div className="flex flex-col gap-1">
                     <div className="flex items-center gap-2 text-gray-900">
                       <CheckCircle className="w-5 h-5 text-teal" />
