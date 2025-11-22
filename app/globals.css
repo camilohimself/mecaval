@@ -233,19 +233,24 @@ body {
   padding-bottom: var(--section-spacing);
 }
 
-/* ===== CARD COMPONENT - CORPORATE STYLE ===== */
+/* ===== CARD COMPONENT - CORPORATE STYLE (OSOM PATTERNS) ===== */
 
 .card {
   background: var(--color-white);
   border: var(--border-width) solid var(--border-color);
   border-radius: var(--radius-DEFAULT);
   padding: var(--spacing-6);
-  transition: all var(--transition-base);
+  transition: all var(--transition-slow);
+}
+
+@media (min-width: 768px) {
+  .card {
+    padding: var(--spacing-8);
+  }
 }
 
 .card:hover {
   border-color: var(--border-color-hover);
-  box-shadow: var(--shadow-md);
 }
 
 .card-bordered {
@@ -254,6 +259,10 @@ body {
 
 .card-elevated {
   box-shadow: var(--shadow-sm);
+}
+
+.card-elevated:hover {
+  box-shadow: var(--shadow-md);
 }
 
 /* ===== BUTTON COMPONENT - CLEAN & PROFESSIONAL ===== */
@@ -332,27 +341,29 @@ body {
   color: var(--color-white);
 }
 
-/* ===== GRID SYSTEM - STRICT & PROFESSIONAL ===== */
+/* ===== GRID SYSTEM - STRICT & PROFESSIONAL (OSOM PATTERNS) ===== */
 
 .grid-2 {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: var(--spacing-6);
+  gap: var(--spacing-6); /* 24px mobile */
 }
 
 .grid-3 {
   display: grid;
   grid-template-columns: repeat(1, 1fr);
-  gap: var(--spacing-6);
+  gap: var(--spacing-6); /* 24px mobile */
 }
 
 @media (min-width: 768px) {
   .grid-2 {
     grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-8); /* OSOM Pattern: gap-6 md:gap-8 = 32px desktop */
   }
 
   .grid-3 {
     grid-template-columns: repeat(3, 1fr);
+    gap: var(--spacing-8); /* OSOM Pattern: gap-6 md:gap-8 = 32px desktop */
   }
 }
 
@@ -451,7 +462,7 @@ button:disabled,
   animation-delay: 300ms;
 }
 
-/* ===== CARD HOVER STATES - SUBTLE & PROFESSIONAL ===== */
+/* ===== CARD HOVER STATES - SUBTLE & PROFESSIONAL (OSOM PATTERNS) ===== */
 
 .card-interactive {
   cursor: pointer;
@@ -459,8 +470,8 @@ button:disabled,
 }
 
 .card-interactive:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 24px -8px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px); /* OSOM Pattern: hover:-translate-y-1 = 4px */
+  box-shadow: var(--shadow-md); /* OSOM Pattern: shadow-sm hover:shadow-md */
 }
 
 /* ===== SHADOWS - ENHANCED BUT SUBTLE ===== */

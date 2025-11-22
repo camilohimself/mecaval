@@ -65,7 +65,7 @@ export default function HomePage() {
                 </div>
 
                 {/* Trust Indicators - Clean Grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-4 animate-slideUp animation-delay-300">
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 md:gap-8 pt-4 animate-slideUp animation-delay-300">
                   <div className="flex flex-col gap-1">
                     <div className="flex items-center gap-2 text-gray-900">
                       <CheckCircle className="w-5 h-5 text-teal" />

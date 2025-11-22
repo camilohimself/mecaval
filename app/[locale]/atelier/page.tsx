@@ -236,7 +236,7 @@ export default function AtelierPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-4xl mx-auto">
               {team.map((member, index) => {
                 const Icon = member.icon;
                 return (
@@ -287,7 +287,7 @@ export default function AtelierPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
               {values.map((value, index) => {
                 const Icon = value.icon;
                 return (
@@ -320,7 +320,7 @@ export default function AtelierPage() {
               </h2>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12 max-w-4xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mb-12 max-w-4xl mx-auto">
               <div className="text-center">
                 <div className="text-5xl font-bold text-teal mb-2">{tAtelier('commitment.metric1Value')}</div>
                 <p className="text-gray-400">{tAtelier('commitment.metric1Label')}</p>

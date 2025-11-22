@@ -58,40 +58,40 @@ export default function ServicesPage() {
   ];
 
   const metrics = [
-    { value: tServices('metrics.metric1.value'), label: tServices('metrics.metric1.label'), subtext: tServices('metrics.metric1.detail') },
-    { value: tServices('metrics.metric2.value'), label: tServices('metrics.metric2.label'), subtext: tServices('metrics.metric2.detail') },
-    { value: tServices('metrics.metric3.value'), label: tServices('metrics.metric3.label'), subtext: tServices('metrics.metric3.detail') }
+    { value: tServices('metrics.metric1Value'), label: tServices('metrics.metric1Label'), subtext: tServices('metrics.metric1Sub') },
+    { value: tServices('metrics.metric2Value'), label: tServices('metrics.metric2Label'), subtext: tServices('metrics.metric2Sub') },
+    { value: tServices('metrics.metric3Value'), label: tServices('metrics.metric3Label'), subtext: tServices('metrics.metric3Sub') }
   ];
 
   const pricingCategories = [
     {
       title: tServices('pricing.diagnostic.title'),
       price: tServices('pricing.diagnostic.price'),
-      note: tServices('pricing.diagnostic.refund'),
+      note: tServices('pricing.diagnostic.note'),
       features: [
-        tServices('pricing.diagnostic.item1'),
-        tServices('pricing.diagnostic.item2'),
-        tServices('pricing.diagnostic.item3')
+        tServices('pricing.diagnostic.feature1'),
+        tServices('pricing.diagnostic.feature2'),
+        tServices('pricing.diagnostic.feature3')
       ]
     },
     {
       title: tServices('pricing.repair.title'),
       price: tServices('pricing.repair.price'),
-      note: tServices('pricing.repair.duration'),
+      note: tServices('pricing.repair.note'),
       features: [
-        tServices('pricing.repair.item1'),
-        tServices('pricing.repair.item2'),
-        tServices('pricing.repair.item4')
+        tServices('pricing.repair.feature1'),
+        tServices('pricing.repair.feature2'),
+        tServices('pricing.repair.feature3')
       ]
     },
     {
       title: tServices('pricing.certification.title'),
       price: tServices('pricing.certification.price'),
-      note: tServices('pricing.certification.duration'),
+      note: tServices('pricing.certification.note'),
       features: [
-        tServices('pricing.certification.item1'),
-        tServices('pricing.certification.item3'),
-        tServices('pricing.certification.item4')
+        tServices('pricing.certification.feature1'),
+        tServices('pricing.certification.feature2'),
+        tServices('pricing.certification.feature3')
       ],
       highlight: true
     }
@@ -163,7 +163,7 @@ export default function ServicesPage() {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center animate-slideUp animation-delay-200">
               <Button variant="primary" size="lg" icon={Phone} iconPosition="left" href="tel:0767080308">
-                {tServices('hero.ctaPrimary')}
+                076 708 03 08
               </Button>
               <Button variant="outline" size="lg" icon={ArrowRight} iconPosition="right" href="#pricing">
                 {tCta('seeRates')}
@@ -181,7 +181,7 @@ export default function ServicesPage() {
               <p className="text-body text-lg">{tServices('essential.subtitle')}</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
               {essentialServices.map((service, index) => {
                 const Icon = service.icon;
                 const badgeBg = service.badgeColor === 'rouge' ? 'bg-rouge-light text-rouge-dark border-rouge' : 'bg-teal-light text-teal-dark border-teal';
@@ -246,10 +246,10 @@ export default function ServicesPage() {
 
                 <div className="space-y-4 mb-8">
                   {[
-                    tServices('callout.benefit1'),
-                    tServices('callout.benefit2'),
-                    tServices('callout.benefit3'),
-                    tServices('callout.benefit4')
+                    tServices('callout.feature1'),
+                    tServices('callout.feature2'),
+                    tServices('callout.feature3'),
+                    tServices('callout.feature4')
                   ].map((item, i) => (
                     <div key={i} className="flex items-start gap-3">
                       <div className="w-6 h-6 bg-teal rounded-lg flex items-center justify-center flex-shrink-0">
@@ -277,7 +277,7 @@ export default function ServicesPage() {
         {/* Metrics - Vercel Style */}
         <section className="section border-b">
           <div className="container">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
               {metrics.map((metric, index) => (
                 <div key={index} className="text-center">
                   <div className="text-5xl font-bold text-gray-900 mb-2">{metric.value}</div>
@@ -300,11 +300,11 @@ export default function ServicesPage() {
               <p className="text-body text-lg">{tServices('thermal.description')}</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
               <div className="card">
-                <h3 className="text-h4 mb-4">{tServices('thermal.feature2')}</h3>
+                <h3 className="text-h4 mb-4">{tServices('thermal.serviceTitle')}</h3>
                 <ul className="space-y-2">
-                  {[tServices('thermal.detail1'), tServices('thermal.detail2'), tServices('thermal.detail3'), tServices('thermal.detail4')].map((item, i) => (
+                  {[tServices('thermal.serviceFeature1'), tServices('thermal.serviceFeature2'), tServices('thermal.serviceFeature3'), tServices('thermal.serviceFeature4')].map((item, i) => (
                     <li key={i} className="flex items-center gap-2 text-sm">
                       <CheckCircle className="w-4 h-4 text-rouge flex-shrink-0" />
                       {item}
@@ -314,9 +314,9 @@ export default function ServicesPage() {
               </div>
 
               <div className="card">
-                <h3 className="text-h4 mb-4">{tServices('thermal.feature1')}</h3>
+                <h3 className="text-h4 mb-4">{tServices('thermal.repairTitle')}</h3>
                 <ul className="space-y-2">
-                  {[tServices('thermal.issue1'), tServices('thermal.issue2'), tServices('thermal.issue3'), tServices('thermal.issue4')].map((item, i) => (
+                  {[tServices('thermal.repairFeature1'), tServices('thermal.repairFeature2'), tServices('thermal.repairFeature3'), tServices('thermal.repairFeature4')].map((item, i) => (
                     <li key={i} className="flex items-center gap-2 text-sm">
                       <CheckCircle className="w-4 h-4 text-rouge flex-shrink-0" />
                       {item}
@@ -339,11 +339,11 @@ export default function ServicesPage() {
               <p className="text-body text-lg">{tServices('bikes.description')}</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
               <div className="card">
-                <h3 className="text-h4 mb-4">{tServices('bikes.service1')}</h3>
+                <h3 className="text-h4 mb-4">{tServices('bikes.serviceTitle')}</h3>
                 <ul className="space-y-2">
-                  {[tServices('bikes.detail1'), tServices('bikes.detail2'), tServices('bikes.service2'), tServices('bikes.service3')].map((item, i) => (
+                  {[tServices('bikes.serviceFeature1'), tServices('bikes.serviceFeature2'), tServices('bikes.serviceFeature3'), tServices('bikes.serviceFeature4')].map((item, i) => (
                     <li key={i} className="flex items-center gap-2 text-sm">
                       <CheckCircle className="w-4 h-4 text-teal flex-shrink-0" />
                       {item}
@@ -353,9 +353,9 @@ export default function ServicesPage() {
               </div>
 
               <div className="card">
-                <h3 className="text-h4 mb-4">{tServices('bikes.service4')}</h3>
+                <h3 className="text-h4 mb-4">{tServices('bikes.electricTitle')}</h3>
                 <ul className="space-y-2">
-                  {[tServices('bikes.feature3'), tServices('bikes.detail3'), tServices('bikes.detail4'), tServices('bikes.feature4')].map((item, i) => (
+                  {[tServices('bikes.electricFeature1'), tServices('bikes.electricFeature2'), tServices('bikes.electricFeature3'), tServices('bikes.electricFeature4')].map((item, i) => (
                     <li key={i} className="flex items-center gap-2 text-sm">
                       <CheckCircle className="w-4 h-4 text-teal flex-shrink-0" />
                       {item}
@@ -367,7 +367,7 @@ export default function ServicesPage() {
 
             <div className="mt-8 card bg-teal-light border-teal text-center">
               <p className="text-sm text-teal-dark font-semibold">
-                {tServices('bikes.feature3')} - {tServices('bikes.feature4')}
+                {tServices('bikes.speedpedNote')}
               </p>
             </div>
           </div>
@@ -426,7 +426,7 @@ export default function ServicesPage() {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
               {b2bServices.map((service, index) => {
                 const Icon = service.icon;
                 return (
@@ -449,7 +449,7 @@ export default function ServicesPage() {
 
             <div className="mt-12 text-center">
               <Button variant="primary" size="lg" icon={Phone} iconPosition="left" href="tel:0767080308">
-                {tServices('b2b.description')}
+                {tCta('contactB2B')}
               </Button>
             </div>
           </div>
@@ -465,7 +465,7 @@ export default function ServicesPage() {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button variant="primary" size="lg" icon={Phone} iconPosition="left" href="tel:0767080308">
-                  {tServices('cta.phone')}
+                  076 708 03 08
                 </Button>
                 <Button variant="outline" size="lg" icon={ArrowRight} iconPosition="right" href="/contact">
                   {tCta('findUs')}

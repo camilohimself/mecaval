@@ -101,10 +101,7 @@
       "title": "Reparatur in 48 Stunden.",
       "badge1": "48h garantiert",
       "badge2": "Zertifizierte Normen",
-      "badge3": "Direkter Kontakt",
-      "subtitle": "Komplette Reparatur von Elektro- und Thermikmaschinen, Fahrrädern. Transparente Preise, garantierte Fristen, Normenkonformität.",
-      "ctaPrimary": "076 708 03 08",
-      "ctaSecondary": "Angebot anfordern"
+      "badge3": "Direkter Kontakt"
     },
     "essential": {
       "title": "Unsere drei wesentlichen Dienstleistungen",
@@ -144,7 +141,17 @@
       "detail1": "Komplette Diagnose",
       "detail2": "Filter-Service",
       "detail3": "Vergaserreinigung",
-      "detail4": "Funktionstests"
+      "detail4": "Funktionstests",
+      "serviceTitle": "Vollständige Wartung",
+      "serviceFeature1": "Komplette Diagnose",
+      "serviceFeature2": "Filter-Service",
+      "serviceFeature3": "Vergaserreinigung",
+      "serviceFeature4": "Funktionstests",
+      "repairTitle": "Häufige Reparaturen",
+      "repairFeature1": "Startprobleme",
+      "repairFeature2": "Unregelmäßiger Betrieb",
+      "repairFeature3": "Mangelnde Wartung",
+      "repairFeature4": "Vergaserprobleme"
     },
     "bikes": {
       "title": "Fahrräder & E-Bikes",
@@ -162,35 +169,40 @@
       "detail1": "Wartung aller Fahrräder",
       "detail2": "Präzise Reparaturen",
       "detail3": "Speedped-Bestellung",
-      "detail4": "Fachkundiger Rat"
+      "detail4": "Fachkundiger Rat",
+      "serviceTitle": "Fahrradwartung",
+      "serviceFeature1": "Wartung aller Fahrräder",
+      "serviceFeature2": "Bremsreparatur",
+      "serviceFeature3": "Gangschaltung",
+      "serviceFeature4": "Präzise Reparaturen",
+      "electricTitle": "E-Bike Spezialist",
+      "electricFeature1": "E-Bike-Elektronik",
+      "electricFeature2": "Batterieprüfung",
+      "electricFeature3": "Motorreparatur",
+      "electricFeature4": "Software-Updates",
+      "speedpedNote": "Speedped-Partner - Maßgeschneiderte Bestellung auf Anfrage"
     },
     "callout": {
       "badge": "SICHERHEIT",
       "title": "Elektrische Normenkontrolle",
       "subtitle": "Ihre Maschine entspricht den Schweizer elektrischen Normen",
       "description": "Wir besitzen eine spezialisierte Maschine für den elektrischen Normentest. Jede reparierte Maschine wird zertifiziert und entspricht den aktuellen Normen.",
-      "benefit1": "Konformitätsbescheinigung",
-      "benefit2": "Garantierte Sicherheit",
-      "benefit3": "Vollständige Tests",
-      "benefit4": "Schweizer Normen"
+      "feature1": "Konformitätsbescheinigung",
+      "feature2": "Garantierte Sicherheit",
+      "feature3": "Vollständige Tests",
+      "feature4": "Schweizer Normen"
     },
     "metrics": {
       "title": "Mecaval-Zahlen",
-      "metric1": {
-        "value": "48h",
-        "label": "Garantierte maximale Frist",
-        "detail": "vs. 2-3 Wochen bei der Konkurrenz"
-      },
-      "metric2": {
-        "value": "100%",
-        "label": "Getestete Maschinen",
-        "detail": "Elektrischer Test + Funktionskontrolle"
-      },
-      "metric3": {
-        "value": "0 CHF",
-        "label": "Versteckte Kosten",
-        "detail": "Detaillierter Kostenvoranschlag vor Intervention"
-      }
+      "metric1Value": "48h",
+      "metric1Label": "Garantierte maximale Frist",
+      "metric1Sub": "vs. 2-3 Wochen bei der Konkurrenz",
+      "metric2Value": "100%",
+      "metric2Label": "Getestete Maschinen",
+      "metric2Sub": "Elektrischer Test + Funktionskontrolle",
+      "metric3Value": "0 CHF",
+      "metric3Label": "Versteckte Kosten",
+      "metric3Sub": "Detaillierter Kostenvoranschlag vor Intervention"
     },
     "pricing": {
       "title": "Transparente Preise",
@@ -198,29 +210,28 @@
       "diagnostic": {
         "title": "Professionelle Diagnose",
         "price": "X CHF",
-        "refund": "(abgezogen bei Reparatur)",
-        "item1": "Präzise Pannenanalyse",
-        "item2": "Detaillierter schriftlicher Kostenvoranschlag",
-        "item3": "Klare Problemerklärung",
-        "item4": "Empfehlungen",
+        "note": "(abgezogen bei Reparatur)",
+        "feature1": "Präzise Pannenanalyse",
+        "feature2": "Detaillierter schriftlicher Kostenvoranschlag",
+        "feature3": "Klare Problemerklärung",
         "duration": "30-60 Min."
       },
       "repair": {
         "title": "Qualitätsreparatur",
         "price": "Je nach Intervention",
-        "item1": "Qualitätsteile",
-        "item2": "Inklusive Arbeitszeit",
-        "item3": "Normenkontrolle",
-        "item4": "Garantie auf Reparatur",
+        "note": "Detailliertes Angebot basierend auf Diagnose",
+        "feature1": "Qualitätsteile",
+        "feature2": "Inklusive Arbeitszeit",
+        "feature3": "Normenkontrolle",
         "duration": "24-48h"
       },
       "certification": {
         "title": "Elektrische Zertifizierung",
         "price": "In Reparatur inbegriffen",
-        "item1": "Spezialisierte Maschine",
-        "item2": "Schweizer Normen",
-        "item3": "Offizielle Bescheinigung",
-        "item4": "Vollständige Tests",
+        "note": "Sicherheit und Konformität garantiert",
+        "feature1": "Spezialisierte Maschine",
+        "feature2": "Schweizer Normen",
+        "feature3": "Offizielle Bescheinigung",
         "duration": "15-30 Min."
       }
     },
@@ -336,27 +347,19 @@
       "image4Alt": "Reparatur von Elektromotor",
       "image5Alt": "Organisierter Arbeitsbereich",
       "image6Alt": "Professionelle Werkzeuge",
-      "note": "📸 Hinzuzufügende Fotos: Bilder in /public/images/ platzieren"
+      "photoNote": "📸 Hinzuzufügende Fotos: Bilder in /public/images/ platzieren"
     },
     "values": {
       "title": "Unsere Werte",
       "subtitle": "Was den Mecaval-Unterschied ausmacht",
-      "proximity": {
-        "title": "Nähe & Lokaler Service",
-        "description": "Familienwerkstatt in Savièse. Direkter Kontakt mit Ihrem Mechaniker."
-      },
-      "speed": {
-        "title": "Schnelle Intervention",
-        "description": "Garantierte Frist 48h vs. 2-3 Wochen bei der Konkurrenz."
-      },
-      "quality": {
-        "title": "Qualität & Zuverlässigkeit",
-        "description": "Dauerhafte Reparaturen, Qualitätsteile, Zufriedenheit garantiert."
-      },
-      "transparency": {
-        "title": "Transparenz & Beratung",
-        "description": "Angezeigte Preise, detaillierte Kostenvoranschläge, ehrliche Beratung."
-      }
+      "value1Title": "Nähe & Lokaler Service",
+      "value1Desc": "Familienwerkstatt in Savièse. Direkter Kontakt mit Ihrem Mechaniker.",
+      "value2Title": "Schnelle Intervention",
+      "value2Desc": "Garantierte Frist 48h vs. 2-3 Wochen bei der Konkurrenz.",
+      "value3Title": "Qualität & Zuverlässigkeit",
+      "value3Desc": "Dauerhafte Reparaturen, Qualitätsteile, Zufriedenheit garantiert.",
+      "value4Title": "Transparenz & Beratung",
+      "value4Desc": "Angezeigte Preise, detaillierte Kostenvoranschläge, ehrliche Beratung."
     },
     "testimonials": {
       "title": "Was unsere Kunden sagen",
@@ -381,15 +384,15 @@
       "testimonial5Author": "Alain B.",
       "testimonial5Location": "Savièse",
       "testimonial5Service": "Maschinenwartung",
-      "note": "💬 Zu sammelnde Kundenmeinungen: Platzhalter durch echte Erfahrungsberichte ersetzen"
+      "testimonialsNote": "💬 Zu sammelnde Kundenmeinungen: Platzhalter durch echte Erfahrungsberichte ersetzen"
     },
     "commitment": {
       "title": "Unser Qualitätsversprechen",
-      "metric1": "48h",
+      "metric1Value": "48h",
       "metric1Label": "Maximale Frist",
-      "metric2": "100%",
+      "metric2Value": "100%",
       "metric2Label": "Getestete Maschinen",
-      "metric3": "0",
+      "metric3Value": "0",
       "metric3Label": "Versteckte Kosten",
       "promiseTitle": "Unser Versprechen",
       "promise1": "Dauerhafte Reparaturen mit Qualitätsteilen",
@@ -398,12 +401,6 @@
       "promise4": "Garantie auf unsere Reparaturen",
       "promise5": "Direkter Kontakt mit dem Mechaniker",
       "promise6": "Vollständige Transparenz bei den Preisen"
-    },
-    "cta": {
-      "title": "Besuchen Sie uns in der Werkstatt!",
-      "subtitle": "Savièse, Wallis • Geöffnet von Montag bis Samstag",
-      "phone": "076 708 03 08",
-      "findUs": "Finden Sie uns"
     }
   },
   "contact": {
