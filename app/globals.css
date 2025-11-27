@@ -1635,10 +1635,10 @@ html {
   margin: 0;
 }
 
-/* Dark Section (Pro) */
+/* Pro Section (Teal) */
 .menu-section-dark {
   padding: 4rem 0;
-  background: var(--color-gray-900);
+  background: var(--color-teal);
   scroll-margin-top: 140px;
 }
 
@@ -1652,8 +1652,8 @@ html {
   align-items: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
-  background: var(--color-rouge);
-  color: white;
+  background: white;
+  color: var(--color-teal-dark);
   font-size: 0.75rem;
   font-weight: 700;
   border-radius: 9999px;
@@ -1669,25 +1669,26 @@ html {
 
 .menu-section-subtitle-dark {
   font-size: 1.125rem;
-  color: var(--color-gray-400);
+  color: rgba(255, 255, 255, 0.85);
   max-width: 600px;
   margin: 0 auto;
 }
 
 .menu-item-dark {
-  background: var(--color-gray-800);
-  border: 1px solid var(--color-gray-700);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 1rem;
   padding: 1.5rem;
   transition: all 0.2s ease;
 }
 
 .menu-item-dark:hover {
-  border-color: var(--color-rouge);
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.4);
 }
 
 .menu-item-dark-icon {
-  color: var(--color-rouge);
+  color: white;
   margin-bottom: 1rem;
 }
 

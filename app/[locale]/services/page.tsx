@@ -203,6 +203,9 @@ export default function ServicesPage() {
                   <li><CheckCircle className="w-4 h-4" />{tServices('bikes.serviceFeature2')}</li>
                   <li><CheckCircle className="w-4 h-4" />{tServices('bikes.serviceFeature3')}</li>
                   <li><CheckCircle className="w-4 h-4" />{tServices('bikes.serviceFeature4')}</li>
+                  <li><CheckCircle className="w-4 h-4" />{tServices('bikes.serviceFeature5')}</li>
+                  <li><CheckCircle className="w-4 h-4" />{tServices('bikes.serviceFeature6')}</li>
+                  <li><CheckCircle className="w-4 h-4" />{tServices('bikes.serviceFeature7')}</li>
                 </ul>
               </div>
 
