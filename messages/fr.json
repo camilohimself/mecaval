@@ -10,7 +10,7 @@
     "call": "Appeler",
     "quote": "Devis gratuit",
     "learnMore": "En savoir plus",
-    "visitUs": "Passer à l'atelier",
+    "visitUs": "Appelez-nous !",
     "contactUs": "Nous contacter",
     "seeRates": "Voir les tarifs",
     "findUs": "Nous trouver",
@@ -76,7 +76,7 @@
     },
     "cta": {
       "title": "Besoin d'une réparation rapide ?",
-      "subtitle": "Passez nous voir à l'atelier à Savièse"
+      "subtitle": "Appelez-nous ou écrivez-nous à Savièse !"
     }
   },
   "services": {
@@ -224,7 +224,7 @@
     },
     "cta": {
       "title": "Besoin d'une réparation rapide ?",
-      "subtitle": "Appelez-nous ou passez directement à l'atelier à Savièse",
+      "subtitle": "Appelez-nous ou écrivez-nous directement !",
       "phone": "076 708 03 08"
     }
   },
@@ -239,7 +239,7 @@
       "step1": {
         "title": "CONTACT",
         "duration": "Immédiat",
-        "description": "Vous nous appelez au 076 708 03 08 ou passez directement à l'atelier.",
+        "description": "Vous nous appelez au 076 708 03 08 ou vous nous écrivez par email/WhatsApp.",
         "benefit1": "Accueil immédiat (pas d'attente)",
         "benefit2": "Conseil téléphonique gratuit",
         "benefit3": "Devis gratuit sans engagement"
@@ -364,14 +364,14 @@
       "promise6": "Transparence totale sur les tarifs"
     },
     "cta": {
-      "title": "Passez nous voir à l'atelier !",
+      "title": "Contactez-nous !",
       "subtitle": "Savièse, Valais • Ouvert du lundi au samedi"
     }
   },
   "contact": {
     "hero": {
       "title": "Nous Contacter",
-      "subtitle": "Une question ? Un devis ? Passez nous voir ou contactez-nous !"
+      "subtitle": "Une question ? Un devis ? Appelez-nous ou écrivez-nous !"
     },
     "cards": {
       "phone": "Téléphone",

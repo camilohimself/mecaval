@@ -10,7 +10,7 @@
     "call": "Anrufen",
     "quote": "Kostenloser Kostenvoranschlag",
     "learnMore": "Mehr erfahren",
-    "visitUs": "Besuchen Sie die Werkstatt",
+    "visitUs": "Rufen Sie uns an!",
     "contactUs": "Kontaktieren Sie uns",
     "seeRates": "Preise ansehen",
     "findUs": "Finden Sie uns",
@@ -78,7 +78,7 @@
     },
     "cta": {
       "title": "Benötigen Sie eine schnelle Reparatur?",
-      "subtitle": "Besuchen Sie uns in der Werkstatt in Savièse"
+      "subtitle": "Rufen Sie uns an oder schreiben Sie uns in Savièse!"
     },
     "zone": {
       "title": "Einsatzgebiet",
@@ -91,7 +91,7 @@
     },
     "cta": {
       "title": "Benötigen Sie eine Reparatur?",
-      "subtitle": "Rufen Sie uns an oder besuchen Sie uns in der Werkstatt in Savièse",
+      "subtitle": "Rufen Sie uns an oder schreiben Sie uns direkt!",
       "phone": "076 708 03 08",
       "visit": "Besuchen Sie uns"
     }
@@ -282,7 +282,7 @@
       "step1": {
         "title": "KONTAKT",
         "duration": "Sofort",
-        "description": "Sie rufen uns unter 076 708 03 08 an oder kommen direkt zur Werkstatt.",
+        "description": "Sie rufen uns unter 076 708 03 08 an oder schreiben uns per E-Mail/WhatsApp.",
         "benefit1": "Sofortiger Empfang (kein Warten)",
         "benefit2": "Kostenlose telefonische Beratung",
         "benefit3": "Kostenloser Kostenvoranschlag ohne Verpflichtung"
@@ -409,7 +409,7 @@
   "contact": {
     "hero": {
       "title": "Kontaktieren Sie uns",
-      "subtitle": "Wir sind hier, um Ihnen zu helfen. Rufen Sie an, schreiben Sie oder besuchen Sie uns!"
+      "subtitle": "Eine Frage? Ein Angebot? Rufen Sie uns an oder schreiben Sie uns!"
     },
     "cards": {
       "phone": "Telefon",
@@ -470,7 +470,7 @@
       "q2": "Ist die Diagnose kostenpflichtig?",
       "a2": "Die professionelle Diagnose kostet X CHF, wird aber bei Reparatur abgezogen.",
       "q3": "Ist ein Termin erforderlich?",
-      "a3": "Nein, Sie können während der Öffnungszeiten direkt zur Werkstatt kommen. Für eine gründliche Diagnose empfehlen wir einen Anruf im Voraus.",
+      "a3": "Nein, ein Termin ist nicht notwendig. Für eine gründliche Diagnose empfehlen wir einen Anruf im Voraus.",
       "q4": "Bieten Sie einen Abhol-Service an?",
       "a4": "Ja, wir können Ihre Maschine abholen und liefern je nach Region. Kontaktieren Sie uns für Modalitäten und Preise.",
       "q5": "Welche Zahlungsmittel akzeptieren Sie?",
