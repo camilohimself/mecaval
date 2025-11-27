@@ -30,7 +30,7 @@
   },
   "home": {
     "hero": {
-      "title": "Votre machine réparée en 48h, pas en 3 semaines",
+      "title": "La solution à votre panne en 48h",
       "subtitle": "Contact direct avec votre réparateur",
       "location": "Savièse, Valais",
       "badge1": "48h max",
@@ -169,8 +169,8 @@
       "subtitle": "Pas de surprises - Devis détaillé avant intervention",
       "diagnostic": {
         "title": "Diagnostic",
-        "price": "50 CHF",
-        "note": "Déduit si réparation",
+        "price": "Offert",
+        "note": "",
         "feature1": "Analyse complète",
         "feature2": "Devis détaillé",
         "feature3": "Explications"
@@ -178,15 +178,15 @@
       "repair": {
         "title": "Réparation",
         "price": "Variable",
-        "note": "Selon panne",
+        "note": "Selon panne (95 CHF/heure)",
         "feature1": "Pièces qualité",
         "feature2": "Délai 48h",
-        "feature3": "Garantie"
+        "feature3": "Garantie 6 mois"
       },
       "certification": {
         "title": "Certification",
         "price": "Inclus",
-        "note": "Gratuit",
+        "note": "",
         "feature1": "Test normes",
         "feature2": "Certificat",
         "feature3": "Conformité"
