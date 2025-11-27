@@ -255,14 +255,14 @@
       "step3": {
         "title": "RÉPARATION",
         "description": "Réparation dans notre atelier avec des pièces d'origine ou qualité certifiée.",
-        "benefit1": "Délai garanti 48h (sauf pièces spéciales)",
+        "benefit1": "Solution en 48h (sauf pièces spéciales)",
         "benefit2": "Pièces de qualité certifiées",
         "benefit3": "Information de l'avancement"
       },
       "step4": {
         "title": "CONTRÔLE QUALITÉ",
         "duration": "15-30 min",
-        "description": "Tests complets et contrôle aux normes électriques avec notre machine spécialisée.",
+        "description": "Tests complets et contrôle aux normes électriques avec nos machines spécialisées.",
         "benefit1": "Tests de fonctionnement complets",
         "benefit2": "Contrôle normes électriques",
         "benefit3": "Certificat de conformité"

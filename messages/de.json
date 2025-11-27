@@ -298,14 +298,14 @@
       "step3": {
         "title": "REPARATUR",
         "description": "Reparatur in unserer Werkstatt mit Original- oder zertifizierten Qualitätsteilen.",
-        "benefit1": "Garantierte Frist 48h (außer Spezialteile)",
+        "benefit1": "Lösung in 48h (außer Spezialteile)",
         "benefit2": "Zertifizierte Qualitätsteile",
         "benefit3": "Fortschrittsinformation"
       },
       "step4": {
         "title": "QUALITÄTSKONTROLLE",
         "duration": "15-30 Min.",
-        "description": "Vollständige Tests und Kontrolle nach elektrischen Normen mit unserer spezialisierten Maschine.",
+        "description": "Vollständige Tests und Kontrolle nach elektrischen Normen mit unseren spezialisierten Maschinen.",
         "benefit1": "Vollständige Funktionstests",
         "benefit2": "Kontrolle elektrischer Normen",
         "benefit3": "Konformitätsbescheinigung"
