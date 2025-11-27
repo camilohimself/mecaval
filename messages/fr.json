@@ -247,7 +247,6 @@
       "step2": {
         "title": "DIAGNOSTIC",
         "duration": "30-60 min",
-        "cost": "X CHF (déduit si réparation)",
         "description": "Diagnostic professionnel avec nos outils spécialisés pour identifier la panne exacte.",
         "benefit1": "Diagnostic précis de la panne",
         "benefit2": "Devis détaillé écrit",
@@ -255,8 +254,7 @@
       },
       "step3": {
         "title": "RÉPARATION",
-        "duration": "⚡ 48h maximum",
-        "description": "Réparation dans notre atelier avec des pièces de qualité. Transparence totale sur les interventions.",
+        "description": "Réparation dans notre atelier avec des pièces d'origine ou qualité certifiée.",
         "benefit1": "Délai garanti 48h (sauf pièces spéciales)",
         "benefit2": "Pièces de qualité certifiées",
         "benefit3": "Information de l'avancement"

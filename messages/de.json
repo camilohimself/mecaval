@@ -290,7 +290,6 @@
       "step2": {
         "title": "DIAGNOSE",
         "duration": "30-60 Min.",
-        "cost": "X CHF (abgezogen bei Reparatur)",
         "description": "Professionelle Diagnose mit unseren spezialisierten Werkzeugen zur Identifizierung der genauen Panne.",
         "benefit1": "Präzise Pannendiagnose",
         "benefit2": "Detaillierter schriftlicher Kostenvoranschlag",
@@ -298,8 +297,7 @@
       },
       "step3": {
         "title": "REPARATUR",
-        "duration": "⚡ Maximal 48h",
-        "description": "Reparatur in unserer Werkstatt mit Qualitätsteilen. Vollständige Transparenz bei den Interventionen.",
+        "description": "Reparatur in unserer Werkstatt mit Original- oder zertifizierten Qualitätsteilen.",
         "benefit1": "Garantierte Frist 48h (außer Spezialteile)",
         "benefit2": "Zertifizierte Qualitätsteile",
         "benefit3": "Fortschrittsinformation"
